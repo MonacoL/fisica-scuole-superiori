@@ -1,0 +1,152 @@
+/* Fisica per le superiori: stile comune.
+   Colori dei riquadri presi da fisica.cls del corso di Fisica per Medicina. */
+:root{
+  --bg:#faf8f4; --card:#fff; --ink:#1d1d1f; --mute:#62626a; --line:#e6e2da; --th:#f3efe7;
+  --acc:#B5651D; --acc2:#1F4E79;
+  --formula:#1F4E79;   --formulaBg:#DCE6F2;
+  --esempio:#B5651D;   --esempioBg:#FDF0DF;
+  --medica:#2E6B30;    --medicaBg:#E6F0E3;
+  --approf:#5B3E8A;    --approfBg:#EEE8F5;
+  --attenzione:#A61B1B;--attenzioneBg:#FBE5E3;
+  --lampo:#00707A;     --lampoBg:#E0F2F2;
+  --richiamo:#4A4A4A;  --richiamoBg:#EFEFEF;
+  --ok:#2E6B30; --solBg:#F2F7F4;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#17171a; --card:#202024; --ink:#ececef; --mute:#a0a0a8; --line:#34343b; --th:#26262b;
+    --acc:#E8A060; --acc2:#8DB8E8;
+    --formula:#8DB8E8;   --formulaBg:#1A2633;
+    --esempio:#E8A060;   --esempioBg:#2E2418;
+    --medica:#7CC47F;    --medicaBg:#1B2A1C;
+    --approf:#B79BE0;    --approfBg:#251F31;
+    --attenzione:#F08A8A;--attenzioneBg:#331C1C;
+    --lampo:#5CC8D0;     --lampoBg:#152B2D;
+    --richiamo:#C8C8C8;  --richiamoBg:#2A2A2E;
+    --ok:#7CC47F; --solBg:#1C2620;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#17171a; --card:#202024; --ink:#ececef; --mute:#a0a0a8; --line:#34343b; --th:#26262b;
+  --acc:#E8A060; --acc2:#8DB8E8;
+  --formula:#8DB8E8;   --formulaBg:#1A2633;
+  --esempio:#E8A060;   --esempioBg:#2E2418;
+  --medica:#7CC47F;    --medicaBg:#1B2A1C;
+  --approf:#B79BE0;    --approfBg:#251F31;
+  --attenzione:#F08A8A;--attenzioneBg:#331C1C;
+  --lampo:#5CC8D0;     --lampoBg:#152B2D;
+  --richiamo:#C8C8C8;  --richiamoBg:#2A2A2E;
+  --ok:#7CC47F; --solBg:#1C2620;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc2)}
+header.top{max-width:940px;margin:auto;padding:28px 16px 8px}
+.crumbs{font-size:.88rem;color:var(--mute);margin-bottom:6px}
+.crumbs a{color:var(--mute)}
+h1{margin:0 0 4px;font-size:1.9rem;line-height:1.25}
+.sub{color:var(--mute);margin:0}
+nav.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.bar .in{max-width:940px;margin:auto;display:flex;gap:6px;padding:10px 16px;flex-wrap:wrap;align-items:center}
+nav.bar a{padding:6px 13px;border-radius:999px;text-decoration:none;color:var(--ink);border:1px solid var(--line);font-size:.9rem;background:var(--card)}
+nav.bar a:hover{border-color:var(--acc)}
+nav.bar .sp{flex:1}
+nav.bar button{padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:.85rem}
+main{max-width:940px;margin:auto;padding:10px 16px 60px}
+h2{font-size:1.5rem;margin:36px 0 8px;padding-bottom:4px;border-bottom:2px solid var(--line)}
+h2 .num{color:var(--acc);margin-right:6px}
+h3{font-size:1.18rem;margin:26px 0 6px}
+.lead{font-size:1.05rem}
+.obiettivi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 18px;margin:16px 0}
+.obiettivi b{color:var(--acc)}
+.obiettivi ul{margin:4px 0}
+
+/* Riquadri */
+.box{border:1px solid var(--c);background:var(--cb);border-radius:6px;margin:18px 0;overflow:hidden}
+.box > .bt{background:var(--c);color:#fff;font-weight:700;font-size:.85rem;padding:3px 12px;letter-spacing:.01em}
+.box > .bb{padding:8px 14px}
+.box > .bb > :first-child{margin-top:4px}
+.box > .bb > :last-child{margin-bottom:4px}
+.box.formula{--c:var(--formula);--cb:var(--formulaBg)}
+.box.esempio{--c:var(--esempio);--cb:var(--esempioBg)}
+.box.semplice{--c:var(--medica);--cb:var(--medicaBg)}
+.box.approf{--c:var(--approf);--cb:var(--approfBg)}
+.box.attenzione{--c:var(--attenzione);--cb:var(--attenzioneBg)}
+.box.lampo{--c:var(--lampo);--cb:var(--lampoBg)}
+.box.richiamo{--c:var(--richiamo);--cb:var(--richiamoBg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .box > .bt{color:#111}}
+:root[data-theme="dark"] .box > .bt{color:#111}
+.box.formula .bb{text-align:center}
+.box.formula .bb p,.box.formula .bb ul{text-align:left}
+
+/* Figure */
+.fig{text-align:center;margin:16px 0}
+.fig img{max-width:100%;height:auto;background:#fff;border-radius:8px;padding:6px;border:1px solid var(--line)}
+.fig svg{max-width:100%;height:auto;color:var(--ink)}
+.fig .cap{font-size:.85rem;color:var(--mute);margin-top:4px}
+.fig.w-sm img,.fig.w-sm svg{max-width:340px}
+.fig.w-md img,.fig.w-md svg{max-width:460px}
+.fig.w-lg img{max-width:600px}
+
+/* Tabelle */
+table.mini{border-collapse:collapse;margin:10px auto;font-size:.92rem;background:var(--card)}
+table.mini td,table.mini th{border:1px solid var(--line);padding:4px 10px;text-align:center}
+table.mini th{background:var(--th)}
+.tw{overflow-x:auto}
+
+/* Esercizi */
+.ex{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:16px 0}
+.ex .head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:4px}
+.ex .n{font-weight:800;color:var(--acc2)}
+.tag{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--acc);padding:2px 7px;border-radius:4px}
+.tag.pensa{background:var(--approf)}
+.tag.sesucc{background:var(--lampo)}
+.tag.prova{background:var(--attenzione)}
+.tag.dimostra{background:var(--formula)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag{color:#111}}
+:root[data-theme="dark"] .tag{color:#111}
+.lvl{font-size:.85rem;color:var(--acc);letter-spacing:2px}
+.lvl::after{content:attr(data-l)}
+.ex p{margin:6px 0}
+.ex ul.req{margin:6px 0;padding-left:20px}
+.ex ul.req li::marker{content:"▸ ";color:var(--acc)}
+.ex details{margin-top:8px;border-radius:8px;padding:6px 12px}
+.ex details.ris{background:var(--th)}
+.ex details.sol{background:var(--solBg)}
+.ex summary{cursor:pointer;font-weight:600}
+.ex details.ris summary{color:var(--acc)}
+.ex details.sol summary{color:var(--ok)}
+.ex details ol{margin:6px 0;padding-left:22px}
+.ex details ol li{margin:4px 0}
+.res{font-weight:700;color:var(--ok)}
+.note{font-size:.9rem;color:var(--mute)}
+
+/* Home */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:18px 0}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--acc)}
+.card h3{margin:0 0 4px;color:var(--acc2)}
+.card p{margin:0;color:var(--mute);font-size:.93rem}
+.card.off{opacity:.55}
+.card .k{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.f h4{margin:0 0 4px;font-size:.95rem;color:var(--acc)}
+.pager{display:flex;justify-content:space-between;gap:10px;margin-top:40px;flex-wrap:wrap}
+.pager a{padding:10px 16px;border:1px solid var(--line);border-radius:10px;background:var(--card);text-decoration:none}
+footer{max-width:940px;margin:auto;padding:20px 16px 40px;color:var(--mute);font-size:.85rem}
+mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media (max-width:600px){body{font-size:16px} h1{font-size:1.55rem} .ex{padding:12px 13px}}
+/* Formule lunghe su schermi stretti: scorre il singolo paragrafo, non la pagina */
+main p, main li, main details{overflow-x:auto;overflow-y:hidden}
+main details > summary{overflow:visible}
+main ul, main ol{padding-left:6px}
+main li{list-style-position:inside;margin:3px 0}
+.ex ul.req{padding-left:4px}
+@media (max-width:700px){
+  nav.bar .in{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  nav.bar a,nav.bar button{white-space:nowrap;flex:none}
+  nav.bar .sp{display:none}
+}
+@media (max-width:600px){mjx-container{font-size:90% !important}}

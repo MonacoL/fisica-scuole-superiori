@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing}
+\usepackage[active,tightpage]{preview}
+\setlength\PreviewBorder{6pt}
+\definecolor{formula}{HTML}{1F4E79}
+\definecolor{esempio}{HTML}{B5651D}
+\definecolor{medica}{HTML}{2E6B30}
+\definecolor{attenzione}{HTML}{A61B1B}
+\definecolor{approf}{HTML}{5B3E8A}
+\definecolor{lampo}{HTML}{00707A}
+\definecolor{sole}{HTML}{F5A623}
+\definecolor{terra}{HTML}{3B82F6}
+\tikzset{>={Stealth[length=2.6mm]}, freccia/.style={->,very thick}}
+\pgfplotsset{every axis/.append style={axis lines=left, grid=major, grid style={gray!25}, tick label style={font=\small}, label style={font=\small}}}
+\begin{document}
+% 1 ellisse
+\begin{preview}\begin{tikzpicture}[scale=1.15]
+\draw[thick] (0,0) ellipse (3.2 and 2);
+\draw[dashed,gray] (-3.4,0)--(3.4,0); \draw[dashed,gray] (0,-2.2)--(0,2.2);
+\fill[sole] (2.5,0) circle (0.2); \node[above=4pt] at (2.5,0.15) {Sole (fuoco)};
+\fill (-2.5,0) circle (0.05); \node[below] at (-2.5,-0.05) {\small altro fuoco};
+\fill[terra] (3.2,0) circle (0.1); \node[right] at (3.25,0.25) {perielio};
+\fill[terra] (-3.2,0) circle (0.1); \node[left] at (-3.25,0.25) {afelio};
+\draw[esempio,very thick] (0,0.08)--(-3.2,0.08) node[midway,above] {$a$};
+\draw[formula,very thick] (0.08,0)--(0.08,2) node[midway,right] {$b$};
+\draw[medica,very thick] (0,-0.08)--(2.5,-0.08) node[midway,below] {$c$};
+\draw[attenzione,decorate,decoration={brace,amplitude=5pt,mirror}] (2.5,-0.55)--(3.2,-0.55) node[midway,below=5pt] {\small $a-c$};
+\end{tikzpicture}\end{preview}
+% 2 seconda legge
+\begin{preview}\begin{tikzpicture}[scale=1.15]
+\def\sA{3.2}\def\sB{2}\def\sC{2.5}
+\fill[esempio,opacity=.35] (\sC,0) -- plot[domain=-47:47,samples=40] ({\sA*cos(\x)},{\sB*sin(\x)}) -- cycle;
+\fill[terra,opacity=.35] (\sC,0) -- plot[domain=172:188,samples=20] ({\sA*cos(\x)},{\sB*sin(\x)}) -- cycle;
+\draw[thick] (0,0) ellipse (3.2 and 2);
+\fill[sole] (\sC,0) circle (0.2);
+\node[esempio] at (3.4,1.6) {arco lungo: veloce};
+\node[terra!70!black] at (-3,2.2) {arco corto: lento};
+\node at (0,-2.5) {\small le due aree colorate sono uguali: stesso tempo};
+\end{tikzpicture}\end{preview}
+% 3 terza legge log-log
+\begin{preview}\begin{tikzpicture}
+\begin{axis}[xmode=log,ymode=log,width=9cm,height=6.5cm,xlabel={semiasse maggiore $a$ (UA)},ylabel={periodo $T$ (anni)},xmin=0.25,xmax=15,ymin=0.1,ymax=60,log basis x=10]
+\addplot[formula,thick,domain=0.25:15,samples=50] {x^1.5};
+\addplot[only marks,mark=*,mark size=2.5pt,esempio,nodes near coords,point meta=explicit symbolic,every node near coord/.style={font=\scriptsize,black,anchor=west,xshift=2pt}] coordinates {(0.387,0.241)[Mercurio] (0.723,0.615)[Venere] (1,1)[Terra] (1.524,1.881)[Marte] (5.203,11.86)[Giove] (9.537,29.45)[Saturno]};
+\node[formula,anchor=west] at (axis cs:0.3,25) {$T=a^{3/2}$};
+\end{axis}\end{tikzpicture}\end{preview}
+% 4 inverso del quadrato
+\begin{preview}\begin{tikzpicture}
+\begin{axis}[width=9cm,height=6cm,xlabel={distanza $r/r_0$},ylabel={forza $F/F_0$},xmin=0,xmax=5.2,ymin=0,ymax=1.15,xtick={1,2,3,4,5},ytick={0,0.25,0.5,0.75,1},yticklabels={0,$\frac14$,$\frac12$,$\frac34$,1}]
+\addplot[formula,very thick,domain=0.93:5,samples=80] {1/x^2};
+\addplot[only marks,mark=*,esempio] coordinates {(1,1) (2,0.25) (3,0.1111) (4,0.0625)};
+\node[anchor=south west,font=\small] at (axis cs:2,0.27) {$\frac14$};
+\node[anchor=south west,font=\small] at (axis cs:3,0.13) {$\frac19$};
+\node[anchor=south west,font=\small] at (axis cs:4,0.08) {$\frac1{16}$};
+\end{axis}\end{tikzpicture}\end{preview}
+% 5 g(h)
+\begin{preview}\begin{tikzpicture}
+\begin{axis}[width=10cm,height=6cm,xlabel={quota $h$ (migliaia di km)},ylabel={$g$ (m/s$^2$)},xmin=0,xmax=40,ymin=0,ymax=10.5]
+\addplot[formula,very thick,domain=0:40,samples=120] {9.81*(6.37/(6.37+x))^2};
+\addplot[only marks,mark=*,esempio,nodes near coords,point meta=explicit symbolic,every node near coord/.style={font=\scriptsize,black,anchor=south west}] coordinates {(0.4,8.69)[ISS: 8{,}7] (20.2,0.57)[GPS: 0{,}57] (35.8,0.22)[geostaz.: 0{,}22]};
+\end{axis}\end{tikzpicture}\end{preview}
+% 6 cannone di Newton
+\begin{preview}\begin{tikzpicture}[scale=1]
+\fill[terra,opacity=.25] (0,0) circle (2.2); \draw (0,0) circle (2.2); \node at (0,0) {Terra};
+\fill (-0.12,2.2)--(0,2.6)--(0.12,2.2)--cycle; \fill[esempio] (0,2.6) circle (0.06);
+\draw[esempio,thick] (0,2.6) .. controls (0.7,2.6) and (1.0,2.3) .. (1.15,1.88);
+\draw[esempio,thick] (0,2.6) .. controls (1.5,2.6) and (2.2,1.9) .. (2.1,0.65);
+\draw[medica,very thick,dashed] (0,0) circle (2.6);
+\node[esempio,font=\small,anchor=west] at (1.15,2.1) {piano};
+\node[esempio,font=\small,anchor=west] at (2.2,0.9) {più forte};
+\node[medica,font=\small,align=left,anchor=east] at (-2.0,2.4) {abbastanza veloce:\\gira per sempre};
+\end{tikzpicture}\end{preview}
+% 7 satellite
+\begin{preview}\begin{tikzpicture}
+\fill[terra,opacity=.25] (0,0) circle (1.3); \draw (0,0) circle (1.3); \node at (0,-0.4) {$M$};
+\draw[dashed] (0,0) circle (3);
+\draw[gray] (0,0)--(150:3) node[pos=.22,below left] {$R$} node[pos=.72,below left] {$h$}; \fill[gray] (150:3) circle (0.04);
+\fill (-0.15,2.85) rectangle (0.15,3.15);
+\draw[freccia,attenzione] (0,2.8)--(0,1.8) node[midway,left] {$\vec F$};
+\draw[freccia,medica] (0.2,3)--(1.6,3) node[right] {$\vec v$};
+\node[font=\small] at (0,-3.5) {$r=R+h$: si misura dal centro};
+\end{tikzpicture}\end{preview}
+% 8 campo radiale
+\begin{preview}\begin{tikzpicture}
+\fill[terra,opacity=.35] (0,0) circle (0.9); \draw (0,0) circle (0.9); \node at (0,0) {$M$};
+\foreach \t in {0,30,...,330}{
+ \draw[medica,freccia] (\t:1.9)--(\t:1.05);
+ \draw[medica,->,thick] (\t:3.0)--(\t:2.55);}
+\end{tikzpicture}\end{preview}
+% 9 campo lungo Terra-Luna
+\begin{preview}\begin{tikzpicture}
+\begin{axis}[width=10cm,height=6cm,xlabel={distanza dal centro della Terra ($\times 10^8$ m)},ylabel={campo totale (m/s$^2$)},xmin=0.3,xmax=3.7,ymin=-0.02,ymax=0.06,ytick={-0.02,0,0.02,0.04,0.06},yticklabel style={/pgf/number format/fixed},scaled y ticks=false]
+\addplot[formula,very thick,domain=0.3:3.7,samples=200] {3.98/(x^2)/100 - 0.0490/((3.84-x)^2)/100};
+\addplot[only marks,mark=*,attenzione] coordinates {(3.46,0)};
+\node[attenzione,anchor=south east,font=\small] at (axis cs:3.42,0.004) {campo nullo};
+\draw[gray] (axis cs:0.3,0)--(axis cs:3.7,0);
+\node[font=\scriptsize,anchor=west] at (axis cs:0.9,0.045) {verso la Terra};
+\end{axis}\end{tikzpicture}\end{preview}
+% 10 pozzo
+\begin{preview}\begin{tikzpicture}
+\begin{axis}[width=10cm,height=7cm,xlabel={distanza $r/R$},ylabel={energia (unità $GMm/R$)},xmin=0,xmax=6,ymin=-1.1,ymax=0.6,legend style={font=\small,at={(0.97,0.35)},anchor=east}]
+\addplot[attenzione,very thick,domain=1:6,samples=80] {-1/x}; \addlegendentry{$U=-GMm/r$}
+\addplot[medica,very thick,domain=1:6,samples=80] {1/(2*x)}; \addlegendentry{$K$ in orbita}
+\addplot[formula,very thick,domain=1:6,samples=80] {-1/(2*x)}; \addlegendentry{$E=K+U$}
+\draw[gray] (axis cs:0,0)--(axis cs:6,0);
+\fill[terra,opacity=.25] (axis cs:0,-1.1) rectangle (axis cs:1,0.6);
+\node[font=\small,rotate=90] at (axis cs:0.5,-0.25) {pianeta};
+\end{axis}\end{tikzpicture}\end{preview}
+% 11 traiettorie
+\begin{preview}\begin{tikzpicture}[scale=0.85]
+\fill[terra,opacity=.35] (0,0) circle (0.5); \node at (0,0) {$M$};
+\draw[formula,very thick] (0,0) circle (1.8);
+\draw[medica,very thick] (-1.7,0) ellipse (3.5 and 3.06);
+\draw[esempio,very thick,domain=-4.2:4.2,samples=60] plot ({1.8-(\x)^2/7.2},{\x});
+\draw[attenzione,very thick,domain=-1.25:1.25,samples=60] plot ({2.7-0.9*cosh(\x)},{2.55*sinh(\x)});
+\fill (1.8,0) circle (0.08); \draw[->,thick] (1.8,0)--(1.8,1.0) node[right,font=\small] {$\vec v$};
+\node[formula,font=\small] at (0,-1.2) {cerchio};
+\node[medica,font=\small] at (-3.6,-3.4) {ellisse, $E<0$};
+\node[esempio,font=\small,anchor=west] at (-0.4,4.3) {parabola, $E=0$};
+\node[attenzione,font=\small,anchor=west] at (0.2,3.5) {iperbole, $E>0$};
+\end{tikzpicture}\end{preview}
+\end{document}

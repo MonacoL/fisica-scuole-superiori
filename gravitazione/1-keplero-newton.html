@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keplero e Newton</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+</head>
+<body>
+<header class="top">
+<div class="crumbs"><a href="../index.html">Fisica</a> › <a href="index.html">Gravitazione</a> › Lezione 1</div>
+<h1>Lezione 1 · Le leggi di Keplero e la gravitazione universale</h1>
+<p class="sub">Come si muovono i pianeti, perché si muovono così, e come si “pesa” la Terra.</p>
+</header>
+<nav class="bar"><div class="in">
+<a href="#storia">Storia</a><a href="#keplero">Keplero</a><a href="#newton">Newton</a><a href="#g">Gravità g</a><a href="#esercizi">Esercizi</a>
+<span class="sp"></span><button id="tog">Apri tutte le soluzioni</button><button id="theme" title="Tema chiaro/scuro">◐</button>
+</div></nav>
+<main>
+
+<div class="obiettivi"><b>Alla fine di questa lezione sai:</b>
+<ul><li>enunciare le tre leggi di Keplero e usare \(T^2/a^3=\text{costante}\);</li>
+<li>usare la legge di gravitazione universale \(F=G\,m_1m_2/r^2\);</li>
+<li>ricavare l’accelerazione di gravità \(g=GM/R^2\) e usarla per calcolare la massa di un pianeta.</li></ul></div>
+
+<h2 id="storia"><span class="num">1</span>Chi gira attorno a chi?</h2>
+<p>Guardando il cielo di notte, le stelle ruotano tutte insieme, come se fossero attaccate a una grande sfera. Alcuni puntini luminosi però si comportano in modo strano: si spostano rispetto alle stelle e ogni tanto <b>tornano indietro</b> per qualche settimana. I Greci li chiamavano <i>pianeti</i>, cioè “stelle erranti”. Questo ritorno all’indietro si chiama <b>moto retrogrado</b>.</p>
+<ul>
+<li><b>Modello tolemaico</b> (II secolo d.C.): la Terra è ferma al centro e tutto le gira attorno su cerchi. Per spiegare il moto retrogrado Tolomeo fa girare ogni pianeta su un cerchio piccolo (<b>epiciclo</b>), il cui centro gira su un cerchio grande. Le previsioni funzionano, ma il sistema è pieno di aggiustamenti.</li>
+<li><b>Modello copernicano</b> (1543): al centro c’è il Sole, e la Terra è un pianeta come gli altri. Il moto retrogrado diventa semplice: la Terra, più interna e più veloce, “sorpassa” Marte.</li>
+<li><b>Keplero</b> (inizio Seicento), studiando le misure precisissime di Tycho Brahe su Marte, scopre che le orbite non sono cerchi ma <b>ellissi</b>.</li>
+<li><b>Galileo</b> (1610), col cannocchiale, vede quattro lune che girano attorno a Giove: non tutto gira attorno alla Terra.</li>
+</ul>
+<div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
+<p>Sei in autostrada a 130 km/h e sorpassi un camion che va a 90. Se guardi il camion rispetto alle montagne lontane, ti sembra che vada <i>all’indietro</i>, anche se in realtà va avanti. Marte fa lo stesso quando la Terra lo sorpassa: ecco il moto retrogrado.</p>
+</div></div>
+
+<h2 id="keplero"><span class="num">2</span>Le tre leggi di Keplero</h2>
+<p>Le leggi di Keplero sono <b>descrittive</b>: dicono <i>come</i> si muovono i pianeti, non <i>perché</i>. Il perché lo darà Newton.</p>
+
+<h3>Prima legge: la forma dell’orbita</h3>
+<div class="box formula"><div class="bt">Prima legge di Keplero</div><div class="bb">
+<p>I pianeti si muovono su orbite <b>ellittiche</b>, e il Sole occupa uno dei due <b>fuochi</b>.</p>
+</div></div>
+<div class="fig w-md"><img src="../assets/fig/f01.svg" alt="Ellisse con semiassi a e b, semidistanza focale c, Sole in un fuoco, perielio e afelio"><div class="cap">L’ellisse è molto esagerata: le orbite vere dei pianeti sono quasi circonferenze.</div></div>
+<div class="box richiamo"><div class="bt">Richiamo di matematica: l’ellisse</div><div class="bb">
+<p>L’ellisse è l’insieme dei punti per cui la <b>somma delle distanze dai due fuochi è costante</b> (e vale \(2a\)). Si può disegnare con due chiodi, un filo e una matita: i chiodi sono i fuochi, il filo è lungo \(2a\).</p>
+<ul>
+<li><b>semiasse maggiore</b> \(a\): metà dell’asse lungo, è la “distanza media” dal Sole;</li>
+<li><b>semiasse minore</b> \(b\) e <b>semidistanza focale</b> \(c\) (centro–fuoco), legati da \(b^2=a^2-c^2\);</li>
+<li><b>eccentricità</b> \(e=c/a\), tra 0 e 1: dice quanto l’ellisse è schiacciata. Con \(e=0\) i fuochi coincidono e hai una circonferenza;</li>
+<li><b>perielio</b> (punto più vicino al Sole) a distanza \(a-c\); <b>afelio</b> (più lontano) a distanza \(a+c\). Quindi \(a=\dfrac{r_\text{per}+r_\text{af}}{2}\).</li>
+</ul>
+<p>L’orbita della Terra ha \(e=0{,}017\): è quasi un cerchio. Le comete arrivano a \(e=0{,}99\).</p>
+</div></div>
+
+<h3>Seconda legge: la velocità lungo l’orbita</h3>
+<div class="box formula"><div class="bt">Seconda legge di Keplero</div><div class="bb">
+<p>Il segmento che unisce il Sole al pianeta (<b>raggio vettore</b>) spazza <b>aree uguali in tempi uguali</b>.</p>
+</div></div>
+<div class="fig w-md"><img src="../assets/fig/f02.svg" alt="Due spicchi di uguale area: largo vicino al Sole, stretto lontano"></div>
+<div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
+<p>Immagina il raggio vettore come una lancetta che “dipinge” il piano mentre gira, e che in un mese dipinge sempre la stessa area. Vicino al Sole la lancetta è corta, e per dipingere la stessa area deve muoversi più in fretta. Lontano è lunga, e basta muoversi piano. <b>Vicino al Sole il pianeta è veloce, lontano è lento.</b></p>
+</div></div>
+<p>Al perielio e all’afelio la velocità è perpendicolare al raggio. In un tempo breve \(\Delta t\) lo spicchio spazzato è quasi un triangolo, con base \(v\,\Delta t\) e altezza \(r\), quindi area \(A=\tfrac12\,r\,v\,\Delta t\). Imponendo aree uguali negli stessi tempi:</p>
+<div class="box formula"><div class="bt">Perielio e afelio</div><div class="bb">
+\[ r_\text{per}\,v_\text{per}=r_\text{af}\,v_\text{af}\qquad\qquad \frac{\Delta A}{\Delta t}=\tfrac12\,r\,v \]
+</div></div>
+
+<h3>Terza legge: distanza e durata dell’anno</h3>
+<div class="box formula"><div class="bt">Terza legge di Keplero</div><div class="bb">
+\[ \frac{T^2}{a^3}=K \]
+<p>Il quadrato del periodo diviso il cubo del semiasse maggiore è <b>uguale per tutti i corpi che girano attorno allo stesso centro</b>.</p>
+</div></div>
+<div class="tw"><table class="mini"><tr><th>Pianeta</th><th>\(a\) (UA)</th><th>\(T\) (anni)</th><th>\(a^3\)</th><th>\(T^2\)</th></tr>
+<tr><td>Mercurio</td><td>0,387</td><td>0,241</td><td>0,058</td><td>0,058</td></tr>
+<tr><td>Venere</td><td>0,723</td><td>0,615</td><td>0,378</td><td>0,378</td></tr>
+<tr><td>Terra</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>Marte</td><td>1,524</td><td>1,881</td><td>3,54</td><td>3,54</td></tr>
+<tr><td>Giove</td><td>5,203</td><td>11,86</td><td>140,9</td><td>140,7</td></tr>
+<tr><td>Saturno</td><td>9,537</td><td>29,45</td><td>867,4</td><td>867,3</td></tr></table></div>
+<div class="fig w-lg"><img src="../assets/fig/f03.svg" alt="Grafico logaritmico del periodo in funzione del semiasse: i pianeti stanno sulla retta T = a^(3/2)"><div class="cap">In scala logaritmica i pianeti stanno tutti sulla stessa retta: \(T=a^{3/2}\), con \(T\) in anni e \(a\) in UA.</div></div>
+<div class="box richiamo"><div class="bt">Richiamo di matematica: potenze con esponente frazionario</div><div class="bb">
+<p>\(x^{3/2}=\sqrt{x^3}=x\sqrt{x}\) e \(x^{2/3}=\sqrt[3]{x^2}\). Sono una l’inversa dell’altra: se \(T=a^{3/2}\) allora \(a=T^{2/3}\).</p>
+<p>Esempi a mente: \(4^{3/2}=\sqrt{64}=8\); \(8^{2/3}=\sqrt[3]{64}=4\); \(9^{3/2}=27\). Sulla calcolatrice usa il tasto \(x^y\) con l’esponente tra parentesi: <code>29.46^(2/3)</code>.</p>
+</div></div>
+<div class="box esempio"><div class="bt">Esempio svolto: Marte</div><div class="bb">
+<p>Marte impiega 1,88 anni terrestri per un giro attorno al Sole. Quanto vale il suo semiasse in UA?</p>
+<p>Usando la Terra come riferimento (1 anno, 1 UA) la terza legge diventa \(T^2=a^3\):
+\[ a=T^{2/3}=1{,}88^{2/3}=\sqrt[3]{1{,}88^2}=\sqrt[3]{3{,}53}=1{,}52\ \text{UA} \]</p>
+</div></div>
+<div class="box attenzione"><div class="bt">Attenzione</div><div class="bb">
+<ul><li>La costante \(K\) <b>cambia se cambia il corpo centrale</b>. Le lune di Giove hanno una \(K\) diversa dai pianeti attorno al Sole: non puoi mettere la Luna e Marte nella stessa proporzione.</li>
+<li>In un rapporto \(T_1^2/a_1^3=T_2^2/a_2^3\) le unità <b>non vanno convertite</b>, basta che siano le stesse per i due corpi (giorni con giorni, km con km).</li></ul>
+</div></div>
+<div class="box lampo"><div class="bt">Quesito lampo</div><div class="bb">
+<p>Un pianeta è 4 volte più lontano dal Sole della Terra. Il suo anno dura 4 anni?</p>
+<details><summary>Risposta</summary>No: \(T=4^{3/2}=8\) anni. Più lontano vuol dire un giro più lungo <b>e</b> una velocità minore.</details>
+</div></div>
+
+<h2 id="newton"><span class="num">3</span>Newton: la legge di gravitazione universale</h2>
+<p>Il ragionamento di Newton parte da cose che conosci già.</p>
+<ol>
+<li><b>Principio d’inerzia</b>: senza forze un corpo va dritto a velocità costante. Se nessuno tirasse la Luna, se ne andrebbe in linea retta.</li>
+<li>La Luna invece gira in cerchio, quindi serve una <b>forza centripeta</b> diretta verso il centro, come il filo che tiene un sasso che fai roteare.</li>
+<li>L’idea geniale: a fare da “filo” è <b>la stessa forza che fa cadere una mela</b>. La gravità vale ovunque nell’universo.</li>
+</ol>
+<div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
+<p>La Luna <b>sta cadendo</b> verso la Terra, continuamente. Ma intanto va così veloce di lato che, mentre cade, la superficie della Terra “curva via” sotto di lei. Cade per sempre senza mai arrivare: questo è un’orbita.</p>
+</div></div>
+<div class="box esempio"><div class="bt">Esempio svolto: il calcolo di Newton</div><div class="bb">
+<p>La Luna dista \(R_L=3{,}84\cdot10^8\) m dalla Terra e compie un giro in \(T=27{,}3\) d \(=2{,}36\cdot10^6\) s. Confrontiamo la sua accelerazione centripeta con \(g\).</p>
+<ol><li>\(a_c=\dfrac{4\pi^2R_L}{T^2}=\dfrac{4\pi^2\cdot3{,}84\cdot10^8}{(2{,}36\cdot10^6)^2}=2{,}72\cdot10^{-3}\) m/s².</li>
+<li>\(\dfrac{a_c}{g}=\dfrac{2{,}72\cdot10^{-3}}{9{,}81}\approx\dfrac{1}{3600}=\dfrac{1}{60^2}\).</li>
+<li>La Luna dista circa \(60\) raggi terrestri dal centro della Terra. Distanza 60 volte, accelerazione \(60^2\) volte più piccola: la forza va come \(1/r^2\).</li></ol>
+</div></div>
+<div class="box formula"><div class="bt">Legge di gravitazione universale</div><div class="bb">
+\[ F=G\,\frac{m_1\,m_2}{r^2}\qquad\qquad G=6{,}67\cdot10^{-11}\ \mathrm{N\,m^2/kg^2} \]
+<p>La forza è attrattiva, diretta lungo la congiungente dei centri. Le due forze sono uguali e opposte (terzo principio). Vale per masse puntiformi e per sfere omogenee, con \(r\) distanza tra i <b>centri</b>.</p>
+</div></div>
+<p>Leggiamo la formula pezzo per pezzo:</p>
+<ul>
+<li><b>\(m_1m_2\) al numeratore</b>: raddoppi una massa e la forza raddoppia; raddoppi entrambe e quadruplica.</li>
+<li><b>\(r^2\) al denominatore</b> (“inverso del quadrato”): distanza doppia, forza 4 volte più piccola; tripla, 9 volte.</li>
+<li><b>\(G\) piccolissima</b>: tra oggetti di tutti i giorni la gravità non si sente. Diventa importante solo se almeno una massa è enorme.</li>
+</ul>
+<div class="fig w-lg"><img src="../assets/fig/f04.svg" alt="Grafico della forza in funzione della distanza: a distanza doppia un quarto, tripla un nono"></div>
+<div class="box richiamo"><div class="bt">Richiamo di matematica: proporzionalità e notazione scientifica</div><div class="bb">
+<p>Se \(F\propto 1/r^2\), per sapere come cambia \(F\) basta il <b>rapporto</b>: \(\dfrac{F_2}{F_1}=\left(\dfrac{r_1}{r_2}\right)^2\). Non servono né \(G\) né le masse.</p>
+<p>Con le potenze di 10: \(10^a\cdot10^b=10^{a+b}\), \(\dfrac{10^a}{10^b}=10^{a-b}\), \((10^a)^2=10^{2a}\). Per esempio \((3{,}84\cdot10^8)^2=14{,}7\cdot10^{16}=1{,}47\cdot10^{17}\).</p>
+</div></div>
+<div class="box esempio"><div class="bt">Esempio svolto: due palline</div><div class="bb">
+<p>Due palline di massa 0,50 kg e 1,2 kg si trovano a 0,40 m di distanza.</p>
+\[ F=6{,}67\cdot10^{-11}\cdot\frac{0{,}50\cdot1{,}2}{0{,}40^2}=2{,}5\cdot10^{-10}\ \text{N} \]
+<p>Miliardi di volte meno di 1 N: la gravità tra oggetti comuni è debolissima.</p>
+</div></div>
+<div class="box lampo"><div class="bt">Quesito lampo</div><div class="bb">
+<p>La Terra ti attira con una forza di 600 N. Con quanta forza tu attiri la Terra?</p>
+<details><summary>Risposta</summary>600 N, per il terzo principio. Ma la massa della Terra è enorme, quindi la sua accelerazione \(a=F/M\) è praticamente zero.</details>
+</div></div>
+
+<h2 id="g"><span class="num">4</span>L’accelerazione di gravità e la massa della Terra</h2>
+<p>Il peso di un corpo sulla superficie si scrive in due modi: \(P=mg\) e \(P=G\,M_Tm/R_T^2\). Uguagliando, la massa \(m\) si semplifica:</p>
+<div class="box formula"><div class="bt">Accelerazione di gravità</div><div class="bb">
+\[ g=\frac{GM}{R^2}\qquad\qquad g(h)=\frac{GM}{(R+h)^2} \]
+<p>\(g\) non dipende dalla massa del corpo che cade. Ad altezza \(h\) la distanza dal centro è \(R+h\).</p>
+</div></div>
+<div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
+<p>Perché un martello e una piuma, senza aria, cadono insieme? Il martello è tirato con una forza più grande, ma è anche più difficile da mettere in moto. I due effetti si compensano esattamente. Gli astronauti dell’Apollo 15 lo hanno provato sulla Luna.</p>
+</div></div>
+<div class="fig w-lg"><img src="../assets/fig/f05.svg" alt="Grafico di g in funzione della quota: 8,7 alla ISS, 0,57 ai GPS, 0,22 ai geostazionari"><div class="cap">\(g\) diminuisce con la quota, ma alla stazione spaziale (400 km) vale ancora 8,7 m/s².</div></div>
+<p><b>Come si “pesa” la Terra.</b> Nella formula \(g=GM_T/R_T^2\) conosciamo \(g\) (si misura con un pendolo) e \(R_T\). Manca \(G\), che è difficile da misurare perché tra oggetti da laboratorio la forza è minuscola. Ci riesce <b>Cavendish</b> nel 1798 con una bilancia di torsione: un manubrio appeso a un filo sottilissimo che si torce quando due grosse sfere di piombo attirano le sue palline. Noto \(G\):</p>
+\[ M_T=\frac{g\,R_T^2}{G}=\frac{9{,}81\cdot(6{,}37\cdot10^6)^2}{6{,}67\cdot10^{-11}}=5{,}97\cdot10^{24}\ \text{kg} \]
+<div class="box approf"><div class="bt">Approfondimento: dentro la Terra</div><div class="bb">
+<p>Dividendo la massa per il volume si trova la densità media della Terra: circa 5,5 g/cm³. Le rocce in superficie arrivano a 2,7 g/cm³, quindi all’interno c’è qualcosa di molto più denso: il nucleo di ferro e nichel.</p>
+</div></div>
+<div class="box esempio"><div class="bt">Esempio svolto: il metodo dei rapporti</div><div class="bb">
+<p>Giove ha massa 318 volte quella della Terra e raggio 11,0 volte maggiore. Quanto vale \(g\) su Giove?</p>
+\[ \frac{g_G}{g_T}=\frac{M_G/M_T}{(R_G/R_T)^2}=\frac{318}{11{,}0^2}=2{,}63\quad\Rightarrow\quad g_G=2{,}63\cdot9{,}81=25{,}8\ \text{m/s}^2 \]
+<p>Niente \(G\), niente potenze di 10.</p>
+</div></div>
+<div class="box attenzione"><div class="bt">Attenzione</div><div class="bb">
+<ul><li>La distanza nella formula è dal <b>centro</b>: ad altezza \(h\) usa \(r=R+h\), non \(h\).</li>
+<li>Se il testo ti dà il <b>diametro</b>, dividilo per 2.</li>
+<li>Converti km in m prima di usare \(G\).</li></ul>
+</div></div>
+
+<h2 id="esercizi"><span class="num">5</span>Esercizi</h2>
+<p class="note">I pallini indicano la difficoltà. Per ogni esercizio puoi vedere prima solo il risultato, per controllare il tuo, e poi la soluzione svolta. Dati che servono spesso: \(G=6{,}67\cdot10^{-11}\ \mathrm{N\,m^2/kg^2}\), \(M_T=5{,}97\cdot10^{24}\) kg, \(R_T=6{,}37\cdot10^6\) m, \(g=9{,}81\) m/s², 1 UA \(=1{,}50\cdot10^{11}\) m (tutti nel <a href="formulario.html">formulario</a>).</p>
+
+<div class="ex" id="e1-1"><div class="head"><span class="n">1</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="●○○"></span></div>
+<p>Un pianeta impiega 27 anni terrestri per compiere un giro attorno al Sole.</p>
+<ul class="req"><li>Quanto dista dal Sole, rispetto alla distanza Terra–Sole?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(a=9\) UA, cioè 9 volte la distanza Terra–Sole.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Con la Terra come riferimento (anni e UA) la terza legge diventa \(T^2=a^3\).</li>
+<li>\(a^3=27^2=729\Rightarrow a=\sqrt[3]{729}=9\) UA.</li></ol>
+<p>In alternativa: \(a=T^{2/3}=27^{2/3}=(\sqrt[3]{27})^2=3^2=9\).</p>
+</details></div>
+
+<div class="ex" id="e1-2"><div class="head"><span class="n">2</span><span class="lvl" data-l="●○○"></span></div>
+<p>Il pianeta nano Cerere orbita nella fascia degli asteroidi, con semiasse maggiore di 2,77 UA.</p>
+<ul class="req"><li>Quanto dura un anno su Cerere?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(T=4{,}61\) anni.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(T^2=a^3\) (anni, UA), quindi \(T=a^{3/2}\).</li>
+<li>\(T=2{,}77^{3/2}=2{,}77\cdot\sqrt{2{,}77}=2{,}77\cdot1{,}664=4{,}61\) anni.</li></ol>
+</details></div>
+
+<div class="ex" id="e1-3"><div class="head"><span class="n">3</span><span class="lvl" data-l="●●○"></span></div>
+<p>Io, una luna di Giove, ha un’orbita di raggio \(4{,}22\cdot10^5\) km e un periodo di 1,77 giorni. Europa, un’altra luna di Giove, ha un periodo di 3,55 giorni.</p>
+<ul class="req"><li>Calcola il raggio dell’orbita di Europa.</li><li>Potresti usare la Terra come riferimento, come negli esercizi precedenti?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(r_E=6{,}71\cdot10^5\) km. No, la Terra non gira attorno a Giove.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Io ed Europa girano attorno allo stesso corpo, quindi \(\dfrac{T_I^2}{r_I^3}=\dfrac{T_E^2}{r_E^3}\).</li>
+<li>\(r_E=r_I\left(\dfrac{T_E}{T_I}\right)^{2/3}=4{,}22\cdot10^5\cdot\left(\dfrac{3{,}55}{1{,}77}\right)^{2/3}\).</li>
+<li>\(3{,}55/1{,}77=2{,}006\); \(2{,}006^{2/3}=1{,}590\).</li>
+<li>\(r_E=4{,}22\cdot10^5\cdot1{,}590=6{,}71\cdot10^5\) km.</li></ol>
+<p>Giorni e km non vanno convertiti: si semplificano nel rapporto. La costante \(K\) delle lune di Giove è diversa da quella dei pianeti attorno al Sole, quindi la Terra non c’entra.</p>
+</details></div>
+
+<div class="ex" id="e1-4"><div class="head"><span class="n">4</span><span class="lvl" data-l="●●○"></span></div>
+<p>Una cometa passa al perielio a 0,59 UA dal Sole e all’afelio arriva a 35,1 UA.</p>
+<div class="fig w-md"><svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" font-size="12" fill="currentColor" role="img" aria-label="Orbita molto allungata di una cometa"><ellipse cx="180" cy="70" rx="165" ry="42" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="337" cy="70" r="7" fill="#f5a623"/><text x="300" y="125">Sole</text><circle cx="345" cy="70" r="3" fill="#B5651D"/><circle cx="15" cy="70" r="3" fill="#B5651D"/><text x="8" y="125">afelio: 35,1 UA</text><text x="250" y="20">perielio: 0,59 UA</text><line x1="15" y1="70" x2="337" y2="70" stroke="currentColor" stroke-dasharray="4 3" stroke-width=".8"/></svg></div>
+<ul class="req"><li>Calcola il semiasse maggiore e l’eccentricità dell’orbita.</li><li>Ogni quanti anni la cometa torna vicino al Sole?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(a=17{,}8\) UA; \(e=0{,}967\); \(T=75{,}4\) anni.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>L’asse maggiore è la somma delle due distanze: \(a=\dfrac{0{,}59+35{,}1}{2}=17{,}85\) UA.</li>
+<li>Il perielio è a \(a-c\), quindi \(c=a-r_\text{per}=17{,}85-0{,}59=17{,}26\) UA.</li>
+<li>\(e=c/a=17{,}26/17{,}85=0{,}967\): un’orbita molto allungata.</li>
+<li>Terza legge con la Terra come riferimento: \(T=a^{3/2}=17{,}85^{3/2}=75{,}4\) anni.</li></ol>
+</details></div>
+
+<div class="ex" id="e1-5"><div class="head"><span class="n">5</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="●●○"></span></div>
+<p>La cometa dell’esercizio precedente al perielio si trova a \(8{,}8\cdot10^{10}\) m dal Sole e viaggia a 54,5 km/s. All’afelio dista \(5{,}25\cdot10^{12}\) m.</p>
+<ul class="req"><li>Con che velocità si muove all’afelio?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(v_\text{af}=914\) m/s, circa 60 volte più lenta che al perielio.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Seconda legge di Keplero al perielio e all’afelio: \(r_\text{per}v_\text{per}=r_\text{af}v_\text{af}\).</li>
+<li>\(v_\text{af}=v_\text{per}\dfrac{r_\text{per}}{r_\text{af}}=54{,}5\cdot10^3\cdot\dfrac{8{,}8\cdot10^{10}}{5{,}25\cdot10^{12}}\).</li>
+<li>\(v_\text{af}=54{,}5\cdot10^3\cdot0{,}01676=914\) m/s.</li></ol>
+</details></div>
+
+<div class="ex" id="e1-6"><div class="head"><span class="n">6</span><span class="lvl" data-l="●○○"></span></div>
+<p>Due automobili di massa 1500 kg e 1200 kg sono parcheggiate con i baricentri a 3,0 m di distanza.</p>
+<ul class="req"><li>Quanto vale la forza gravitazionale tra le due auto?</li><li>Confrontala con il peso di una zanzara (circa \(2\cdot10^{-5}\) N).</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F=1{,}3\cdot10^{-5}\) N, meno del peso di una zanzara.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(F=G\dfrac{m_1m_2}{r^2}=6{,}67\cdot10^{-11}\cdot\dfrac{1500\cdot1200}{3{,}0^2}\).</li>
+<li>\(=6{,}67\cdot10^{-11}\cdot\dfrac{1{,}8\cdot10^6}{9{,}0}=6{,}67\cdot10^{-11}\cdot2{,}0\cdot10^5=1{,}3\cdot10^{-5}\) N.</li></ol>
+<p>Per questo non vediamo le auto parcheggiate avvicinarsi: l’attrito con l’asfalto è milioni di volte più grande.</p>
+</details></div>
+
+<div class="ex" id="e1-7"><div class="head"><span class="n">7</span><span class="tag sesucc">Che cosa succede se</span><span class="lvl" data-l="●○○"></span></div>
+<p>Due corpi si attraggono con una forza \(F\). Raddoppi la massa di uno dei due e triplichi la distanza tra i centri.</p>
+<ul class="req"><li>Quanto vale la nuova forza, in funzione di \(F\)?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F'=\dfrac29F\approx0{,}22\,F\).</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(F'=G\dfrac{(2m_1)\,m_2}{(3r)^2}=\dfrac{2}{9}\,G\dfrac{m_1m_2}{r^2}=\dfrac29F\).</li></ol>
+<p>Il fattore 2 della massa non basta a compensare il fattore 9 della distanza al quadrato.</p>
+</details></div>
+
+<div class="ex" id="e1-8"><div class="head"><span class="n">8</span><span class="lvl" data-l="●○○"></span></div>
+<p>La Terra (\(5{,}97\cdot10^{24}\) kg) dista in media \(1{,}50\cdot10^{11}\) m dal Sole (\(1{,}99\cdot10^{30}\) kg).</p>
+<ul class="req"><li>Calcola la forza con cui il Sole attira la Terra.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F=3{,}52\cdot10^{22}\) N.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(F=6{,}67\cdot10^{-11}\cdot\dfrac{1{,}99\cdot10^{30}\cdot5{,}97\cdot10^{24}}{(1{,}50\cdot10^{11})^2}\).</li>
+<li>Numeratore: \(6{,}67\cdot1{,}99\cdot5{,}97\cdot10^{-11+30+24}=79{,}2\cdot10^{43}\). Denominatore: \(2{,}25\cdot10^{22}\).</li>
+<li>\(F=\dfrac{7{,}92\cdot10^{44}}{2{,}25\cdot10^{22}}=3{,}52\cdot10^{22}\) N.</li></ol>
+</details></div>
+
+<div class="ex" id="e1-9"><div class="head"><span class="n">9</span><span class="lvl" data-l="●●○"></span></div>
+<p>Marte ha una massa pari a 0,107 volte quella terrestre e un raggio pari a 0,532 volte quello terrestre.</p>
+<ul class="req"><li>Quanto vale l’accelerazione di gravità sulla superficie di Marte?</li><li>Quanto pesa su Marte una persona di 60 kg?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(g_M=3{,}71\) m/s²; peso 223 N.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Metodo dei rapporti: \(\dfrac{g_M}{g_T}=\dfrac{M_M/M_T}{(R_M/R_T)^2}=\dfrac{0{,}107}{0{,}532^2}=\dfrac{0{,}107}{0{,}283}=0{,}378\).</li>
+<li>\(g_M=0{,}378\cdot9{,}81=3{,}71\) m/s².</li>
+<li>\(P=mg_M=60\cdot3{,}71=223\) N (sulla Terra sarebbero 589 N).</li></ol>
+</details></div>
+
+<div class="ex" id="e1-10"><div class="head"><span class="n">10</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="●●●"></span></div>
+<p>A che altezza dalla superficie terrestre l’accelerazione di gravità vale la metà di quella al suolo?</p>
+<details class="ris"><summary>Risultato</summary>\(h=(\sqrt2-1)R_T=2{,}64\cdot10^3\) km.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(\dfrac{g(h)}{g_0}=\left(\dfrac{R_T}{R_T+h}\right)^2=\dfrac12\).</li>
+<li>Radice quadrata: \(\dfrac{R_T+h}{R_T}=\sqrt2\Rightarrow h=(\sqrt2-1)R_T\).</li>
+<li>\(h=0{,}414\cdot6370\) km \(=2{,}64\cdot10^3\) km.</li></ol>
+<p>Prendere la radice subito evita un’equazione di secondo grado.</p>
+</details></div>
+
+<div class="ex" id="e1-11"><div class="head"><span class="n">11</span><span class="lvl" data-l="●●○"></span></div>
+<p>Sulla superficie di Venere, che ha raggio \(6{,}05\cdot10^6\) m, l’accelerazione di gravità vale 8,87 m/s².</p>
+<ul class="req"><li>Calcola la massa di Venere.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(M_V=4{,}87\cdot10^{24}\) kg.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Da \(g=GM/R^2\) si ricava \(M=\dfrac{gR^2}{G}\).</li>
+<li>\(M=\dfrac{8{,}87\cdot(6{,}05\cdot10^6)^2}{6{,}67\cdot10^{-11}}=\dfrac{8{,}87\cdot3{,}66\cdot10^{13}}{6{,}67\cdot10^{-11}}=4{,}87\cdot10^{24}\) kg.</li></ol>
+<p>È l’82% della massa della Terra.</p>
+</details></div>
+
+<div class="ex" id="e1-12"><div class="head"><span class="n">12</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="●●○"></span></div>
+<p>Considera la Terra come una sfera di raggio \(6{,}37\cdot10^6\) m e massa \(5{,}97\cdot10^{24}\) kg.</p>
+<ul class="req"><li>Calcola la sua densità media.</li><li>Il granito ha densità \(2{,}7\cdot10^3\) kg/m³. Che cosa puoi dire dell’interno della Terra?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(d=5{,}51\cdot10^3\) kg/m³, il doppio delle rocce di superficie: dentro c’è materiale più denso.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Volume della sfera: \(V=\tfrac43\pi R^3=\tfrac43\pi(6{,}37\cdot10^6)^3=1{,}08\cdot10^{21}\) m³.</li>
+<li>\(d=\dfrac{M}{V}=\dfrac{5{,}97\cdot10^{24}}{1{,}08\cdot10^{21}}=5{,}51\cdot10^3\) kg/m³.</li>
+<li>La media è il doppio delle rocce in superficie, quindi all’interno deve esserci materiale molto più denso (il nucleo di ferro).</li></ol>
+</details></div>
+
+<div class="ex" id="e1-13"><div class="head"><span class="n">13</span><span class="lvl" data-l="●●○"></span></div>
+<p>Un astronauta di 70 kg cammina sulla Luna (\(M_L=7{,}35\cdot10^{22}\) kg, \(R_L=1{,}74\cdot10^6\) m).</p>
+<ul class="req"><li>Quanto vale \(g\) sulla Luna?</li><li>Con che forza la Luna attira l’astronauta?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(g_L=1{,}62\) m/s²; \(F=113\) N.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(g_L=\dfrac{GM_L}{R_L^2}=\dfrac{6{,}67\cdot10^{-11}\cdot7{,}35\cdot10^{22}}{(1{,}74\cdot10^6)^2}=\dfrac{4{,}90\cdot10^{12}}{3{,}03\cdot10^{12}}=1{,}62\) m/s².</li>
+<li>\(F=mg_L=70\cdot1{,}62=113\) N, circa un sesto del peso sulla Terra (687 N).</li></ol>
+</details></div>
+
+<div class="ex" id="e1-14"><div class="head"><span class="n">14</span><span class="lvl" data-l="●●○"></span></div>
+<p>Un satellite di 850 kg orbita a 500 km dalla superficie terrestre.</p>
+<div class="fig w-sm"><svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" font-size="12" fill="currentColor" role="img" aria-label="Satellite a quota h sopra la Terra"><circle cx="130" cy="140" r="55" fill="#3b82f6" fill-opacity=".3" stroke="currentColor"/><text x="112" y="160">Terra</text><circle cx="130" cy="140" r="100" fill="none" stroke="currentColor" stroke-dasharray="4 3"/><line x1="130" y1="140" x2="130" y2="85" stroke="#888"/><text x="136" y="120">R</text><line x1="130" y1="85" x2="130" y2="44" stroke="#B5651D" stroke-width="2"/><text x="136" y="70" fill="#B5651D">h = 500 km</text><rect x="124" y="34" width="12" height="9"/><text x="10" y="196">la distanza da usare è r = R + h</text></svg></div>
+<ul class="req"><li>Con che forza la Terra lo attira?</li><li>Che errore faresti usando \(h\) al posto di \(r\)?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F=7{,}17\cdot10^3\) N. Usando \(h\) otterresti una forza circa 190 volte troppo grande.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(r=R_T+h=6{,}37\cdot10^6+0{,}50\cdot10^6=6{,}87\cdot10^6\) m.</li>
+<li>\(F=G\dfrac{M_Tm}{r^2}=\dfrac{6{,}67\cdot10^{-11}\cdot5{,}97\cdot10^{24}\cdot850}{(6{,}87\cdot10^6)^2}=\dfrac{3{,}38\cdot10^{17}}{4{,}72\cdot10^{13}}=7{,}17\cdot10^3\) N.</li>
+<li>Con \(h=5{,}0\cdot10^5\) m al denominatore, \((6{,}87/0{,}50)^2\approx189\) volte di più: un risultato assurdo.</li></ol>
+</details></div>
+
+<div class="pager"><a href="index.html">← Gravitazione</a><a href="2-satelliti-campo.html">Lezione 2: satelliti e campo →</a></div>
+</main>
+<footer>Fisica per le superiori · Gravitazione</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

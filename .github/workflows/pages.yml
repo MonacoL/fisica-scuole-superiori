@@ -1,0 +1,50 @@
+name: controlli e pubblicazione
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  controlli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Link, tag, formule, testo
+        run: python3 tools/controlla.py
+      - name: Layout telefono e tablet
+        run: |
+          pip install -q playwright
+          python -m playwright install --with-deps chromium
+          python tools/controlla_layout.py
+      - name: Prepara il sito
+        run: |
+          mkdir _site
+          cp -r index.html .nojekyll assets gravitazione _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  pubblica:
+    if: github.event_name != 'pull_request'
+    needs: controlli
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
