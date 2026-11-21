@@ -50,16 +50,6 @@ p("10 vf Terra",sqrt(2*GMT/RT)); p("10 v radente",sqrt(GMT/RT))
 p("11 v impatto da h=RT",sqrt(GMT/RT)); 
 print("== teoria ==")
 p("g(h) 400km",GMT/(RT+4e5)**2); p("ac Luna",4*pi**2*dTL/(27.3*86400)**2)
-# buchi neri: orologi, GPS, maree (corpo lungo L=2 m)
-for x in (10,2,1.1): p(f"BN sqrt(1-Rs/r) r={x}Rs",sqrt(1-1/x))
-rG=2.66e7; vG=3.87e3; fg=GMT/c**2*(1/RT-1/rG); fv=vG**2/(2*c**2)
-p("BN GPS grav us/giorno",fg*86400*1e6); p("BN GPS vel us/giorno",fv*86400*1e6); p("BN GPS netto us/giorno",(fg-fv)*86400*1e6)
-p("BN GPS errore km/giorno",(fg-fv)*86400*c/1e3)
-L=2.0; p("BN marea Terra",2*GMT*L/RT**3); p("BN Rs Terra mm",2*GMT/c**2*1e3)
-for nome,M in (("10 Msole",10*MS),("Sgr A*",4e6*MS)):
-    Rs=2*G*M/c**2; dg=2*G*M*L/Rs**3
-    p(f"BN {nome} Rs",Rs); p(f"BN {nome} marea a Rs",dg); p(f"BN {nome} marea/g0",dg/g0); p(f"BN {nome} tau max s",pi*G*M/c**3)
-    p(f"BN {nome} r con marea 10 g (km)",(2*G*M*L/(10*g0))**(1/3)/1e3)
 for nome,a_,T_ in [("Mercurio",0.387,0.241),("Venere",0.723,0.615),("Terra",1,1),("Marte",1.524,1.881),("Giove",5.203,11.86),("Saturno",9.537,29.45)]:
     print(nome,a_**3,T_**2)
 print("== verifica ==")
