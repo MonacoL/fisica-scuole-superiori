@@ -12,13 +12,28 @@
   var t = document.getElementById('theme');
   var root = document.documentElement;
   try { var s = localStorage.getItem('tema'); if (s) root.dataset.theme = s; } catch (e) {}
+  // Icona: luna quando il tema è chiaro (clic per lo scuro), sole quando è scuro.
+  var SOLE = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>';
+  var LUNA = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg>';
+  function scuro() {
+    return root.dataset.theme ? root.dataset.theme === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function icona() {
+    if (!t) return;
+    var d = scuro();
+    t.innerHTML = d ? SOLE : LUNA;
+    t.setAttribute('aria-label', d ? 'Passa al tema chiaro' : 'Passa al tema scuro');
+    t.title = t.getAttribute('aria-label');
+  }
   if (t) {
+    icona();
     t.addEventListener('click', function () {
-      var dark = root.dataset.theme ? root.dataset.theme === 'dark'
-        : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.dataset.theme = dark ? 'light' : 'dark';
+      root.dataset.theme = scuro() ? 'light' : 'dark';
       try { localStorage.setItem('tema', root.dataset.theme); } catch (e) {}
+      icona();
     });
+    try { window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', icona); } catch (e) {}
   }
 })();
 

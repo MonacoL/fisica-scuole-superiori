@@ -12,89 +12,422 @@
 <header class="top">
 <div class="crumbs"><a href="../index.html">Fisica</a> / <a href="index.html">Gravitazione</a> / Verifica</div>
 <h1>Verifica finale di gravitazione</h1>
-<p class="sub">Dodici domande su tutta l’unità. Prova a rispondere senza guardare la teoria, poi controlla.</p>
+<p class="sub">Sedici domande di teoria e venti problemi su tutta l’unità, con due compiti di prova da un’ora e da due ore.</p>
 </header>
 <nav class="bar"><div class="in">
-<a href="index.html">Gravitazione</a><a href="formulario.html">Formulario</a>
+<a href="#compiti">Compiti di prova</a><a href="#teoria">Domande</a><a href="#pianeti">Pianeti</a><a href="#ellissi">Ellissi</a><a href="#satelliti">Satelliti</a><a href="#vettori">Più masse</a><a href="#dimostrazioni">Dimostrazioni</a><a href="#passaggi">Più passaggi</a>
 <span class="sp"></span><button id="tog">Apri tutte le soluzioni</button><button id="theme" title="Passa dal tema chiaro a quello scuro">Tema</button>
 </div></nav>
 <main>
+
 <div class="box attenzione"><div class="bt">Come usarla</div><div class="bb">
-<p>Le prime otto domande si fanno a mente o quasi; le ultime quattro richiedono la calcolatrice. Se sbagli una domanda, il link “Ripassa” ti porta alla parte di teoria corrispondente.</p>
+<p>Prova a rispondere senza guardare la teoria, poi apri il risultato. Se il tuo è diverso, rifai il calcolo prima di aprire la soluzione svolta. Nelle domande di teoria il link “Ripassa” porta alla parte della lezione da rileggere.</p>
+<p>Dati: \(G=6{,}67\cdot10^{-11}\ \mathrm{N\,m^2/kg^2}\), \(M_T=5{,}97\cdot10^{24}\) kg, \(R_T=6{,}37\cdot10^6\) m, \(GM_T=3{,}98\cdot10^{14}\ \mathrm{m^3/s^2}\), \(g=9{,}81\) m/s². Gli altri sono nel <a href="formulario.html">formulario</a>.</p>
 </div></div>
 
-<h2>Domande veloci</h2>
+<h2 id="compiti">Compiti di prova</h2>
+<p>Per allenarti nelle condizioni di un compito in classe, fai di seguito gli esercizi di uno dei due compiti, senza formulario e con il tempo misurato; puoi usare solo la calcolatrice. Correggi solo alla fine.</p>
+<div class="cards">
+<div class="card"><span class="k">1 ora</span><h3>Compito breve</h3><p>Domande <a href="#a1">A1</a> e <a href="#a4">A4</a>; problemi <a href="#b1">B1</a>, <a href="#b6">B6</a> e <a href="#b11">B11</a>.</p></div>
+<div class="card"><span class="k">2 ore</span><h3>Compito completo</h3><p>Domande <a href="#a1">A1</a>, <a href="#a3">A3</a>, <a href="#a4">A4</a> e <a href="#a6">A6</a>; problemi <a href="#b1">B1</a>, <a href="#b4">B4</a>, <a href="#b6">B6</a>, <a href="#b9">B9</a>, <a href="#b11">B11</a> e <a href="#b16">B16</a>.</p></div>
+</div>
+<p>In un compito conta anche come scrivi: parti dalla formula generale, ricava l’incognita in simboli e sostituisci i numeri solo alla fine, con le unità di misura.</p>
+<div class="box attenzione"><div class="bt">Errori frequenti nei compiti</div><div class="bb">
+<ul>
+<li>Confondere \(g\) (accelerazione di gravità, 9,81 m/s² sulla Terra) con \(G\) (costante universale, \(6{,}67\cdot10^{-11}\)). Nelle formule dei satelliti compare il prodotto \(GM\).</li>
+<li>Sbagliare dove finisce la radice: \(v_f=\sqrt{\dfrac{2GM}{R}}\), con \(R\) sotto la radice.</li>
+<li>Scrivere \(h+v_0t+\tfrac12gt^2\) per un corpo che cade: se l’asse punta verso l’alto, l’accelerazione è \(-g\).</li>
+<li>Disegnare una “forza centrifuga” su un corpo in orbita. Nel sistema di riferimento inerziale l’unica forza è la gravità, che fa da forza centripeta.</li>
+<li>Usare la quota \(h\) al posto della distanza dal centro \(r=R+h\), o il diametro al posto del raggio. Lasciare il periodo in ore invece di convertirlo in secondi.</li>
+</ul>
+</div></div>
 
-<div class="ex"><div class="head"><span class="n">1</span><span class="lvl" data-l="livello 1"></span></div>
-<p>Un pianeta dista 4 UA dal Sole. Quanto dura il suo anno?</p>
-<details class="ris"><summary>Risultato</summary>8 anni.</details>
-<details class="sol"><summary>Soluzione svolta</summary>\(T=a^{3/2}=4^{3/2}=\sqrt{64}=8\) anni. <a href="1-keplero-newton.html#keplero">Ripassa la terza legge</a>.</details></div>
+<h2 id="teoria">Parte A: domande di teoria</h2>
 
-<div class="ex"><div class="head"><span class="n">2</span><span class="lvl" data-l="livello 1"></span></div>
-<p>Se la distanza tra due masse si dimezza, la forza gravitazionale…</p>
-<details class="ris"><summary>Risultato</summary>…quadruplica.</details>
-<details class="sol"><summary>Soluzione svolta</summary>\(F\propto\dfrac{1}{r^2}\): con \(r\to\dfrac{r}{2}\), \(F\to F\cdot2^2=4F\). <a href="1-keplero-newton.html#newton">Ripassa la legge di gravitazione</a>.</details></div>
+<div class="ex" id="a1"><div class="head"><span class="n">A1</span><span class="lvl" data-l="livello 1"></span></div>
+<p>La Terra gira attorno al Sole su un’orbita ellittica. In che punto dell’orbita è più veloce? Spiega perché, con una legge di Keplero e con una legge di conservazione.</p>
+<details class="ris"><summary>Risultato</summary>Al perielio, il punto più vicino al Sole.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>Per la seconda legge di Keplero il raggio vettore spazza aree uguali in tempi uguali. Vicino al Sole il raggio è corto, quindi per spazzare la stessa area il pianeta percorre un arco più lungo, cioè va più veloce.</p>
+<p>Lo stesso risultato viene dalla conservazione del momento angolare: al perielio e all’afelio \(r_Pv_P=r_Av_A\), e siccome \(r_P&lt;r_A\) si ha \(v_P&gt;v_A\). <a href="1-keplero-newton.html#keplero">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">3</span><span class="lvl" data-l="livello 1"></span></div>
-<p>In che punto della sua orbita un pianeta va più veloce? Quale legge lo dice?</p>
-<details class="ris"><summary>Risultato</summary>Al perielio; seconda legge di Keplero.</details>
-<details class="sol"><summary>Soluzione svolta</summary>Aree uguali in tempi uguali: vicino al Sole il raggio vettore è corto, quindi per spazzare la stessa area il pianeta deve percorrere un arco più lungo, cioè andare più veloce. <a href="1-keplero-newton.html#keplero">Ripassa</a>.</details></div>
+<div class="ex" id="a2"><div class="head"><span class="n">A2</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Se la distanza tra due masse si dimezza, come cambia la forza gravitazionale? E se raddoppiano entrambe le masse e anche la distanza?</p>
+<details class="ris"><summary>Risultato</summary>Quadruplica; nel secondo caso resta uguale.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>\(F\propto\dfrac{1}{r^2}\): con \(r\to\dfrac r2\) la forza diventa \(2^2=4\) volte più grande. Nel secondo caso \(F'=G\dfrac{(2m_1)(2m_2)}{(2r)^2}=\dfrac44F=F\). <a href="1-keplero-newton.html#newton">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">4</span><span class="lvl" data-l="livello 1"></span></div>
-<p>Due satelliti di masse diverse sono sulla stessa orbita circolare. Che cosa hanno di uguale tra forza, velocità ed energia?</p>
-<details class="ris"><summary>Risultato</summary>La velocità (e il periodo).</details>
-<details class="sol"><summary>Soluzione svolta</summary>\(v=\sqrt{\dfrac{GM}{r}}\) non contiene la massa del satellite. Forza ed energia invece sono proporzionali alla massa. <a href="2-satelliti-campo.html#satelliti">Ripassa</a>.</details></div>
+<div class="ex" id="a3"><div class="head"><span class="n">A3</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Spiega perché gli astronauti sulla stazione spaziale galleggiano, anche se a quella quota \(g\) vale circa 8,7 m/s².</p>
+<details class="ris"><summary>Risultato</summary>Sono in caduta libera insieme alla stazione: il peso apparente è zero.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>La gravità agisce sugli astronauti e sulla stazione, e fa da forza centripeta per entrambi. Tutti cadono con la stessa accelerazione, quindi il pavimento non spinge sugli astronauti e una bilancia segnerebbe zero anche se la gravità continua ad agire. <a href="2-satelliti-campo.html#peso">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">5</span><span class="lvl" data-l="livello 1"></span></div>
-<p>Perché un astronauta sulla stazione spaziale galleggia?</p>
-<details class="ris"><summary>Risultato</summary>Perché lui e la stazione sono in caduta libera insieme, non perché manca la gravità.</details>
-<details class="sol"><summary>Soluzione svolta</summary>A 400 km \(g\approx8{,}7\) m/s². Stazione e astronauta cadono con la stessa accelerazione, quindi il pavimento non lo spinge: il peso apparente è zero. <a href="2-satelliti-campo.html#peso">Ripassa</a>.</details></div>
+<div class="ex" id="a4"><div class="head"><span class="n">A4</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Un satellite viene sostituito da uno di massa doppia. Come cambiano la velocità di fuga dalla Terra, la velocità sulla stessa orbita circolare, la forza di gravità e l’energia totale?</p>
+<details class="ris"><summary>Risultato</summary>Velocità di fuga e velocità orbitale restano uguali; la forza raddoppia e l’energia totale diventa il doppio, cioè più negativa.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>In \(v_f=\sqrt{\dfrac{2GM}{R}}\) e in \(v=\sqrt{\dfrac{GM}{r}}\) compare solo la massa \(M\) del pianeta: la massa del satellite si semplifica. Invece \(F=G\dfrac{Mm}{r^2}\) ed \(E=-\dfrac{GMm}{2r}\) sono proporzionali a \(m\): la forza raddoppia e l’energia, che è negativa, diventa il doppio più negativa. <a href="3-energia-fuga.html#fuga">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">6</span><span class="lvl" data-l="livello 2"></span></div>
+<div class="ex" id="a5"><div class="head"><span class="n">A5</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Enuncia le tre leggi di Keplero.</p>
+<details class="ris"><summary>Risultato</summary>Orbite ellittiche con il Sole in un fuoco; aree uguali in tempi uguali; \(\dfrac{T^2}{a^3}\) uguale per tutti i pianeti.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>I pianeti percorrono orbite ellittiche, e il Sole occupa uno dei due fuochi.</li>
+<li>Il raggio vettore che unisce il Sole al pianeta spazza aree uguali in tempi uguali.</li>
+<li>Il quadrato del periodo è proporzionale al cubo del semiasse maggiore, con la stessa costante per tutti i corpi che girano attorno allo stesso centro: \(\dfrac{T^2}{a^3}=K\).</li></ol>
+<p>La dimostrazione della terza legge per orbite circolari è il problema <a href="#b17">B17</a>. <a href="1-keplero-newton.html#keplero">Ripassa</a>.</p>
+</details></div>
+
+<div class="ex" id="a6"><div class="head"><span class="n">A6</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Enuncia i tre principi della dinamica di Newton e la legge di gravitazione universale. Quali di questi usi per ricavare la velocità di un satellite in orbita circolare?</p>
+<details class="ris"><summary>Risultato</summary>Inerzia, \(\vec F=m\vec a\), azione e reazione; \(F=G\dfrac{m_1m_2}{r^2}\). Per il satellite servono il secondo principio e la gravitazione.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Primo principio: in un sistema di riferimento inerziale, un corpo su cui la risultante delle forze è nulla resta fermo o si muove di moto rettilineo uniforme.</li>
+<li>Secondo principio: \(\vec F=m\vec a\).</li>
+<li>Terzo principio: se A esercita una forza su B, B esercita su A una forza uguale e opposta.</li>
+<li>Gravitazione universale: due masse si attraggono con una forza \(F=G\dfrac{m_1m_2}{r^2}\) diretta lungo la congiungente dei centri.</li></ol>
+<p>Per il satellite si scrive il secondo principio con l’accelerazione centripeta, \(G\dfrac{Mm}{r^2}=m\dfrac{v^2}{r}\), da cui \(v=\sqrt{\dfrac{GM}{r}}\). Il primo principio spiega perché serve una forza per curvare la traiettoria; il terzo dice che il satellite attira la Terra con una forza uguale. <a href="2-satelliti-campo.html#satelliti">Ripassa</a>.</p>
+</details></div>
+
+<div class="ex" id="a7"><div class="head"><span class="n">A7</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Perché l’accelerazione di gravità non dipende dalla massa del corpo che cade?</p>
+<details class="ris"><summary>Risultato</summary>La massa compare sia nella forza di gravità sia nel secondo principio, e si semplifica.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>\(ma=G\dfrac{Mm}{R^2}\Rightarrow a=\dfrac{GM}{R^2}\). Un corpo più massiccio è tirato con più forza ma ha anche più inerzia, nella stessa proporzione. <a href="1-keplero-newton.html#g">Ripassa</a>.</p>
+</details></div>
+
+<div class="ex" id="a8"><div class="head"><span class="n">A8</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Quanto vale \(g\) a una quota pari al raggio terrestre?</p>
+<details class="ris"><summary>Risultato</summary>Un quarto di quello al suolo: 2,45 m/s².</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>La distanza dal centro è \(r=2R_T\), quindi \(g=\dfrac{GM_T}{(2R_T)^2}=\dfrac{g_0}{4}=\dfrac{9{,}81}{4}=2{,}45\) m/s². <a href="1-keplero-newton.html#g">Ripassa</a>.</p>
+</details></div>
+
+<div class="ex" id="a9"><div class="head"><span class="n">A9</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Un pianeta ha la stessa densità della Terra ma raggio doppio. Quanto vale \(g\) sulla sua superficie?</p>
 <details class="ris"><summary>Risultato</summary>Il doppio: 19,6 m/s².</details>
-<details class="sol"><summary>Soluzione svolta</summary>Stessa densità: \(M\propto R^3\). Quindi \(g=\dfrac{GM}{R^2}\propto\dfrac{R^3}{R^2}=R\): raggio doppio, \(g\) doppio. <a href="1-keplero-newton.html#g">Ripassa</a>.</details></div>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>Con la stessa densità \(M\propto R^3\), quindi \(g=\dfrac{GM}{R^2}\propto\dfrac{R^3}{R^2}=R\): se il raggio raddoppia, anche \(g\) raddoppia. <a href="1-keplero-newton.html#g">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">7</span><span class="lvl" data-l="livello 1"></span></div>
+<div class="ex" id="a10"><div class="head"><span class="n">A10</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Perché un satellite geostazionario deve stare sopra l’equatore? Perché tutti i geostazionari sono alla stessa quota?</p>
+<details class="ris"><summary>Risultato</summary>L’orbita deve avere il centro nel centro della Terra e seguire la rotazione terrestre; a un periodo dato corrisponde un solo raggio.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>Ogni orbita ha il centro nel centro della Terra. Un satellite su un’orbita inclinata passerebbe metà del tempo a nord e metà a sud dell’equatore, quindi non resterebbe fermo sopra lo stesso punto. Il periodo deve essere un giorno siderale, e per la terza legge \(r^3=\dfrac{GM_TT^2}{4\pi^2}\): a un periodo corrisponde un solo raggio, circa \(4{,}22\cdot10^7\) m. <a href="2-satelliti-campo.html#geo">Ripassa</a>.</p>
+</details></div>
+
+<div class="ex" id="a11"><div class="head"><span class="n">A11</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Perché l’energia potenziale gravitazionale \(U=-\dfrac{GMm}{r}\) è negativa?</p>
-<details class="ris"><summary>Risultato</summary>Perché lo zero è all’infinito e, avvicinandosi, \(U\) diminuisce.</details>
-<details class="sol"><summary>Soluzione svolta</summary>Si sceglie \(U=0\) a distanza infinita. Avvicinandosi la gravità compie lavoro positivo, quindi \(U\) diminuisce: parte da 0 e scende sotto lo zero. È il “fondo del pozzo”. <a href="3-energia-fuga.html#potenziale">Ripassa</a>.</details></div>
-
-<div class="ex"><div class="head"><span class="n">8</span><span class="lvl" data-l="livello 1"></span></div>
-<p>Un corpo ha energia totale nulla rispetto al Sole. Che traiettoria segue?</p>
-<details class="ris"><summary>Risultato</summary>Una parabola.</details>
-<details class="sol"><summary>Soluzione svolta</summary>\(E&lt;0\) ellisse, \(E=0\) parabola, \(E&gt;0\) iperbole. Con \(E=0\) arriva all’infinito con velocità che tende a zero. <a href="3-energia-fuga.html#orbita">Ripassa</a>.</details></div>
-
-<h2>Problemi</h2>
-
-<div class="ex"><div class="head"><span class="n">9</span><span class="lvl" data-l="livello 2"></span></div>
-<p>Saturno ha massa 95,2 volte quella terrestre e raggio 9,45 volte maggiore. Quanto vale \(g\) su Saturno?</p>
-<details class="ris"><summary>Risultato</summary>\(g_S=10{,}5\) m/s².</details>
+<details class="ris"><summary>Risultato</summary>Lo zero è all’infinito, e avvicinandosi \(U\) diminuisce.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
-<ol><li>\(\dfrac{g_S}{g_T}=\dfrac{95{,}2}{9{,}45^2}=\dfrac{95{,}2}{89{,}3}=1{,}066\).</li>
-<li>\(g_S=1{,}066\cdot9{,}81=10{,}5\) m/s²: poco più che sulla Terra, nonostante la massa enorme.</li></ol></details></div>
+<p>Si sceglie \(U=0\) a distanza infinita, dove la gravità non agisce più. Avvicinandosi al pianeta la gravità compie lavoro positivo, quindi \(U\) diminuisce e scende sotto lo zero. <a href="3-energia-fuga.html#potenziale">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">10</span><span class="lvl" data-l="livello 2"></span></div>
-<p>Un satellite di 500 kg è in orbita circolare a 2000 km di quota. Calcola velocità e periodo.</p>
-<details class="ris"><summary>Risultato</summary>\(v=6{,}90\) km/s; \(T=7{,}62\cdot10^3\) s \(=127\) min.</details>
+<div class="ex" id="a12"><div class="head"><span class="n">A12</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Un corpo ha energia meccanica totale nulla rispetto al Sole. Che traiettoria segue? E con energia positiva?</p>
+<details class="ris"><summary>Risultato</summary>Una parabola; con energia positiva un’iperbole.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
-<ol><li>\(r=6{,}37\cdot10^6+2{,}00\cdot10^6=8{,}37\cdot10^6\) m.</li>
-<li>\(v=\sqrt{\dfrac{3{,}98\cdot10^{14}}{8{,}37\cdot10^6}}=\sqrt{4{,}76\cdot10^7}=6{,}90\cdot10^3\) m/s.</li>
-<li>\(T=\dfrac{2\pi r}{v}=\dfrac{2\pi\cdot8{,}37\cdot10^6}{6{,}90\cdot10^3}=7{,}62\cdot10^3\) s \(=127\) min. La massa di 500 kg non serve.</li></ol></details></div>
+<p>Con \(E&lt;0\) il corpo è legato e percorre un’ellisse. Con \(E=0\) arriva all’infinito con velocità che tende a zero, lungo una parabola. Con \(E&gt;0\) arriva all’infinito con velocità residua, lungo un’iperbole. <a href="3-energia-fuga.html#orbita">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">11</span><span class="lvl" data-l="livello 2"></span></div>
-<p>La Luna ha massa \(7{,}35\cdot10^{22}\) kg e raggio \(1{,}74\cdot10^6\) m. Calcola la velocità di fuga dalla Luna.</p>
-<details class="ris"><summary>Risultato</summary>\(v_f=2{,}37\) km/s.</details>
+<div class="ex" id="a13"><div class="head"><span class="n">A13</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Un satellite passa da un’orbita circolare bassa a una più alta. Il lavoro della forza di gravità è positivo o negativo? La sua energia totale aumenta o diminuisce? E la velocità?</p>
+<details class="ris"><summary>Risultato</summary>Lavoro negativo; energia totale aumenta; velocità diminuisce.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
-\(v_f=\sqrt{\dfrac{2\cdot6{,}67\cdot10^{-11}\cdot7{,}35\cdot10^{22}}{1{,}74\cdot10^6}}=\sqrt{5{,}64\cdot10^6}=2{,}37\cdot10^3\) m/s. Così bassa che la Luna non riesce a trattenere un’atmosfera.</details></div>
+<p>Salendo il satellite si allontana contro la gravità, quindi, chiamando A un punto dell’orbita iniziale e B uno di quella finale, \(L=U_A-U_B&lt;0\). L’energia totale \(E=-\dfrac{GMm}{2r}\) diventa meno negativa, cioè aumenta: la differenza la forniscono i motori. La velocità \(v=\sqrt{\dfrac{GM}{r}}\) invece diminuisce. <a href="3-energia-fuga.html#orbita">Ripassa</a>.</p>
+</details></div>
 
-<div class="ex"><div class="head"><span class="n">12</span><span class="lvl" data-l="livello 3"></span></div>
+<div class="ex" id="a14"><div class="head"><span class="n">A14</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Descrivi due modi per misurare la massa di un pianeta, uno usando una sua luna e uno con misure fatte sulla superficie.</p>
+<details class="ris"><summary>Risultato</summary>\(M=\dfrac{4\pi^2r^3}{GT^2}\) dall’orbita della luna; \(M=\dfrac{gR^2}{G}\) da \(g\) e dal raggio.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>Con una luna si misurano il periodo \(T\) e il raggio \(r\) della sua orbita e si usa la terza legge ricavata da Newton, \(M=\dfrac{4\pi^2r^3}{GT^2}\).</p>
+<p>Sulla superficie si misura \(g\), per esempio con un pendolo o con un corpo in caduta (problema <a href="#b1">B1</a>), si conosce il raggio \(R\) e si usa \(M=\dfrac{gR^2}{G}\). In entrambi i casi serve conoscere \(G\). <a href="2-satelliti-campo.html#satelliti">Ripassa</a>.</p>
+</details></div>
+
+<div class="ex" id="a15"><div class="head"><span class="n">A15</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Su un’orbita ellittica quali grandezze del satellite restano costanti e quali cambiano? Perché?</p>
+<details class="ris"><summary>Risultato</summary>Restano costanti l’energia meccanica e il momento angolare; cambiano distanza, velocità, energia cinetica e potenziale.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>L’energia meccanica si conserva perché la gravità è una forza conservativa. Il momento angolare si conserva perché la gravità è una forza centrale, sempre diretta verso il centro. Lungo l’orbita la distanza cambia, quindi cambiano l’energia potenziale e, di conseguenza, quella cinetica e la velocità. <a href="3-energia-fuga.html#orbita">Ripassa</a>.</p>
+</details></div>
+
+<div class="ex" id="a16"><div class="head"><span class="n">A16</span><span class="lvl" data-l="livello 1"></span></div>
+<p>Il campo gravitazionale si misura in N/kg, l’accelerazione in m/s². Dimostra che sono la stessa unità e spiega che cosa significa.</p>
+<details class="ris"><summary>Risultato</summary>1 N/kg = 1 m/s²: il campo in un punto è l’accelerazione di un corpo lasciato libero lì.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<p>\(1\ \text{N}=1\ \text{kg}\cdot\text{m/s}^2\), quindi \(1\ \dfrac{\text{N}}{\text{kg}}=1\ \dfrac{\text{m}}{\text{s}^2}\). Il campo è la forza per unità di massa, \(\vec g=\dfrac{\vec F}{m}\), e per il secondo principio \(\dfrac{\vec F}{m}\) è l’accelerazione. <a href="2-satelliti-campo.html#campo">Ripassa</a>.</p>
+</details></div>
+
+<h2>Parte B: problemi</h2>
+
+<h3 id="pianeti">Gravità sulla superficie di un pianeta</h3>
+
+<div class="ex" id="b1"><div class="head"><span class="n">B1</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Su un pianeta sconosciuto di raggio \(3{,}40\cdot10^6\) m una biglia viene lasciata cadere da ferma da un’altezza di 1,80 m e tocca il suolo dopo 0,98 s. Trascura l’atmosfera.</p>
+<ul class="req"><li>Calcola l’accelerazione di gravità sul pianeta.</li><li>Calcola la velocità della biglia quando tocca il suolo.</li><li>Calcola la massa del pianeta.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(g=3{,}75\) m/s²; \(v=3{,}67\) m/s; \(M=6{,}50\cdot10^{23}\) kg.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Moto uniformemente accelerato con partenza da ferma: \(h=\tfrac12gt^2\Rightarrow g=\dfrac{2h}{t^2}=\dfrac{2\cdot1{,}80}{0{,}98^2}=\dfrac{3{,}60}{0{,}960}=3{,}75\) m/s².</li>
+<li>\(v=gt=\dfrac{2h}{t^2}\,t=\dfrac{2h}{t}=\dfrac{3{,}60}{0{,}98}=3{,}67\) m/s.</li>
+<li>Sulla superficie il peso è la forza di gravità: \(mg=G\dfrac{Mm}{R^2}\Rightarrow M=\dfrac{gR^2}{G}\).</li>
+<li>\(M=\dfrac{3{,}75\cdot(3{,}40\cdot10^6)^2}{6{,}67\cdot10^{-11}}=\dfrac{3{,}75\cdot1{,}156\cdot10^{13}}{6{,}67\cdot10^{-11}}=6{,}50\cdot10^{23}\) kg.</li></ol>
+<p>Sono valori simili a quelli di Marte (\(g=3{,}71\) m/s², \(M=6{,}42\cdot10^{23}\) kg). La massa della biglia non serve.</p>
+</details></div>
+
+<div class="ex" id="b2"><div class="head"><span class="n">B2</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Su una luna di raggio \(1{,}56\cdot10^6\) m un astronauta lancia un sasso verso l’alto a 4,0 m/s. Il sasso ricade nella sua mano dopo 6,2 s.</p>
+<ul class="req"><li>Calcola \(g\) sulla luna e la sua massa.</li><li>Calcola la velocità di fuga dalla luna.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(g=1{,}29\) m/s²; \(M=4{,}71\cdot10^{22}\) kg; \(v_f=2{,}01\) km/s.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Con l’asse verso l’alto: \(v(t)=v_0-gt\). Il sasso torna in mano con velocità \(-v_0\), quindi \(-v_0=v_0-gt\Rightarrow g=\dfrac{2v_0}{t}=\dfrac{8{,}0}{6{,}2}=1{,}29\) m/s².</li>
+<li>\(M=\dfrac{gR^2}{G}=\dfrac{1{,}29\cdot(1{,}56\cdot10^6)^2}{6{,}67\cdot10^{-11}}=\dfrac{1{,}29\cdot2{,}434\cdot10^{12}}{6{,}67\cdot10^{-11}}=4{,}71\cdot10^{22}\) kg.</li>
+<li>\(v_f=\sqrt{\dfrac{2GM}{R}}=\sqrt{2gR}=\sqrt{2\cdot1{,}29\cdot1{,}56\cdot10^6}=\sqrt{4{,}02\cdot10^6}=2{,}01\cdot10^3\) m/s.</li></ol>
+</details></div>
+
+<div class="ex" id="b3"><div class="head"><span class="n">B3</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Saturno ha massa 95,2 volte quella terrestre e raggio 9,45 volte maggiore.</p>
+<ul class="req"><li>Quanto vale \(g\) su Saturno?</li><li>Quanto vale la velocità di fuga da Saturno?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(g_S=10{,}5\) m/s²; \(v_f=35{,}5\) km/s.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(\dfrac{g_S}{g_T}=\dfrac{M_S}{M_T}\left(\dfrac{R_T}{R_S}\right)^2=\dfrac{95{,}2}{9{,}45^2}=\dfrac{95{,}2}{89{,}3}=1{,}066\Rightarrow g_S=1{,}066\cdot9{,}81=10{,}5\) m/s².</li>
+<li>\(\dfrac{v_{f,S}}{v_{f,T}}=\sqrt{\dfrac{M_S}{M_T}\cdot\dfrac{R_T}{R_S}}=\sqrt{\dfrac{95{,}2}{9{,}45}}=\sqrt{10{,}07}=3{,}17\).</li>
+<li>\(v_{f,S}=3{,}17\cdot11{,}2=35{,}5\) km/s.</li></ol>
+<p>Il rapporto fra le velocità di fuga (3,17) è molto più grande di quello fra le \(g\) (1,07) perché \(v_f\) dipende da \(\dfrac{M}{R}\), mentre \(g\) dipende da \(\dfrac{M}{R^2}\).</p>
+</details></div>
+
+<h3 id="ellissi">Orbite ellittiche</h3>
+
+<div class="ex" id="b4"><div class="head"><span class="n">B4</span><span class="lvl" data-l="livello 3"></span></div>
+<p>Un asteroide orbita attorno al Sole (\(M_S=1{,}99\cdot10^{30}\) kg). Al perielio dista \(2{,}0\cdot10^{11}\) m dal Sole, all’afelio \(6{,}0\cdot10^{11}\) m.</p>
+<div class="fig w-md"><svg viewBox="0 0 370 175" xmlns="http://www.w3.org/2000/svg" font-size="12" fill="currentColor" role="img" aria-label="Orbita ellittica dell’asteroide con perielio e afelio"><ellipse cx="160" cy="85" rx="130" ry="75" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="225" cy="85" r="9" fill="#f5a623"/><text x="212" y="112">Sole</text><circle cx="290" cy="85" r="4"/><circle cx="30" cy="85" r="4"/><text x="296" y="80">P</text><text x="12" y="80">A</text><line x1="30" y1="85" x2="225" y2="85" stroke="#1F4E79" stroke-dasharray="4 3"/><line x1="225" y1="85" x2="290" y2="85" stroke="#1F4E79" stroke-width="2.5"/><text x="100" y="78" fill="#1F4E79">r_A</text><text x="245" y="78" fill="#1F4E79">r_P</text></svg></div>
+<ul class="req"><li>Calcola la velocità al perielio e all’afelio usando insieme la conservazione del momento angolare e quella dell’energia.</li><li>Calcola l’eccentricità dell’orbita e il periodo in anni.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(v_P=31{,}6\) km/s; \(v_A=10{,}5\) km/s; \(e=0{,}50\); \(T=4{,}36\) anni.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Momento angolare: \(r_Pv_P=r_Av_A\Rightarrow v_A=v_P\dfrac{r_P}{r_A}=\dfrac{v_P}{3}\).</li>
+<li>Energia: \(\tfrac12v_P^2-\dfrac{GM_S}{r_P}=\tfrac12v_A^2-\dfrac{GM_S}{r_A}\). Sostituendo \(v_A=\dfrac{v_P}{3}\):
+\[ \frac12v_P^2\left(1-\frac19\right)=GM_S\left(\frac1{r_P}-\frac1{r_A}\right)\quad\Rightarrow\quad \frac49v_P^2=GM_S\left(\frac1{r_P}-\frac1{r_A}\right) \]</li>
+<li>\(GM_S=6{,}67\cdot10^{-11}\cdot1{,}99\cdot10^{30}=1{,}327\cdot10^{20}\ \mathrm{m^3/s^2}\); \(\dfrac1{r_P}-\dfrac1{r_A}=5{,}00\cdot10^{-12}-1{,}667\cdot10^{-12}=3{,}333\cdot10^{-12}\ \mathrm{m^{-1}}\).</li>
+<li>\(v_P^2=\dfrac94\cdot1{,}327\cdot10^{20}\cdot3{,}333\cdot10^{-12}=9{,}95\cdot10^8\Rightarrow v_P=3{,}16\cdot10^4\) m/s; \(v_A=\dfrac{3{,}155\cdot10^4}{3}=1{,}05\cdot10^4\) m/s.</li>
+<li>\(e=\dfrac{r_A-r_P}{r_A+r_P}=\dfrac{4{,}0}{8{,}0}=0{,}50\).</li>
+<li>\(a=\dfrac{r_P+r_A}{2}=4{,}0\cdot10^{11}\) m \(=\dfrac{4{,}0\cdot10^{11}}{1{,}50\cdot10^{11}}=2{,}667\) UA; \(T=a^{3/2}=2{,}667^{3/2}=4{,}36\) anni.</li></ol>
+</details></div>
+
+<div class="ex" id="b5"><div class="head"><span class="n">B5</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="livello 3"></span></div>
+<p>Un satellite passa al perigeo a \(6{,}90\cdot10^6\) m dal centro della Terra con velocità 8,80 km/s, perpendicolare al raggio.</p>
+<ul class="req"><li>Verifica che l’orbita sia un’ellisse e non una circonferenza o una traiettoria aperta.</li><li>Calcola la distanza all’apogeo e la velocità all’apogeo.</li><li>Calcola l’eccentricità dell’orbita.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(7{,}60&lt;8{,}80&lt;10{,}7\) km/s, quindi ellisse; \(r_A=1{,}41\cdot10^7\) m; \(v_A=4{,}31\) km/s; \(e=0{,}343\).</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Velocità circolare a quella distanza: \(v_c=\sqrt{\dfrac{GM_T}{r_P}}=\sqrt{\dfrac{3{,}98\cdot10^{14}}{6{,}90\cdot10^6}}=7{,}60\) km/s. Velocità di fuga: \(\sqrt2\,v_c=10{,}7\) km/s. La velocità è compresa tra le due, quindi l’orbita è un’ellisse e il punto dato è il perigeo.</li>
+<li>Energia per unità di massa: \(\dfrac Em=\tfrac12v_P^2-\dfrac{GM_T}{r_P}=3{,}872\cdot10^7-5{,}768\cdot10^7=-1{,}896\cdot10^7\) J/kg.</li>
+<li>Momento angolare per unità di massa: \(r_Pv_P=6{,}90\cdot10^6\cdot8{,}80\cdot10^3=6{,}072\cdot10^{10}\ \mathrm{m^2/s}\), quindi all’apogeo \(v_A=\dfrac{6{,}072\cdot10^{10}}{r_A}\).</li>
+<li>Energia all’apogeo: \(\dfrac12\cdot\dfrac{(6{,}072\cdot10^{10})^2}{r_A^2}-\dfrac{3{,}98\cdot10^{14}}{r_A}=-1{,}896\cdot10^7\). Moltiplicando per \(r_A^2\):
+\[ 1{,}896\cdot10^7\,r_A^2-3{,}98\cdot10^{14}\,r_A+1{,}843\cdot10^{21}=0 \]</li>
+<li>Formula risolutiva: \(r_A=\dfrac{3{,}98\cdot10^{14}\pm\sqrt{1{,}584\cdot10^{29}-1{,}398\cdot10^{29}}}{2\cdot1{,}896\cdot10^7}=\dfrac{3{,}98\cdot10^{14}\pm1{,}365\cdot10^{14}}{3{,}792\cdot10^7}\).</li>
+<li>Le due soluzioni sono \(6{,}90\cdot10^6\) m, cioè il perigeo (anche lì valgono le due equazioni), e \(r_A=1{,}410\cdot10^7\) m.</li>
+<li>\(v_A=\dfrac{6{,}072\cdot10^{10}}{1{,}410\cdot10^7}=4{,}31\cdot10^3\) m/s.</li>
+<li>\(e=\dfrac{r_A-r_P}{r_A+r_P}=\dfrac{1{,}410-0{,}690}{1{,}410+0{,}690}=\dfrac{0{,}720}{2{,}100}=0{,}343\).</li></ol>
+</details></div>
+
+<h3 id="satelliti">Satelliti ed energia</h3>
+
+<div class="ex" id="b6"><div class="head"><span class="n">B6</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Un satellite di 800 kg è in orbita geostazionaria. Usa come periodo 24 h.</p>
+<ul class="req"><li>Calcola il raggio dell’orbita.</li><li>Calcola l’energia potenziale, l’energia cinetica e l’energia meccanica del satellite.</li><li>Quanta energia serve, come minimo, per portarlo lì partendo da fermo dalla superficie? Trascura la rotazione della Terra.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(r=4{,}22\cdot10^7\) m; \(U=-7{,}55\cdot10^9\) J; \(K=3{,}77\cdot10^9\) J; \(E=-3{,}77\cdot10^9\) J; servono \(4{,}62\cdot10^{10}\) J.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Gravità come forza centripeta, scritta con \(\omega=\dfrac{2\pi}{T}\): \(G\dfrac{M_Tm}{r^2}=m\omega^2r\Rightarrow r=\sqrt[3]{\dfrac{GM_TT^2}{4\pi^2}}\).</li>
+<li>\(T=24\cdot3600=86\,400\) s; \(r=\sqrt[3]{\dfrac{3{,}98\cdot10^{14}\cdot(8{,}64\cdot10^4)^2}{4\pi^2}}=\sqrt[3]{7{,}53\cdot10^{22}}=4{,}22\cdot10^7\) m.</li>
+<li>\(U=-\dfrac{GM_Tm}{r}=-\dfrac{3{,}98\cdot10^{14}\cdot800}{4{,}22\cdot10^7}=-7{,}55\cdot10^9\) J.</li>
+<li>\(K=\dfrac{GM_Tm}{2r}=-\dfrac U2=3{,}77\cdot10^9\) J; \(E=K+U=-\dfrac{GM_Tm}{2r}=-3{,}77\cdot10^9\) J.</li>
+<li>Sulla superficie, da fermo: \(E_0=U_0=-\dfrac{3{,}98\cdot10^{14}\cdot800}{6{,}37\cdot10^6}=-5{,}00\cdot10^{10}\) J.</li>
+<li>Energia da fornire: \(E-E_0=-0{,}377\cdot10^{10}+5{,}00\cdot10^{10}=4{,}62\cdot10^{10}\) J.</li></ol>
+<p>Con il giorno siderale (\(8{,}61\cdot10^4\) s) il raggio viene \(4{,}21\cdot10^7\) m: la differenza è piccola, ma usa sempre il periodo indicato dal testo.</p>
+</details></div>
+
+<div class="ex" id="b7"><div class="head"><span class="n">B7</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Un satellite di 1500 kg passa da un’orbita circolare a 500 km di quota a una a 2000 km di quota.</p>
+<ul class="req"><li>Calcola velocità e periodo sulle due orbite.</li><li>Calcola l’energia minima che devono fornire i motori.</li></ul>
+<details class="ris"><summary>Risultato</summary>7,61 km/s e 94,5 min; 6,90 km/s e 127 min; \(\Delta E=7{,}79\cdot10^9\) J.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(r_1=6{,}87\cdot10^6\) m: \(v_1=\sqrt{\dfrac{3{,}98\cdot10^{14}}{6{,}87\cdot10^6}}=7{,}61\cdot10^3\) m/s; \(T_1=\dfrac{2\pi r_1}{v_1}=5{,}67\cdot10^3\) s \(=94{,}5\) min.</li>
+<li>\(r_2=8{,}37\cdot10^6\) m: \(v_2=\sqrt{\dfrac{3{,}98\cdot10^{14}}{8{,}37\cdot10^6}}=6{,}90\cdot10^3\) m/s; \(T_2=\dfrac{2\pi r_2}{v_2}=7{,}62\cdot10^3\) s \(=127\) min.</li>
+<li>\(\Delta E=E_2-E_1=\dfrac{GM_Tm}{2}\left(\dfrac1{r_1}-\dfrac1{r_2}\right)=\dfrac{3{,}98\cdot10^{14}\cdot1500}{2}\left(\dfrac1{6{,}87\cdot10^6}-\dfrac1{8{,}37\cdot10^6}\right)\).</li>
+<li>\(=2{,}985\cdot10^{17}\cdot(1{,}4556-1{,}1947)\cdot10^{-7}=2{,}985\cdot10^{17}\cdot2{,}609\cdot10^{-8}=7{,}79\cdot10^9\) J.</li></ol>
+</details></div>
+
+<div class="ex" id="b8"><div class="head"><span class="n">B8</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Quanta energia serve, come minimo, per portare un satellite di 1000 kg da un’orbita circolare a 300 km di quota a una a 1300 km?</p>
 <details class="ris"><summary>Risultato</summary>\(\Delta E=3{,}89\cdot10^9\) J.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>\(r_1=6{,}67\cdot10^6\) m, \(r_2=7{,}67\cdot10^6\) m.</li>
 <li>\(\Delta E=\dfrac{GM_Tm}{2}\left(\dfrac1{r_1}-\dfrac1{r_2}\right)=\dfrac{3{,}98\cdot10^{14}\cdot1000}{2}\left(\dfrac{1}{6{,}67\cdot10^6}-\dfrac{1}{7{,}67\cdot10^6}\right)\).</li>
-<li>\(=1{,}99\cdot10^{17}\cdot(1{,}4993-1{,}3038)\cdot10^{-7}=1{,}99\cdot10^{17}\cdot1{,}955\cdot10^{-8}=3{,}89\cdot10^9\) J.</li></ol></details></div>
+<li>\(=1{,}99\cdot10^{17}\cdot(1{,}4993-1{,}3038)\cdot10^{-7}=1{,}99\cdot10^{17}\cdot1{,}955\cdot10^{-8}=3{,}89\cdot10^9\) J.</li></ol>
+</details></div>
+
+<h3 id="vettori">Più masse: somme di vettori</h3>
+<p>Quando su un corpo agiscono le forze di più masse, ogni forza si calcola da sola con la legge di gravitazione, poi le forze si sommano come vettori. Se la figura è simmetrica, alcune forze si annullano a coppie e non serve calcolarle.</p>
+<div class="box richiamo"><div class="bt">Richiamo di matematica: somma di vettori con le componenti</div><div class="bb">
+<p>Un vettore di modulo \(F\) che forma un angolo \(\alpha\) con l’asse \(x\) ha componenti \(F_x=F\cos\alpha\) e \(F_y=F\sin\alpha\). Per sommare più vettori:</p>
+<ol><li>scegli gli assi sfruttando le simmetrie;</li>
+<li>scomponi ogni vettore e somma separatamente le componenti \(x\) e le componenti \(y\);</li>
+<li>il modulo della risultante è \(F=\sqrt{F_x^2+F_y^2}\), l’angolo con l’asse \(x\) è dato da \(\tan\alpha=\dfrac{F_y}{F_x}\).</li></ol>
+<p>Valori da ricordare: \(\cos30^\circ=\sin60^\circ=\dfrac{\sqrt3}{2}\), \(\cos60^\circ=\sin30^\circ=\dfrac12\), \(\cos45^\circ=\sin45^\circ=\dfrac{\sqrt2}{2}\). In un quadrato di lato \(l\) la diagonale è \(l\sqrt2\); in un triangolo equilatero di lato \(L\) il raggio della circonferenza circoscritta è \(\dfrac{L}{\sqrt3}\).</p>
+</div></div>
+<div class="box esempio"><div class="bt">Esempio svolto: tre masse uguali ai vertici di un triangolo equilatero</div><div class="bb">
+<p>Tre masse \(M\) sono ai vertici di un triangolo equilatero di lato \(L\). Qui si calcola la forza totale sulla massa in alto.</p>
+<div class="fig w-sm"><svg viewBox="0 0 260 230" xmlns="http://www.w3.org/2000/svg" font-size="13" fill="currentColor" role="img" aria-label="Triangolo equilatero con le due forze sulla massa in alto e la risultante verso il centro"><polygon points="130,30 40,186 220,186" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="130" cy="134" r="3" fill="#888"/><text x="137" y="140" font-size="11">O</text><circle cx="130" cy="30" r="7" fill="#3b82f6"/><circle cx="40" cy="186" r="7" fill="#3b82f6"/><circle cx="220" cy="186" r="7" fill="#3b82f6"/><text x="140" y="24">M</text><text x="16" y="206">M</text><text x="226" y="206">M</text><line x1="130" y1="30" x2="105" y2="73" stroke="#A61B1B" stroke-width="2.2"/><path d="M101 66 L103 77 L110 70 z" fill="#A61B1B"/><line x1="130" y1="30" x2="155" y2="73" stroke="#A61B1B" stroke-width="2.2"/><path d="M150 70 L157 77 L159 66 z" fill="#A61B1B"/><line x1="130" y1="30" x2="130" y2="104" stroke="#2E6B30" stroke-width="2.6"/><path d="M124 98 L130 110 L136 98 z" fill="#2E6B30"/><text x="78" y="66" fill="#A61B1B">F</text><text x="164" y="66" fill="#A61B1B">F</text><text x="136" y="96" fill="#2E6B30">F_ris</text><text x="120" y="222">L</text></svg></div>
+<ol><li>Ogni altra massa attira quella in alto con \(F=G\dfrac{M^2}{L^2}\), lungo il lato.</li>
+<li>Asse \(y\) verticale. Ogni forza forma un angolo di \(30^\circ\) con la verticale: le componenti orizzontali sono opposte e si annullano, quelle verticali valgono \(F\cos30^\circ\) e si sommano.</li>
+<li>\(F_\text{ris}=2F\cos30^\circ=2F\dfrac{\sqrt3}{2}=\sqrt3\,F=\sqrt3\,G\dfrac{M^2}{L^2}\), diretta verso il centro O del triangolo.</li></ol>
+<p>Per simmetria lo stesso vale per le altre due masse: su ciascuna la forza punta verso il centro.</p>
+</div></div>
+
+<div class="ex" id="b9"><div class="head"><span class="n">B9</span><span class="lvl" data-l="livello 3"></span></div>
+<p>Tre stelle uguali, ciascuna di massa \(M=1{,}5\cdot10^{30}\) kg, stanno ai vertici di un triangolo equilatero di lato \(L=2{,}0\cdot10^{11}\) m e ruotano attorno al centro del triangolo, sulla circonferenza circoscritta, mantenendo la forma del triangolo.</p>
+<ul class="req"><li>Calcola la forza totale su una stella.</li><li>Ricava in simboli la velocità di ciascuna stella, poi calcolala.</li><li>Calcola il periodo di rotazione.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F_\text{ris}=6{,}50\cdot10^{27}\) N; \(v=\sqrt{\dfrac{GM}{L}}=22{,}4\) km/s; \(T=3{,}24\cdot10^7\) s, circa un anno.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Dall’esempio svolto: \(F=G\dfrac{M^2}{L^2}=6{,}67\cdot10^{-11}\cdot\dfrac{(1{,}5\cdot10^{30})^2}{(2{,}0\cdot10^{11})^2}=3{,}75\cdot10^{27}\) N e \(F_\text{ris}=\sqrt3\,F=6{,}50\cdot10^{27}\) N, verso il centro.</li>
+<li>Raggio dell’orbita: \(R=\dfrac{L}{\sqrt3}=1{,}155\cdot10^{11}\) m.</li>
+<li>La risultante fa da forza centripeta: \(M\dfrac{v^2}{R}=\sqrt3\,G\dfrac{M^2}{L^2}\Rightarrow v^2=\sqrt3\,\dfrac{GMR}{L^2}=\sqrt3\,\dfrac{GM}{L^2}\cdot\dfrac{L}{\sqrt3}=\dfrac{GM}{L}\).</li>
+<li>\(v=\sqrt{\dfrac{GM}{L}}=\sqrt{\dfrac{6{,}67\cdot10^{-11}\cdot1{,}5\cdot10^{30}}{2{,}0\cdot10^{11}}}=\sqrt{5{,}0\cdot10^8}=2{,}24\cdot10^4\) m/s.</li>
+<li>\(T=\dfrac{2\pi R}{v}=\dfrac{2\pi\cdot1{,}155\cdot10^{11}}{2{,}24\cdot10^4}=3{,}24\cdot10^7\) s, circa 1,03 anni.</li></ol>
+<p>Sulle stelle agiscono solo le due attrazioni gravitazionali, e la loro risultante è la forza centripeta.</p>
+</details></div>
+
+<div class="ex" id="b10"><div class="head"><span class="n">B10</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Due stelle uguali di massa \(2{,}0\cdot10^{30}\) kg distano \(1{,}0\cdot10^{11}\) m e ruotano attorno al punto medio del segmento che le unisce.</p>
+<ul class="req"><li>Calcola la forza tra le due stelle.</li><li>Ricava in simboli e calcola la velocità di ciascuna stella e il periodo in giorni.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F=2{,}67\cdot10^{28}\) N; \(v=\sqrt{\dfrac{GM}{2d}}=25{,}8\) km/s; \(T=141\) giorni.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(F=G\dfrac{M^2}{d^2}=6{,}67\cdot10^{-11}\cdot\dfrac{(2{,}0\cdot10^{30})^2}{(1{,}0\cdot10^{11})^2}=2{,}67\cdot10^{28}\) N.</li>
+<li>Ogni stella gira su una circonferenza di raggio \(\dfrac d2\) (non \(d\)): \(M\dfrac{2v^2}{d}=G\dfrac{M^2}{d^2}\Rightarrow v^2=\dfrac{GM}{2d}\).</li>
+<li>\(v=\sqrt{\dfrac{6{,}67\cdot10^{-11}\cdot2{,}0\cdot10^{30}}{2{,}0\cdot10^{11}}}=\sqrt{6{,}67\cdot10^8}=2{,}58\cdot10^4\) m/s.</li>
+<li>\(T=\dfrac{2\pi}{v}\cdot\dfrac{d}{2}=\dfrac{\pi d}{v}=\dfrac{\pi\cdot1{,}0\cdot10^{11}}{2{,}58\cdot10^4}=1{,}22\cdot10^7\) s \(=141\) giorni.</li></ol>
+</details></div>
+
+<div class="ex" id="b11"><div class="head"><span class="n">B11</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Una sfera di 5,0 kg è al centro di un quadrato di lato 0,80 m. Ai vertici ci sono quattro sfere: due di massa \(M\) uguale ai capi di una diagonale, una di 300 kg e una di 100 kg ai capi dell’altra.</p>
+<div class="fig w-sm"><svg viewBox="0 0 240 230" xmlns="http://www.w3.org/2000/svg" font-size="13" fill="currentColor" role="img" aria-label="Quadrato con masse M, 300 kg, M, 100 kg ai vertici e una sfera al centro"><rect x="40" y="30" width="160" height="160" fill="none" stroke="currentColor" stroke-width="1.2"/><line x1="40" y1="30" x2="200" y2="190" stroke="#888" stroke-dasharray="3 3"/><line x1="200" y1="30" x2="40" y2="190" stroke="#888" stroke-dasharray="3 3"/><circle cx="40" cy="30" r="8" fill="#3b82f6"/><circle cx="200" cy="30" r="11" fill="#3b82f6"/><circle cx="200" cy="190" r="8" fill="#3b82f6"/><circle cx="40" cy="190" r="6" fill="#3b82f6"/><circle cx="120" cy="110" r="6" fill="#B5651D"/><text x="18" y="22">M</text><text x="190" y="16">300 kg</text><text x="206" y="210">M</text><text x="10" y="214">100 kg</text><text x="128" y="128" fill="#B5651D">5,0 kg</text><text x="105" y="222">0,80 m</text></svg></div>
+<ul class="req"><li>Calcola la forza risultante sulla sfera centrale e indicane la direzione.</li><li>Serve conoscere \(M\)?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F=2{,}08\cdot10^{-7}\) N, lungo la diagonale verso la sfera di 300 kg. \(M\) non serve.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Tutte le sfere ai vertici distano dal centro metà diagonale: \(d=\dfrac{l\sqrt2}{2}=\dfrac{0{,}80\cdot1{,}414}{2}=0{,}566\) m, quindi \(d^2=\dfrac{l^2}{2}=0{,}320\ \mathrm{m^2}\).</li>
+<li>Le due sfere di massa \(M\) sono alla stessa distanza e in versi opposti: le loro forze si annullano, qualunque sia \(M\).</li>
+<li>Sulla diagonale rimasta: \(F_{300}=G\dfrac{300\cdot5{,}0}{0{,}320}=3{,}13\cdot10^{-7}\) N, \(F_{100}=G\dfrac{100\cdot5{,}0}{0{,}320}=1{,}04\cdot10^{-7}\) N, in versi opposti.</li>
+<li>\(F=F_{300}-F_{100}=G\dfrac{200\cdot5{,}0}{0{,}320}=2{,}08\cdot10^{-7}\) N, verso la sfera di 300 kg.</li></ol>
+</details></div>
+
+<div class="ex" id="b12"><div class="head"><span class="n">B12</span><span class="lvl" data-l="livello 3"></span></div>
+<p>Ai vertici di un quadrato di lato 1,0 m ci sono quattro sfere: A di 100 kg in alto a sinistra, B di 200 kg in alto a destra, C di 300 kg in basso a destra, D di 400 kg in basso a sinistra. Al centro c’è una sfera di 2,0 kg.</p>
+<div class="fig w-sm"><svg viewBox="0 0 240 230" xmlns="http://www.w3.org/2000/svg" font-size="13" fill="currentColor" role="img" aria-label="Quadrato con A 100 kg, B 200 kg, C 300 kg, D 400 kg e una sfera al centro"><rect x="40" y="30" width="160" height="160" fill="none" stroke="currentColor" stroke-width="1.2"/><line x1="40" y1="30" x2="200" y2="190" stroke="#888" stroke-dasharray="3 3"/><line x1="200" y1="30" x2="40" y2="190" stroke="#888" stroke-dasharray="3 3"/><circle cx="40" cy="30" r="6" fill="#3b82f6"/><circle cx="200" cy="30" r="8" fill="#3b82f6"/><circle cx="200" cy="190" r="10" fill="#3b82f6"/><circle cx="40" cy="190" r="12" fill="#3b82f6"/><circle cx="120" cy="110" r="6" fill="#B5651D"/><text x="8" y="22">A 100 kg</text><text x="160" y="16">B 200 kg</text><text x="160" y="220">C 300 kg</text><text x="4" y="220">D 400 kg</text><text x="128" y="106" fill="#B5651D">2,0 kg</text></svg></div>
+<ul class="req"><li>Calcola modulo e direzione della forza risultante sulla sfera centrale.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F=7{,}55\cdot10^{-8}\) N, diretta verso il punto medio del lato CD (verso il basso).</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Distanza dal centro: \(d^2=\dfrac{l^2}{2}=0{,}50\ \mathrm{m^2}\).</li>
+<li>Diagonale AC: le forze di A e C sono opposte, resta \(G\dfrac{(300-100)\cdot2{,}0}{0{,}50}=5{,}34\cdot10^{-8}\) N verso C.</li>
+<li>Diagonale BD: resta \(G\dfrac{(400-200)\cdot2{,}0}{0{,}50}=5{,}34\cdot10^{-8}\) N verso D.</li>
+<li>Le due diagonali di un quadrato sono perpendicolari, quindi le due forze sono perpendicolari e uguali: \(F=\sqrt2\cdot5{,}34\cdot10^{-8}=7{,}55\cdot10^{-8}\) N.</li>
+<li>La risultante sta a metà tra la direzione verso C e quella verso D, cioè punta verso il punto medio del lato CD, perpendicolare a quel lato.</li></ol>
+</details></div>
+
+<div class="ex" id="b13"><div class="head"><span class="n">B13</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Una sfera di 10 kg è nel vertice O dell’angolo retto di un triangolo rettangolo. Sul primo cateto, a 0,40 m da O, c’è una sfera di 50 kg; sul secondo cateto, a 0,60 m da O, una sfera di 80 kg.</p>
+<div class="fig w-sm"><svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg" font-size="13" fill="currentColor" role="img" aria-label="Angolo retto con sfera in O, 50 kg sul cateto orizzontale e 80 kg su quello verticale"><line x1="40" y1="180" x2="210" y2="180" stroke="currentColor"/><line x1="40" y1="180" x2="40" y2="2" stroke="currentColor"/><rect x="40" y="168" width="12" height="12" fill="none" stroke="currentColor"/><circle cx="40" cy="180" r="7" fill="#B5651D"/><circle cx="153" cy="180" r="9" fill="#3b82f6"/><circle cx="40" cy="10" r="9" fill="#3b82f6"/><text x="16" y="200">O</text><text x="140" y="202">50 kg</text><text x="54" y="15">80 kg</text><text x="88" y="172">0,40 m</text><text x="46" y="98">0,60 m</text></svg></div>
+<ul class="req"><li>Calcola modulo e direzione della forza risultante sulla sfera in O.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(F=2{,}56\cdot10^{-7}\) N, a \(35{,}4^\circ\) dal cateto con la sfera di 50 kg.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(F_1=G\dfrac{50\cdot10}{0{,}40^2}=6{,}67\cdot10^{-11}\cdot\dfrac{500}{0{,}16}=2{,}08\cdot10^{-7}\) N, lungo il primo cateto.</li>
+<li>\(F_2=G\dfrac{80\cdot10}{0{,}60^2}=6{,}67\cdot10^{-11}\cdot\dfrac{800}{0{,}36}=1{,}48\cdot10^{-7}\) N, lungo il secondo cateto.</li>
+<li>Le due forze sono perpendicolari: \(F=\sqrt{F_1^2+F_2^2}=\sqrt{(2{,}08)^2+(1{,}48)^2}\cdot10^{-7}=2{,}56\cdot10^{-7}\) N.</li>
+<li>\(\tan\alpha=\dfrac{F_2}{F_1}=\dfrac{1{,}48}{2{,}08}=0{,}712\Rightarrow\alpha=35{,}4^\circ\) dal primo cateto.</li></ol>
+</details></div>
+
+<div class="ex" id="b14"><div class="head"><span class="n">B14</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Tre asteroidi A, B e C sono allineati, con B in mezzo: \(m_A=6{,}0\cdot10^{15}\) kg, \(m_B=3{,}0\cdot10^{15}\) kg, \(m_C=1{,}5\cdot10^{16}\) kg. La distanza AB è 200 km, la distanza BC è 500 km.</p>
+<div class="fig w-md"><svg viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" font-size="13" fill="currentColor" role="img" aria-label="Asteroidi A, B, C in linea"><line x1="30" y1="40" x2="330" y2="40" stroke="#888" stroke-dasharray="3 3"/><circle cx="30" cy="40" r="9" fill="#888"/><circle cx="116" cy="40" r="7" fill="#888"/><circle cx="330" cy="40" r="12" fill="#888"/><text x="24" y="20">A</text><text x="110" y="20">B</text><text x="324" y="18">C</text><text x="56" y="68">200 km</text><text x="200" y="68">500 km</text></svg></div>
+<ul class="req"><li>Calcola la forza totale che A e C esercitano su B.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(1{,}80\cdot10^{10}\) N, verso A.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(F_A=G\dfrac{m_Am_B}{AB^2}=6{,}67\cdot10^{-11}\cdot\dfrac{6{,}0\cdot10^{15}\cdot3{,}0\cdot10^{15}}{(2{,}0\cdot10^5)^2}=3{,}00\cdot10^{10}\) N, verso A.</li>
+<li>\(F_C=G\dfrac{m_Cm_B}{BC^2}=6{,}67\cdot10^{-11}\cdot\dfrac{1{,}5\cdot10^{16}\cdot3{,}0\cdot10^{15}}{(5{,}0\cdot10^5)^2}=1{,}20\cdot10^{10}\) N, verso C.</li>
+<li>Versi opposti: \(F=F_A-F_C=1{,}80\cdot10^{10}\) N, verso A. C ha massa 2,5 volte maggiore ma è 2,5 volte più lontano, e la forza diminuisce con il quadrato della distanza, quindi prevale A.</li></ol>
+</details></div>
+
+<div class="ex" id="b15"><div class="head"><span class="n">B15</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Due sfere di 500 kg sono a 2,0 m di distanza. Calcola il campo gravitazionale (modulo e direzione) nel punto che forma con le due sfere un triangolo equilatero.</p>
+<details class="ris"><summary>Risultato</summary>\(1{,}44\cdot10^{-8}\) N/kg, diretto verso il punto medio del segmento tra le due sfere.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Ogni sfera crea un campo \(g_1=G\dfrac{M}{L^2}=6{,}67\cdot10^{-11}\cdot\dfrac{500}{2{,}0^2}=8{,}34\cdot10^{-9}\) N/kg, diretto verso la sfera.</li>
+<li>Come nell’esempio svolto del triangolo, le componenti parallele al segmento si annullano e quelle perpendicolari si sommano: \(g=2g_1\cos30^\circ=\sqrt3\,g_1=1{,}44\cdot10^{-8}\) N/kg.</li>
+<li>Il campo punta verso il punto medio del segmento che unisce le due sfere.</li></ol>
+</details></div>
+
+<h3 id="dimostrazioni">Dimostrazioni</h3>
+
+<div class="ex" id="b16"><div class="head"><span class="n">B16</span><span class="tag dimostra">Dimostra</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Dimostra che il rapporto tra la velocità di fuga da un pianeta e la velocità di un’orbita circolare radente alla sua superficie vale \(\sqrt2\). Poi calcola le due velocità per Marte (\(M=6{,}42\cdot10^{23}\) kg, \(R=3{,}39\cdot10^6\) m).</p>
+<details class="ris"><summary>Risultato</summary>\(\dfrac{v_f}{v_\text{orb}}=\sqrt2\); per Marte \(v_\text{orb}=3{,}55\) km/s e \(v_f=5{,}03\) km/s.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Orbita radente (\(r=R\)): \(G\dfrac{Mm}{R^2}=m\dfrac{v_\text{orb}^2}{R}\Rightarrow v_\text{orb}=\sqrt{\dfrac{GM}{R}}\).</li>
+<li>Fuga: energia totale nulla, \(\tfrac12mv_f^2-\dfrac{GMm}{R}=0\Rightarrow v_f=\sqrt{\dfrac{2GM}{R}}\).</li>
+<li>\(\dfrac{v_f}{v_\text{orb}}=\sqrt{\dfrac{2GM}{R}\cdot\dfrac{R}{GM}}=\sqrt2\).</li>
+<li>Marte: \(v_\text{orb}=\sqrt{\dfrac{6{,}67\cdot10^{-11}\cdot6{,}42\cdot10^{23}}{3{,}39\cdot10^6}}=\sqrt{1{,}263\cdot10^7}=3{,}554\cdot10^3\) m/s; \(v_f=\sqrt2\cdot3{,}554=5{,}03\) km/s.</li></ol>
+<p>Nella formula compare \(G\), la costante universale, moltiplicata per la massa \(M\) del pianeta, e il raggio \(R\) sta sotto la radice.</p>
+</details></div>
+
+<div class="ex" id="b17"><div class="head"><span class="n">B17</span><span class="tag dimostra">Dimostra</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Dimostra la terza legge di Keplero per un’orbita circolare a partire dalla legge di gravitazione universale. Poi usala per calcolare la massa di Giove sapendo che la sua luna Callisto ha un’orbita di raggio \(1{,}88\cdot10^9\) m e periodo 16,7 giorni.</p>
+<details class="ris"><summary>Risultato</summary>\(T^2=\dfrac{4\pi^2}{GM}\,r^3\); \(M_G=1{,}89\cdot10^{27}\) kg.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Gravità come forza centripeta: \(G\dfrac{Mm}{r^2}=m\dfrac{v^2}{r}\Rightarrow v^2=\dfrac{GM}{r}\).</li>
+<li>In un moto circolare uniforme \(v=\dfrac{2\pi r}{T}\), quindi \(\dfrac{4\pi^2r^2}{T^2}=\dfrac{GM}{r}\Rightarrow\dfrac{T^2}{r^3}=\dfrac{4\pi^2}{GM}\).</li>
+<li>Il rapporto \(\dfrac{T^2}{r^3}\) dipende solo dalla massa \(M\) del corpo centrale: è uguale per tutti i satelliti dello stesso pianeta, come dice Keplero.</li>
+<li>Callisto: \(T=16{,}7\cdot86\,400=1{,}443\cdot10^6\) s; \(M_G=\dfrac{4\pi^2r^3}{GT^2}=\dfrac{4\pi^2\cdot(1{,}88\cdot10^9)^3}{6{,}67\cdot10^{-11}\cdot(1{,}443\cdot10^6)^2}=1{,}89\cdot10^{27}\) kg.</li></ol>
+</details></div>
+
+<h3 id="passaggi">Problemi a più passaggi</h3>
+
+<div class="ex" id="b18"><div class="head"><span class="n">B18</span><span class="lvl" data-l="livello 3"></span></div>
+<p>Dalla superficie della Luna (\(M_L=7{,}35\cdot10^{22}\) kg, \(R_L=1{,}74\cdot10^6\) m) si lancia un oggetto in verticale. Trascura la rotazione della Luna.</p>
+<ul class="req"><li>Con velocità iniziale 2,0 km/s, che quota massima raggiunge?</li><li>Calcola la velocità di fuga dalla Luna.</li><li>Con velocità iniziale 3,0 km/s l’oggetto sfugge. Con che velocità si allontana quando è molto lontano?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(h_\text{max}=4{,}26\cdot10^3\) km; \(v_f=2{,}37\) km/s; \(v_\infty=1{,}84\) km/s.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(GM_L=6{,}67\cdot10^{-11}\cdot7{,}35\cdot10^{22}=4{,}90\cdot10^{12}\ \mathrm{m^3/s^2}\).</li>
+<li>Conservazione dell’energia tra il lancio e il punto più alto: \(\tfrac12v_0^2-\dfrac{GM_L}{R_L}=-\dfrac{GM_L}{r_\text{max}}\Rightarrow\dfrac1{r_\text{max}}=\dfrac1{R_L}-\dfrac{v_0^2}{2GM_L}\).</li>
+<li>\(\dfrac1{r_\text{max}}=5{,}747\cdot10^{-7}-\dfrac{(2{,}0\cdot10^3)^2}{2\cdot4{,}90\cdot10^{12}}=5{,}747\cdot10^{-7}-4{,}08\cdot10^{-7}=1{,}667\cdot10^{-7}\ \mathrm{m^{-1}}\Rightarrow r_\text{max}=6{,}00\cdot10^6\) m.</li>
+<li>\(h_\text{max}=r_\text{max}-R_L=6{,}00\cdot10^6-1{,}74\cdot10^6=4{,}26\cdot10^6\) m. Con \(\dfrac{v_0^2}{2g}\) e \(g\) costante verrebbero 1240 km, molto meno, perché salendo \(g\) diminuisce e la formula con \(g\) costante non vale più.</li>
+<li>\(v_f=\sqrt{\dfrac{2GM_L}{R_L}}=\sqrt{\dfrac{2\cdot4{,}90\cdot10^{12}}{1{,}74\cdot10^6}}=\sqrt{5{,}632\cdot10^6}=2{,}37\cdot10^3\) m/s.</li>
+<li>Con \(v_0=3{,}0\) km/s: \(\tfrac12v_0^2-\dfrac{GM_L}{R_L}=\tfrac12v_\infty^2\), cioè \(v_\infty^2=v_0^2-v_f^2=9{,}00\cdot10^6-5{,}632\cdot10^6=3{,}368\cdot10^6\Rightarrow v_\infty=1{,}84\cdot10^3\) m/s.</li></ol>
+</details></div>
+
+<div class="ex" id="b19"><div class="head"><span class="n">B19</span><span class="lvl" data-l="livello 3"></span></div>
+<p>Attorno a un esopianeta di raggio \(2{,}0\cdot10^7\) m orbita una luna su un’orbita circolare di raggio \(4{,}0\cdot10^8\) m, con periodo 5,0 giorni.</p>
+<ul class="req"><li>Calcola la massa del pianeta.</li><li>Calcola \(g\) sulla sua superficie.</li><li>Calcola la velocità di un’orbita radente e la velocità di fuga.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(M=2{,}03\cdot10^{26}\) kg; \(g=33{,}8\) m/s²; \(v_\text{orb}=26{,}0\) km/s; \(v_f=36{,}8\) km/s.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>\(T=5{,}0\cdot86\,400=4{,}32\cdot10^5\) s; \(M=\dfrac{4\pi^2r^3}{GT^2}=\dfrac{4\pi^2\cdot(4{,}0\cdot10^8)^3}{6{,}67\cdot10^{-11}\cdot(4{,}32\cdot10^5)^2}=2{,}030\cdot10^{26}\) kg.</li>
+<li>\(g=\dfrac{GM}{R^2}=\dfrac{6{,}67\cdot10^{-11}\cdot2{,}030\cdot10^{26}}{(2{,}0\cdot10^7)^2}=\dfrac{1{,}3540\cdot10^{16}}{4{,}0\cdot10^{14}}=33{,}8\) m/s².</li>
+<li>\(v_\text{orb}=\sqrt{gR}=\sqrt{33{,}8\cdot2{,}0\cdot10^7}=\sqrt{6{,}76\cdot10^8}=2{,}60\cdot10^4\) m/s.</li>
+<li>\(v_f=\sqrt2\,v_\text{orb}=3{,}68\cdot10^4\) m/s.</li></ol>
+</details></div>
+
+<div class="ex" id="b20"><div class="head"><span class="n">B20</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Un pianeta ha la stessa densità della Terra e raggio tre volte maggiore.</p>
+<ul class="req"><li>Quanto vale \(g\) sulla sua superficie?</li><li>Di quanto cambiano rispetto alla Terra la velocità di un’orbita radente e la velocità di fuga?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(g=29{,}4\) m/s²; entrambe le velocità triplicano: 23,7 km/s e 33,6 km/s.</details>
+<details class="sol"><summary>Soluzione svolta</summary>
+<ol><li>Stessa densità: \(M\propto R^3\), quindi \(M=27\,M_T\).</li>
+<li>\(g=\dfrac{GM}{R^2}\propto\dfrac{R^3}{R^2}=R\): \(g=3\cdot9{,}81=29{,}4\) m/s².</li>
+<li>\(v\propto\sqrt{\dfrac{M}{R}}\propto\sqrt{\dfrac{R^3}{R}}=R\): le velocità triplicano. Orbita radente \(3\cdot7{,}90=23{,}7\) km/s, fuga \(3\cdot11{,}2=33{,}6\) km/s.</li></ol>
+</details></div>
 
 <div class="pager"><a href="3-energia-fuga.html">Indietro: Lezione 3</a><a href="formulario.html">Avanti: Formulario</a></div>
 </main>
