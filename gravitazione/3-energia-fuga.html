@@ -24,7 +24,8 @@
 <ul><li>usare l’energia potenziale gravitazionale \(U=-\dfrac{GMm}{r}\) e capire perché è negativa;</li>
 <li>calcolare l’energia totale di un satellite e il lavoro per cambiare orbita;</li>
 <li>usare la conservazione dell’energia e del momento angolare sulle orbite ellittiche;</li>
-<li>calcolare la velocità di fuga e il raggio di Schwarzschild.</li></ul></div>
+<li>calcolare la velocità di fuga e il raggio di Schwarzschild;</li>
+<li>spiegare perché vicino a un buco nero il tempo rallenta e che cos’è la spaghettificazione.</li></ul></div>
 
 <h2 id="potenziale"><span class="num">1</span>L’energia potenziale gravitazionale</h2>
 <div class="box richiamo"><div class="bt">Richiamo: lavoro ed energia</div><div class="bb">
@@ -97,6 +98,57 @@
 </div></div>
 <div class="box approf"><div class="bt">Approfondimento: Newton e Einstein</div><div class="bb">
 <p>Questo calcolo usa la fisica di Newton, mentre quello corretto richiede la relatività generale di Einstein. Per coincidenza la formula è la stessa. Nel 2022 è stata pubblicata la prima immagine di Sagittarius A*, il buco nero al centro della nostra galassia: ha una massa di circa 4 milioni di Soli.</p>
+</div></div>
+
+<h3 id="vicino">Vicino a un buco nero: tempo, spazio e maree</h3>
+<p>Newton ti dà il raggio di Schwarzschild, ma vicino a un buco nero succedono cose che la sua fisica non spiega. Per capirle serve un fatto scoperto da Einstein: <b>la luce va sempre alla stessa velocità \(c\)</b>, per chiunque la misuri.</p>
+<div class="box semplice"><div class="bt">In parole semplici: la luce non può rallentare</div><div class="bb">
+<p>Una palla lanciata verso l’alto rallenta salendo: perde energia cinetica per risalire il pozzo. Anche la luce che esce dal pozzo di un buco nero perde energia, ma non può rallentare, perché va sempre a \(c\). Allora perde energia in un altro modo: abbassa la sua <b>frequenza</b> e diventa più rossa.</p>
+<p>Ora pensa a un orologio vicino al buco nero che manda un lampo a ogni secondo. Da lontano i lampi arrivano più distanziati di un secondo: quell’orologio, visto da fuori, va più piano. L’orologio funziona benissimo: è che vicino a una massa grande <b>passa meno tempo</b>. È la <b>dilatazione gravitazionale del tempo</b>.</p>
+</div></div>
+<div class="box formula"><div class="bt">Orologio fermo vicino a un buco nero</div><div class="bb">
+\[ \Delta t_\text{vicino}=\Delta t_\text{lontano}\,\sqrt{1-\frac{R_S}{r}} \]
+<p>Vale per un orologio <b>tenuto fermo</b> a distanza \(r\) dal centro, confrontato con uno molto lontano. Mentre lontano passa un’ora, a \(r=10\,R_S\) passano 57 minuti, a \(r=2\,R_S\) 42 minuti, a \(r=1{,}1\,R_S\) 18 minuti. Avvicinandosi a \(R_S\) il fattore tende a zero, e sotto \(R_S\) nessun oggetto può restare fermo.</p>
+</div></div>
+<div class="fig w-md"><img src="../assets/fig/f12.svg" alt="Grafico dei minuti che passano su un orologio fermo vicino a un buco nero mentre lontano passa un’ora, in funzione della distanza"><div class="cap">Mentre lontano passa un’ora, quanti minuti segna un orologio fermo a distanza \(r\) dal centro. Più ti avvicini all’orizzonte, meno tempo passa.</div></div>
+<p><b>E le distanze?</b> Da lontano vedi la luce vicino al buco nero avanzare più lentamente di \(c\). Chi sta lì, invece, la misura sempre a \(c\). I conti tornano perché per lui passano meno secondi (gli orologi vanno più piano) e, nella direzione del centro, ci sono più metri: le distanze misurate con il metro verso il buco nero sono più lunghe di quanto ti aspetteresti guardando da fuori. Il tempo si accorcia e lo spazio si allunga proprio in modo che la velocità della luce resti \(c\).</p>
+<div class="box esempio"><div class="bt">Esempio svolto: il tempo scorre diverso anche sopra la tua testa</div><div class="bb">
+<p>L’effetto c’è anche per la Terra, solo molto più piccolo. I satelliti GPS orbitano a \(r=2{,}66\cdot10^7\) m (esercizio 10 della lezione 2), più in alto nel pozzo di noi. Per un campo debole la formula si può approssimare, e la differenza tra un orologio in orbita e uno a terra è:</p>
+\[ \frac{\Delta t}{t}\approx\frac{GM_T}{c^2}\left(\frac{1}{R_T}-\frac{1}{r}\right)=5{,}28\cdot10^{-10} \]
+<ul><li>In un giorno (86 400 s) l’orologio del satellite va avanti di 45,6 milionesimi di secondo (μs) rispetto a uno a terra, per effetto della gravità.</li>
+<li>Il satellite si muove a 3,87 km/s, e un orologio in movimento va più piano (relatività ristretta): questo lo fa restare indietro di 7,2 μs al giorno.</li>
+<li>Totale: 38,4 μs al giorno in avanti. Il GPS calcola le distanze dal tempo che impiega il segnale a viaggiare alla velocità \(c\). Se non si correggessero gli orologi, l’errore crescerebbe di circa 11,5 km al giorno.</li></ul>
+</div></div>
+
+<h4>Che cosa vede chi sta fuori</h4>
+<p>Immagina una sonda che cade nel buco nero e manda un lampo a ogni secondo del suo orologio. Da lontano vedi i lampi arrivare sempre più distanziati, sempre più rossi e deboli. La sonda sembra rallentare avvicinandosi a \(R_S\), e non la vedi mai attraversarlo: la sua luce si affievolisce fino a sparire. Per questo la sfera di raggio \(R_S\) si chiama <b>orizzonte degli eventi</b>: quello che succede dentro non può mandarti nessun segnale.</p>
+
+<h4>Che cosa sente chi cade</h4>
+<p>Per la sonda è tutto diverso. È in caduta libera, quindi non sente il proprio peso, come gli astronauti sulla ISS. Il suo orologio per lei va normalmente: un secondo è sempre un secondo. La dilatazione del tempo è un <b>confronto</b> tra due orologi in posti diversi, non qualcosa che senti sul tuo. All’orizzonte non c’è nessuna superficie: lo attraversa senza notare niente di speciale in quel punto.</p>
+<p>Due cose però la sonda non le può evitare.</p>
+<ul><li><b>Non può più tornare indietro.</b> Dentro l’orizzonte ogni strada porta verso il centro, anche accendendo i motori al massimo. Per il suo orologio il viaggio fino al centro dura poco: al massimo circa un minuto per Sagittarius A*, meno di un millesimo di secondo per un buco nero di 10 masse solari.</li>
+<li><b>Le maree.</b> La gravità tira più forte la parte più vicina al buco nero e meno quella lontana. È la spaghettificazione, spiegata qui sotto.</li></ul>
+<div class="box formula"><div class="bt">Spaghettificazione: la forza di marea</div><div class="bb">
+<p>Un corpo lungo \(L\) cade verso il buco nero con i piedi avanti. I piedi, alla distanza \(r\), hanno un’accelerazione più grande della testa, a \(r+L\). La differenza è:</p>
+\[ \Delta g=\frac{GM}{r^2}-\frac{GM}{(r+L)^2}\approx\frac{2GM\,L}{r^3}\qquad(L\ll r) \]
+<p>Il corpo viene stirato nella direzione del buco nero e schiacciato di lato, come uno spaghetto. Lo stesso effetto, molto più debole, produce le maree degli oceani causate dalla Luna.</p>
+</div></div>
+<div class="box esempio"><div class="bt">Esempio svolto: due buchi neri molto diversi</div><div class="bb">
+<p>Prendi un corpo lungo \(L=2\) m e calcola \(\Delta g\) all’orizzonte, cioè a \(r=R_S\). Per confronto, nella prima riga c’è \(\Delta g\) sulla superficie della Terra (e il raggio in cui bisognerebbe comprimerla per farne un buco nero).</p>
+<div class="tw"><table class="mini"><tr><th>Dove</th><th>\(R_S\)</th><th>\(\Delta g\) tra piedi e testa</th></tr>
+<tr><td>sulla Terra (\(r=R_T\))</td><td>8,8 mm</td><td>\(6{,}2\cdot10^{-6}\) m/s²</td></tr>
+<tr><td>buco nero di 10 masse solari</td><td>29,5 km</td><td>\(2{,}1\cdot10^{8}\) m/s², 20 milioni di volte \(g\)</td></tr>
+<tr><td>Sagittarius A* (4 milioni di Soli)</td><td>\(1{,}2\cdot10^{7}\) km</td><td>\(1{,}3\cdot10^{-3}\) m/s², circa un decimillesimo di \(g\)</td></tr></table></div>
+<p>Nel buco nero piccolo la differenza arriva già a 10 \(g\) a circa 3800 km dal centro: il corpo viene fatto a pezzi molto prima di raggiungere l’orizzonte. In Sagittarius A* lo attraversa senza sentire quasi niente, e viene stirato solo più tardi, quando si avvicina al centro.</p>
+</div></div>
+<div class="box attenzione"><div class="bt">Attenzione</div><div class="bb">
+<ul><li>Più un buco nero è grande, più all’orizzonte le maree sono deboli. Infatti \(R_S\) è proporzionale a \(M\): se la massa raddoppia, nella formula di \(\Delta g\) il numeratore raddoppia ma \(R_S^3\) diventa 8 volte più grande, e la marea si riduce a un quarto.</li>
+<li>La formula \(\sqrt{1-\dfrac{R_S}{r}}\) vale per un orologio fermo, non per uno che cade.</li>
+<li>Da fuori non vedi la sonda “congelata” per sempre sull’orizzonte: la sua luce diventa sempre più rossa e debole, e la sonda sparisce.</li></ul>
+</div></div>
+<div class="box lampo"><div class="bt">Quesito lampo</div><div class="bb">
+<p>Un’astronauta cade in Sagittarius A* guardando il suo orologio. Quando attraversa l’orizzonte, vede le lancette rallentare?</p>
+<details><summary>Risposta</summary>No. Per lei l’orologio va sempre normalmente. Sono gli osservatori lontani a vedere i suoi segnali arrivare sempre più lenti e rossi, fino a sparire.</details>
 </div></div>
 
 <h2 id="esercizi"><span class="num">4</span>Esercizi</h2>

@@ -11,7 +11,7 @@ Sito statico con teoria ed esercizi svolti, pubblicato con GitHub Pages.
 
 ```
 cd figure && pdflatex -output-directory build src/figure.tex
-for i in $(seq 1 11); do pdftocairo -svg -f $i -l $i build/figure.pdf ../assets/fig/f$(printf %02d $i).svg; done
+for i in $(seq 1 12); do pdftocairo -svg -f $i -l $i build/figure.pdf ../assets/fig/f$(printf %02d $i).svg; done
 ```
 
 ## Controlli prima del deploy

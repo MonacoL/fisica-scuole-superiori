@@ -126,4 +126,16 @@
 \node[esempio,font=\small,anchor=west] at (-0.4,4.3) {parabola, $E=0$};
 \node[attenzione,font=\small,anchor=west] at (0.2,3.5) {iperbole, $E>0$};
 \end{tikzpicture}\end{preview}
+% 12 orologio vicino a un buco nero
+\begin{preview}\begin{tikzpicture}
+\begin{axis}[width=10cm,height=6.5cm,xlabel={distanza dal centro $\dfrac{r}{R_S}$},ylabel={minuti vicino al buco nero},xmin=0,xmax=10,ymin=0,ymax=65,xtick={0,1,2,4,6,8,10},ytick={0,15,30,45,60}]
+\fill[black,opacity=.8] (axis cs:0,0) rectangle (axis cs:1,65);
+\node[white,font=\small,rotate=90] at (axis cs:0.5,32) {orizzonte};
+\draw[gray,dashed] (axis cs:0,60)--(axis cs:10,60) node[pos=0.55,above,font=\scriptsize] {lontano: 60 minuti};
+\addplot[formula,very thick,domain=1:10,samples=300] {60*sqrt(1-1/x)};
+\addplot[only marks,mark=*,attenzione] coordinates {(1.1,18.1) (2,42.4) (10,56.9)};
+\node[attenzione,font=\small,anchor=west] at (axis cs:1.25,16) {18 min};
+\node[attenzione,font=\small,anchor=north west] at (axis cs:2.1,41) {42 min};
+\node[attenzione,font=\small,anchor=north east] at (axis cs:9.8,55) {57 min};
+\end{axis}\end{tikzpicture}\end{preview}
 \end{document}
