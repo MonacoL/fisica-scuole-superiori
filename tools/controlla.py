@@ -12,6 +12,9 @@ ESCLUSI = {"materiale_gravitazione", "figure", "tools", "docs", ".git"}
 CDN_OK = ("https://cdn.jsdelivr.net/npm/mathjax@3.2.2/",)
 # Tracce del piano di lezione per il docente che non devono finire nel sito per gli studenti.
 VOCE_DOCENTE = re.compile(r"\b(ragazzo|fagli|chiedi|libro|scheda|venerd[iì]|sabato|marted[iì]|lavagna)\b|es\. \d", re.I)
+# Anti-pattern di scrittura (nucleo cima-scrittura): trattini lunghi e medi fuori dagli
+# intervalli numerici, punto medio come separatore, frecce e simboli decorativi.
+VIETATI = re.compile(r"[—→←↑↓►▸●○◐★✅]|(?<!\d)–|–(?!\d)| · ")
 VOID = {"meta", "link", "img", "br", "hr", "input", "source", "path", "circle", "line",
         "rect", "ellipse", "polygon", "polyline"}
 
@@ -90,6 +93,13 @@ def main():
         for a, b in ((r"\(", r"\)"), (r"\[", r"\]")):
             if testo.count(a) != testo.count(b):
                 e(f"formule non bilanciate: {testo.count(a)} '{a}' contro {testo.count(b)} '{b}'")
+        for m in re.finditer(r"\\\((.+?)\\\)|\\\[(.+?)\\\]", testo, re.S):
+            f = m.group(1) or m.group(2)
+            nuda = re.sub(r"\\(mathrm|text)\{[^}]*\}|\^\{[^}]*\}", "", f)
+            if "/" in nuda:
+                e(f"frazione in linea con la barra, usa \\dfrac: {f.strip()[:60]}")
+        for m in VIETATI.finditer(testo):
+            e(f"carattere vietato {m.group()!r}: «{testo[max(0, m.start()-25):m.end()+25].strip()}»")
         for m in VOCE_DOCENTE.finditer(testo):
             e(f"testo da docente: «{testo[max(0, m.start()-30):m.end()+30].strip()}»")
     for p, pg in parsed.items():

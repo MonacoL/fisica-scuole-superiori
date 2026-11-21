@@ -10,18 +10,18 @@
 </head>
 <body>
 <header class="top">
-<div class="crumbs"><a href="../index.html">Fisica</a> › <a href="index.html">Gravitazione</a> › Lezione 3</div>
-<h1>Lezione 3 · Energia gravitazionale, orbite e velocità di fuga</h1>
+<div class="crumbs"><a href="../index.html">Fisica</a> / <a href="index.html">Gravitazione</a> / Lezione 3</div>
+<h1>Lezione 3: energia gravitazionale, orbite e velocità di fuga</h1>
 <p class="sub">Il “pozzo” gravitazionale, l’energia di un satellite, come si scappa da un pianeta, e i buchi neri.</p>
 </header>
 <nav class="bar"><div class="in">
 <a href="#potenziale">Energia potenziale</a><a href="#orbita">Energia di un’orbita</a><a href="#fuga">Velocità di fuga</a><a href="#esercizi">Esercizi</a>
-<span class="sp"></span><button id="tog">Apri tutte le soluzioni</button><button id="theme" title="Tema chiaro/scuro">◐</button>
+<span class="sp"></span><button id="tog">Apri tutte le soluzioni</button><button id="theme" title="Passa dal tema chiaro a quello scuro">Tema</button>
 </div></nav>
 <main>
 
 <div class="obiettivi"><b>Alla fine di questa lezione sai:</b>
-<ul><li>usare l’energia potenziale gravitazionale \(U=-GMm/r\) e capire perché è negativa;</li>
+<ul><li>usare l’energia potenziale gravitazionale \(U=-\dfrac{GMm}{r}\) e capire perché è negativa;</li>
 <li>calcolare l’energia totale di un satellite e il lavoro per cambiare orbita;</li>
 <li>usare la conservazione dell’energia e del momento angolare sulle orbite ellittiche;</li>
 <li>calcolare la velocità di fuga e il raggio di Schwarzschild.</li></ul></div>
@@ -33,7 +33,7 @@
 <li><b>Energia potenziale</b> vicino al suolo: \(U=mgh\). Per una forza conservativa \(L=-\Delta U\).</li>
 <li><b>Conservazione dell’energia</b>: senza attriti \(K+U\) resta costante.</li></ul>
 </div></div>
-<p><b>Perché \(mgh\) non basta più?</b> Perché vale solo se \(g\) è costante. Un satellite che sale di migliaia di chilometri sente un \(g\) molto più piccolo (a 36 000 km vale 0,22 m/s²). Serve una formula valida a qualsiasi distanza.</p>
+<p>La formula \(mgh\) vale solo se \(g\) è costante. Un satellite che sale di migliaia di chilometri sente un \(g\) molto più piccolo (a 36 000 km vale 0,22 m/s²). Serve una formula valida a qualsiasi distanza.</p>
 <p>Si dimostra che il lavoro della gravità per andare da A a B dipende solo dalle distanze iniziale e finale dal centro, non dalla strada fatta. La gravità è quindi una <b>forza conservativa</b>, e ha un’energia potenziale:</p>
 <div class="box formula"><div class="bt">Energia potenziale gravitazionale</div><div class="bb">
 \[ U=-G\,\frac{Mm}{r}\qquad(\text{zero a distanza infinita})\qquad\qquad L_{A\to B}=U_A-U_B \]
@@ -47,7 +47,7 @@
 <div class="box esempio"><div class="bt">Esempio svolto: \(mgh\) come caso particolare</div><div class="bb">
 <p>Un corpo sale dalla superficie fino all’altezza \(h\). La variazione esatta di energia potenziale è:</p>
 \[ \Delta U=-\frac{GM_Tm}{R_T+h}+\frac{GM_Tm}{R_T}=GM_Tm\,\frac{h}{R_T(R_T+h)} \]
-<p>Se \(h\ll R_T\), allora \(R_T+h\approx R_T\) e \(\Delta U\approx\dfrac{GM_T}{R_T^2}\,mh=mgh\). La formula di sempre è l’approssimazione per piccole altezze.</p>
+<p>Se \(h\ll R_T\), allora \(R_T+h\approx R_T\) e \(\Delta U\approx\dfrac{GM_T}{R_T^2}\,mh=mgh\).</p>
 </div></div>
 <div class="box attenzione"><div class="bt">Attenzione</div><div class="bb">
 <ul><li>Non dimenticare il <b>segno meno</b> in \(U\) e in \(E\).</li>
@@ -65,14 +65,14 @@
 </div></div>
 <div class="box lampo"><div class="bt">Quesito lampo</div><div class="bb">
 <p>Un satellite scende su un’orbita più bassa. Va più veloce o più lento? La sua energia totale aumenta o diminuisce?</p>
-<details><summary>Risposta</summary>Va più veloce, perché \(v=\sqrt{GM/r}\). Ma l’energia totale diminuisce, perché \(-GMm/2r\) diventa più negativa. Per scendere bisogna <b>frenare</b>: l’attrito con l’aria fa scendere lentamente la ISS e allo stesso tempo la fa andare più veloce.</details>
+<details><summary>Risposta</summary>Va più veloce, perché \(v=\sqrt{\dfrac{GM}{r}}\). Ma l’energia totale diminuisce, perché \(-\dfrac{GMm}{2r}\) diventa più negativa. Per scendere bisogna <b>frenare</b>: l’attrito con l’aria fa scendere lentamente la ISS e allo stesso tempo la fa andare più veloce.</details>
 </div></div>
 
 <h3>Orbite ellittiche</h3>
 <p>Lungo un’ellisse la distanza cambia, quindi cambiano velocità ed energia potenziale. Due grandezze però restano costanti:</p>
 <ul><li><b>l’energia meccanica</b> \(E=\tfrac12mv^2-\dfrac{GMm}{r}\), perché la gravità è conservativa. Quando il pianeta si avvicina, \(U\) scende e \(K\) sale: va più veloce;</li>
-<li><b>il momento angolare</b> \(L=m\,r\,v\sin\theta\), perché la gravità punta sempre verso il centro (forza centrale). Al perielio e all’afelio \(\theta=90^\circ\), quindi \(r_Pv_P=r_Av_A\): è la seconda legge di Keplero della lezione 1.</li></ul>
-<div class="box semplice"><div class="bt">In parole semplici: il pattinatore</div><div class="bb">
+<li><b>il momento angolare</b>, che vale \(m\,r\,v\sin\theta\), perché la gravità punta sempre verso il centro (forza centrale). Al perielio e all’afelio \(\theta=90^\circ\), quindi \(r_Pv_P=r_Av_A\): è la seconda legge di Keplero della lezione 1.</li></ul>
+<div class="box semplice"><div class="bt">In parole semplici: la pattinatrice</div><div class="bb">
 <p>Una pattinatrice che gira su se stessa chiude le braccia e gira più veloce, le apre e rallenta: il suo momento angolare si conserva. Un pianeta che si avvicina al Sole fa la stessa cosa.</p>
 </div></div>
 <div class="fig w-md"><img src="../assets/fig/f11.svg" alt="Traiettorie dallo stesso punto con velocità crescente: cerchio, ellisse, parabola, iperbole"><div class="cap">Stesso punto di partenza, velocità sempre maggiore: cerchio, ellisse, parabola, iperbole.</div></div>
@@ -83,28 +83,26 @@
 
 <h2 id="fuga"><span class="num">3</span>Velocità di fuga e buchi neri</h2>
 <div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
-<p>Lancia una palla verso l’alto: sale, rallenta, si ferma e ricade. Più forte la lanci, più in alto arriva. Siccome la gravità diminuisce con la distanza, esiste una velocità oltre la quale la palla rallenta sempre ma <b>non si ferma mai</b>: se ne va per sempre. È la velocità di fuga, quella che serve per risalire fino in cima al pozzo.</p>
+<p>Lancia una palla verso l’alto: sale, rallenta, si ferma e ricade. Più forte la lanci, più in alto arriva. Siccome la gravità diminuisce con la distanza, esiste una velocità oltre la quale la palla rallenta sempre ma non si ferma mai e se ne va per sempre. È la velocità di fuga, quella che serve per risalire fino in cima al pozzo.</p>
 </div></div>
 <p>Il caso limite è arrivare all’infinito con velocità zero, dove \(K=0\) e \(U=0\). L’energia totale è zero lì, quindi deve essere zero anche alla partenza:</p>
 <div class="box formula"><div class="bt">Velocità di fuga</div><div class="bb">
 \[ \tfrac12mv_f^2-\frac{GMm}{R}=0\quad\Longrightarrow\quad v_f=\sqrt{\frac{2GM}{R}}=\sqrt{2gR} \]
 <p>Per la Terra \(v_f=11{,}2\) km/s. Non dipende dalla massa lanciata, ed è \(\sqrt2\) volte la velocità di un’orbita radente (7,9 km/s).</p>
 </div></div>
-<ul><li>11,2 km/s sono circa 40 000 km/h.</li>
-<li>Luna: 2,4 km/s; Marte: 5,0 km/s; Giove: 60 km/s.</li>
-<li>Un pianeta con velocità di fuga bassa perde l’atmosfera, perché le molecole di gas più veloci scappano. Per questo la Luna non ha atmosfera.</li></ul>
-<p><b>Buchi neri.</b> Se comprimi una massa in un raggio sempre più piccolo, \(v_f=\sqrt{2GM/R}\) cresce. Quando supera la velocità della luce \(c\), <b>neanche la luce</b> riesce a uscire: l’oggetto è nero.</p>
+<p>Per la Terra 11,2 km/s sono circa 40 000 km/h. La velocità di fuga è 2,4 km/s per la Luna, 5,0 km/s per Marte e 60 km/s per Giove. Un pianeta con velocità di fuga bassa perde l’atmosfera, perché le molecole di gas più veloci scappano, e per questo la Luna non ha atmosfera.</p>
+<p><b>Buchi neri.</b> Se comprimi una massa in un raggio sempre più piccolo, \(v_f=\sqrt{\dfrac{2GM}{R}}\) cresce. Quando supera la velocità della luce \(c\), neanche la luce riesce a uscire, e l’oggetto appare nero.</p>
 <div class="box formula"><div class="bt">Raggio di Schwarzschild</div><div class="bb">
 \[ c=\sqrt{\frac{2GM}{R_S}}\quad\Longrightarrow\quad R_S=\frac{2GM}{c^2} \]
 </div></div>
 <div class="box approf"><div class="bt">Approfondimento: Newton e Einstein</div><div class="bb">
-<p>Questo calcolo usa la fisica di Newton, mentre quello corretto richiede la relatività generale di Einstein. Per una coincidenza fortunata la formula è la stessa. Nel 2022 è stata pubblicata la prima immagine di Sagittarius A*, il buco nero al centro della nostra galassia: ha una massa di circa 4 milioni di Soli.</p>
+<p>Questo calcolo usa la fisica di Newton, mentre quello corretto richiede la relatività generale di Einstein. Per coincidenza la formula è la stessa. Nel 2022 è stata pubblicata la prima immagine di Sagittarius A*, il buco nero al centro della nostra galassia: ha una massa di circa 4 milioni di Soli.</p>
 </div></div>
 
 <h2 id="esercizi"><span class="num">4</span>Esercizi</h2>
 <p class="note">Dati: \(G=6{,}67\cdot10^{-11}\ \mathrm{N\,m^2/kg^2}\), \(M_T=5{,}97\cdot10^{24}\) kg, \(R_T=6{,}37\cdot10^6\) m, \(GM_T=3{,}98\cdot10^{14}\ \mathrm{m^3/s^2}\), \(c=3{,}00\cdot10^8\) m/s. Altri dati nel <a href="formulario.html">formulario</a>.</p>
 
-<div class="ex" id="e3-1"><div class="head"><span class="n">1</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e3-1"><div class="head"><span class="n">1</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Un satellite di 1200 kg orbita a 1000 km di quota.</p>
 <ul class="req"><li>Calcola la sua energia potenziale gravitazionale (zero all’infinito).</li></ul>
 <details class="ris"><summary>Risultato</summary>\(U=-6{,}48\cdot10^{10}\) J.</details>
@@ -113,7 +111,7 @@
 <li>\(U=-\dfrac{GM_Tm}{r}=-\dfrac{3{,}98\cdot10^{14}\cdot1200}{7{,}37\cdot10^6}=-6{,}48\cdot10^{10}\) J.</li></ol>
 </details></div>
 
-<div class="ex" id="e3-2"><div class="head"><span class="n">2</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e3-2"><div class="head"><span class="n">2</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Una sonda di 500 kg viene portata dalla superficie terrestre fino a un’altezza pari al raggio terrestre (\(h=R_T\)).</p>
 <ul class="req"><li>Quanto lavoro bisogna fare contro la gravità?</li><li>Quanto otterresti usando \(mgh\)? Perché il risultato è sbagliato?</li></ul>
 <details class="ris"><summary>Risultato</summary>\(1{,}56\cdot10^{10}\) J. Con \(mgh\): \(3{,}12\cdot10^{10}\) J, il doppio.</details>
@@ -123,7 +121,7 @@
 <li>Con \(mgh=500\cdot9{,}81\cdot6{,}37\cdot10^6=3{,}12\cdot10^{10}\) J: il doppio. Salendo, \(g\) diminuisce fino a un quarto, quindi \(mgh\) sovrastima molto il lavoro.</li></ol>
 </details></div>
 
-<div class="ex" id="e3-3"><div class="head"><span class="n">3</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e3-3"><div class="head"><span class="n">3</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Un satellite di 900 kg è in orbita circolare a 600 km di quota.</p>
 <ul class="req"><li>Calcola la sua energia cinetica, l’energia potenziale e l’energia totale.</li></ul>
 <details class="ris"><summary>Risultato</summary>\(K=2{,}57\cdot10^{10}\) J; \(U=-5{,}14\cdot10^{10}\) J; \(E=-2{,}57\cdot10^{10}\) J.</details>
@@ -134,7 +132,7 @@
 <li>\(E=K+U=-2{,}57\cdot10^{10}\) J. Nota: \(E=-K\), vale per ogni orbita circolare.</li></ol>
 </details></div>
 
-<div class="ex" id="e3-4"><div class="head"><span class="n">4</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="●●●"></span></div>
+<div class="ex" id="e3-4"><div class="head"><span class="n">4</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="livello 3"></span></div>
 <p>Un satellite per telecomunicazioni di 2000 kg viene prima messo in un’orbita circolare a 400 km di quota, poi portato sull’orbita geostazionaria (\(r=4{,}22\cdot10^7\) m).</p>
 <div class="fig w-sm"><svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" font-size="12" fill="currentColor" role="img" aria-label="Orbita bassa e orbita alta attorno alla Terra"><circle cx="110" cy="110" r="25" fill="#3b82f6" fill-opacity=".35" stroke="currentColor"/><circle cx="110" cy="110" r="38" fill="none" stroke="currentColor" stroke-dasharray="4 3"/><circle cx="110" cy="110" r="95" fill="none" stroke="currentColor" stroke-dasharray="4 3"/><circle cx="148" cy="110" r="4" fill="#B5651D"/><circle cx="205" cy="110" r="4" fill="#B5651D"/><text x="72" y="160">r₁</text><text x="88" y="10">r₂ = 4,22·10⁷ m</text></svg></div>
 <ul class="req"><li>Calcola l’energia totale nelle due orbite.</li><li>Quanta energia devono fornire i motori, come minimo?</li></ul>
@@ -147,7 +145,7 @@
 <p>L’energia totale aumenta (diventa meno negativa) anche se in alto il satellite va più piano.</p>
 </details></div>
 
-<div class="ex" id="e3-5"><div class="head"><span class="n">5</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e3-5"><div class="head"><span class="n">5</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Giove ha massa \(1{,}90\cdot10^{27}\) kg e raggio \(7{,}15\cdot10^7\) m.</p>
 <ul class="req"><li>Calcola la velocità di fuga da Giove.</li></ul>
 <details class="ris"><summary>Risultato</summary>\(v_f=59{,}5\) km/s.</details>
@@ -156,23 +154,23 @@
 <li>\(v_f=5{,}95\cdot10^4\) m/s \(=59{,}5\) km/s, più di 5 volte quella terrestre.</li></ol>
 </details></div>
 
-<div class="ex" id="e3-6"><div class="head"><span class="n">6</span><span class="lvl" data-l="●●●"></span></div>
+<div class="ex" id="e3-6"><div class="head"><span class="n">6</span><span class="lvl" data-l="livello 3"></span></div>
 <p>Un satellite percorre un’orbita ellittica attorno alla Terra. Al perigeo dista \(7{,}00\cdot10^6\) m dal centro e viaggia a 9,24 km/s; all’apogeo dista \(2{,}10\cdot10^7\) m.</p>
 <div class="fig w-md"><svg viewBox="0 0 370 175" xmlns="http://www.w3.org/2000/svg" font-size="12" fill="currentColor" role="img" aria-label="Orbita ellittica con perigeo e apogeo"><ellipse cx="150" cy="85" rx="120" ry="70" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="210" cy="85" r="9" fill="#3b82f6"/><text x="196" y="112">Terra</text><circle cx="270" cy="85" r="4"/><circle cx="30" cy="85" r="4"/><line x1="270" y1="85" x2="270" y2="28" stroke="#B5651D" stroke-width="2"/><path d="M265 34 L270 22 L275 34 z" fill="#B5651D"/><text x="278" y="40" fill="#B5651D">v_P = 9,24 km/s</text><line x1="30" y1="85" x2="30" y2="110" stroke="#B5651D" stroke-width="2"/><path d="M25 106 L30 118 L35 106 z" fill="#B5651D"/><text x="6" y="136" fill="#B5651D">v_A = ?</text><line x1="30" y1="85" x2="210" y2="85" stroke="#1F4E79" stroke-dasharray="4 3"/><line x1="210" y1="85" x2="270" y2="85" stroke="#1F4E79" stroke-width="2.5"/><text x="100" y="80" fill="#1F4E79">r_A</text><text x="232" y="78" fill="#1F4E79">r_P</text></svg></div>
-<ul class="req"><li>Calcola la velocità all’apogeo con la conservazione del momento angolare.</li><li>Verifica che l’energia meccanica per unità di massa \(E/m=\tfrac12v^2-GM_T/r\) sia la stessa nei due punti.</li></ul>
-<details class="ris"><summary>Risultato</summary>\(v_A=3{,}08\) km/s; \(E/m\approx-1{,}42\cdot10^7\) J/kg in entrambi i punti.</details>
+<ul class="req"><li>Calcola la velocità all’apogeo con la conservazione del momento angolare.</li><li>Verifica che l’energia meccanica per unità di massa \(\dfrac{E}{m}=\tfrac12v^2-\dfrac{GM_T}{r}\) sia la stessa nei due punti.</li></ul>
+<details class="ris"><summary>Risultato</summary>\(v_A=3{,}08\) km/s; \(\dfrac{E}{m}\approx-1{,}42\cdot10^7\) J/kg in entrambi i punti.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>Al perigeo e all’apogeo velocità e raggio sono perpendicolari: \(r_Pv_P=r_Av_A\).</li>
 <li>\(v_A=v_P\dfrac{r_P}{r_A}=9{,}24\cdot10^3\cdot\dfrac{7{,}00\cdot10^6}{2{,}10\cdot10^7}=3{,}08\cdot10^3\) m/s.</li>
 <li>Perigeo: \(\tfrac12(9{,}24\cdot10^3)^2-\dfrac{3{,}98\cdot10^{14}}{7{,}00\cdot10^6}=4{,}27\cdot10^7-5{,}69\cdot10^7=-1{,}42\cdot10^7\) J/kg.</li>
-<li>Apogeo: \(\tfrac12(3{,}08\cdot10^3)^2-\dfrac{3{,}98\cdot10^{14}}{2{,}10\cdot10^7}=0{,}474\cdot10^7-1{,}90\cdot10^7=-1{,}42\cdot10^7\) J/kg.</li></ol>
-<p>L’energia è negativa: l’orbita è legata, come deve essere per un’ellisse.</p>
+<li>Apogeo: \(\tfrac12(3{,}08\cdot10^3)^2-\dfrac{3{,}98\cdot10^{14}}{2{,}10\cdot10^7}=0{,}474\cdot10^7-1{,}895\cdot10^7=-1{,}42\cdot10^7\) J/kg.</li></ol>
+<p>L’energia è negativa, come per ogni orbita ellittica.</p>
 </details></div>
 
-<div class="ex" id="e3-7"><div class="head"><span class="n">7</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="●●●"></span></div>
+<div class="ex" id="e3-7"><div class="head"><span class="n">7</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="livello 3"></span></div>
 <p>Un proiettile viene lanciato in verticale dalla superficie terrestre a 5,0 km/s (trascura l’aria).</p>
-<ul class="req"><li>Che altezza massima raggiunge?</li><li>Quanto otterresti con la formula \(h=v^2/(2g)\)? Perché è diverso?</li></ul>
-<details class="ris"><summary>Risultato</summary>\(h_\text{max}=1{,}59\cdot10^3\) km. Con \(v^2/2g\): \(1{,}27\cdot10^3\) km, troppo poco.</details>
+<ul class="req"><li>Che altezza massima raggiunge?</li><li>Quanto otterresti con la formula \(h=\dfrac{v^2}{2g}\)? Perché è diverso?</li></ul>
+<details class="ris"><summary>Risultato</summary>\(h_\text{max}=1{,}59\cdot10^3\) km. Con \(\dfrac{v^2}{2g}\): \(1{,}27\cdot10^3\) km, troppo poco.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>Conservazione dell’energia tra la superficie e il punto più alto (dove \(v=0\)): \(\tfrac12mv_0^2-\dfrac{GM_Tm}{R_T}=-\dfrac{GM_Tm}{r_\text{max}}\).</li>
 <li>Dividendo per \(m\) e isolando: \(\dfrac{1}{r_\text{max}}=\dfrac{1}{R_T}-\dfrac{v_0^2}{2GM_T}=\dfrac{1}{6{,}37\cdot10^6}-\dfrac{(5{,}0\cdot10^3)^2}{2\cdot3{,}98\cdot10^{14}}\).</li>
@@ -181,7 +179,7 @@
 <li>Con \(g\) costante: \(h=\dfrac{(5{,}0\cdot10^3)^2}{2\cdot9{,}81}=1{,}27\cdot10^6\) m. Salendo \(g\) diminuisce, quindi il proiettile rallenta meno e arriva più in alto.</li></ol>
 </details></div>
 
-<div class="ex" id="e3-8"><div class="head"><span class="n">8</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e3-8"><div class="head"><span class="n">8</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Calcola il raggio di Schwarzschild di:</p>
 <ul class="req"><li>un buco nero di 10 masse solari (\(M_S=1{,}99\cdot10^{30}\) kg);</li><li>Giove (\(1{,}90\cdot10^{27}\) kg).</li></ul>
 <details class="ris"><summary>Risultato</summary>29,5 km; 2,82 m.</details>
@@ -191,37 +189,37 @@
 <p>Per diventare un buco nero, Giove dovrebbe essere compresso in una palla grande come una stanza.</p>
 </details></div>
 
-<div class="ex" id="e3-9"><div class="head"><span class="n">9</span><span class="lvl" data-l="●●○"></span></div>
-<p>Una sonda si trova alla distanza Terra–Sole (\(1{,}50\cdot10^{11}\) m) ma lontano dalla Terra.</p>
+<div class="ex" id="e3-9"><div class="head"><span class="n">9</span><span class="lvl" data-l="livello 2"></span></div>
+<p>Una sonda si trova alla distanza Terra-Sole (\(1{,}50\cdot10^{11}\) m) ma lontano dalla Terra.</p>
 <ul class="req"><li>Che velocità serve per sfuggire al Sole partendo da lì?</li><li>Confrontala con la velocità orbitale della Terra attorno al Sole.</li></ul>
 <details class="ris"><summary>Risultato</summary>\(v_f=42{,}1\) km/s; la Terra va a 29,8 km/s, cioè \(\sqrt2\) volte meno.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>\(v_f=\sqrt{\dfrac{2GM_S}{r}}=\sqrt{\dfrac{2\cdot6{,}67\cdot10^{-11}\cdot1{,}99\cdot10^{30}}{1{,}50\cdot10^{11}}}=\sqrt{1{,}77\cdot10^9}=4{,}21\cdot10^4\) m/s.</li>
 <li>\(v_\text{orb}=\sqrt{\dfrac{GM_S}{r}}=\dfrac{v_f}{\sqrt2}=2{,}98\cdot10^4\) m/s.</li></ol>
-<p>Una sonda che parte dalla Terra sfrutta già i 29,8 km/s della Terra: le basta aggiungerne circa 12 nella direzione giusta.</p>
+<p>Una sonda che parte dalla Terra sfrutta già i 29,8 km/s della Terra: una volta lasciata la Terra, le basta aggiungerne circa 12 nella direzione giusta.</p>
 </details></div>
 
-<div class="ex" id="e3-10"><div class="head"><span class="n">10</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e3-10"><div class="head"><span class="n">10</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="livello 1"></span></div>
 <p>La velocità di fuga dalla Terra è 11,2 km/s, quella di un’orbita radente è 7,9 km/s.</p>
 <ul class="req"><li>Perché il rapporto tra le due è proprio \(\sqrt2\)?</li><li>La velocità di fuga dipende dalla massa del razzo?</li></ul>
-<details class="ris"><summary>Risultato</summary>\(v_f/v_\text{orb}=\sqrt{2GM/R}\,/\sqrt{GM/R}=\sqrt2\). No, la massa del razzo si semplifica.</details>
+<details class="ris"><summary>Risultato</summary>\(\dfrac{v_f}{v_\text{orb}}=\sqrt{\dfrac{2GM}{R}\cdot\dfrac{R}{GM}}=\sqrt2\). No, la massa del razzo si semplifica.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
-<ol><li>Orbita radente: \(v=\sqrt{GM/R}\). Fuga: \(v_f=\sqrt{2GM/R}\). Il rapporto è \(\sqrt2=1{,}41\), e infatti \(7{,}90\cdot1{,}414=11{,}2\).</li>
-<li>In \(\tfrac12mv_f^2=GMm/R\) la massa \(m\) compare in entrambi i membri e si semplifica: 11,2 km/s per un sasso come per un razzo.</li></ol>
+<ol><li>Orbita radente: \(v=\sqrt{\dfrac{GM}{R}}\). Fuga: \(v_f=\sqrt{\dfrac{2GM}{R}}\). Il rapporto è \(\sqrt2=1{,}41\), e infatti \(7{,}90\cdot1{,}414=11{,}2\).</li>
+<li>In \(\tfrac12mv_f^2=\dfrac{GMm}{R}\) la massa \(m\) compare in entrambi i membri e si semplifica: 11,2 km/s per un sasso come per un razzo.</li></ol>
 </details></div>
 
-<div class="ex" id="e3-11"><div class="head"><span class="n">11</span><span class="lvl" data-l="●●●"></span></div>
+<div class="ex" id="e3-11"><div class="head"><span class="n">11</span><span class="lvl" data-l="livello 3"></span></div>
 <p>Un meteoroide parte da fermo a una quota pari al raggio terrestre (\(h=R_T\)) e cade verso la Terra. Trascura l’atmosfera.</p>
 <ul class="req"><li>Con che velocità arriva al suolo?</li><li>Che cosa noti confrontandola con la velocità di un’orbita radente?</li></ul>
-<details class="ris"><summary>Risultato</summary>\(v=\sqrt{GM_T/R_T}=7{,}90\) km/s, proprio la velocità dell’orbita radente.</details>
+<details class="ris"><summary>Risultato</summary>\(v=\sqrt{\dfrac{GM_T}{R_T}}=7{,}90\) km/s, proprio la velocità dell’orbita radente.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>Conservazione dell’energia tra \(r=2R_T\) (fermo) e \(r=R_T\): \(-\dfrac{GM_Tm}{2R_T}=\tfrac12mv^2-\dfrac{GM_Tm}{R_T}\).</li>
 <li>\(\tfrac12v^2=\dfrac{GM_T}{R_T}-\dfrac{GM_T}{2R_T}=\dfrac{GM_T}{2R_T}\Rightarrow v=\sqrt{\dfrac{GM_T}{R_T}}\).</li>
 <li>\(v=\sqrt{\dfrac{3{,}98\cdot10^{14}}{6{,}37\cdot10^6}}=7{,}90\cdot10^3\) m/s.</li></ol>
-<p>Coincidenza curiosa: è proprio la velocità di un’orbita radente.</p>
+<p>È la stessa velocità di un’orbita radente, perché in entrambi i casi \(v^2=\dfrac{GM_T}{R_T}\).</p>
 </details></div>
 
-<div class="ex" id="e3-12"><div class="head"><span class="n">12</span><span class="tag sesucc">Che cosa succede se</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e3-12"><div class="head"><span class="n">12</span><span class="tag sesucc">Che cosa succede se</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Un asteroide che passa vicino al Sole ha energia meccanica totale positiva (rispetto al Sole).</p>
 <ul class="req"><li>Che traiettoria segue? Tornerà a passare vicino al Sole?</li></ul>
 <details class="ris"><summary>Risultato</summary>Un ramo di iperbole; non tornerà più.</details>
@@ -229,9 +227,9 @@
 <p>Con \(E&gt;0\) l’asteroide non è legato: anche all’infinito, dove \(U=0\), gli resta energia cinetica positiva. Percorre un ramo di iperbole e si allontana per sempre. Solo con \(E&lt;0\) l’orbita sarebbe un’ellisse chiusa.</p>
 </details></div>
 
-<div class="pager"><a href="2-satelliti-campo.html">← Lezione 2</a><a href="verifica.html">Verifica finale →</a></div>
+<div class="pager"><a href="2-satelliti-campo.html">Indietro: Lezione 2</a><a href="verifica.html">Avanti: Verifica finale</a></div>
 </main>
-<footer>Fisica per le superiori · Gravitazione</footer>
+<footer>Fisica per le superiori, unità sulla gravitazione</footer>
 <script src="../assets/site.js"></script>
 </body>
 </html>

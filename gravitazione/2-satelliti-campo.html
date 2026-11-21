@@ -10,18 +10,18 @@
 </head>
 <body>
 <header class="top">
-<div class="crumbs"><a href="../index.html">Fisica</a> › <a href="index.html">Gravitazione</a> › Lezione 2</div>
-<h1>Lezione 2 · Satelliti e campo gravitazionale</h1>
-<p class="sub">Perché un satellite non cade, perché gli astronauti galleggiano, e che cos’è un campo.</p>
+<div class="crumbs"><a href="../index.html">Fisica</a> / <a href="index.html">Gravitazione</a> / Lezione 2</div>
+<h1>Lezione 2: satelliti e campo gravitazionale</h1>
+<p class="sub">Il moto dei satelliti in orbita circolare, i satelliti geostazionari, l’assenza di peso e il campo gravitazionale.</p>
 </header>
 <nav class="bar"><div class="in">
 <a href="#satelliti">Satelliti</a><a href="#geo">Geostazionari</a><a href="#peso">Assenza di peso</a><a href="#campo">Campo</a><a href="#esercizi">Esercizi</a>
-<span class="sp"></span><button id="tog">Apri tutte le soluzioni</button><button id="theme" title="Tema chiaro/scuro">◐</button>
+<span class="sp"></span><button id="tog">Apri tutte le soluzioni</button><button id="theme" title="Passa dal tema chiaro a quello scuro">Tema</button>
 </div></nav>
 <main>
 
 <div class="obiettivi"><b>Alla fine di questa lezione sai:</b>
-<ul><li>ricavare da solo la velocità \(v=\sqrt{GM/r}\) e il periodo di un satellite in orbita circolare;</li>
+<ul><li>ricavare da solo la velocità \(v=\sqrt{\dfrac{GM}{r}}\) e il periodo di un satellite in orbita circolare;</li>
 <li>ritrovare la terza legge di Keplero dalla legge di Newton e usarla per misurare la massa di un pianeta;</li>
 <li>spiegare i satelliti geostazionari e l’“assenza di peso”;</li>
 <li>calcolare il campo gravitazionale di una o più masse.</li></ul></div>
@@ -29,7 +29,7 @@
 <h2 id="satelliti"><span class="num">1</span>Satelliti in orbita circolare</h2>
 <div class="fig w-sm"><img src="../assets/fig/f06.svg" alt="Il cannone di Newton: proiettili sempre più veloci cadono sempre più lontano, finché uno gira attorno alla Terra"><div class="cap">Il cannone di Newton: a circa 7,9 km/s la Terra “curva via” sotto il proiettile tanto quanto lui cade.</div></div>
 <div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
-<p>Un cannone in cima a una montagna altissima spara in orizzontale. Se spara piano, la palla cade vicino. Se spara più forte, cade più lontano. Ma la Terra è rotonda: se spari abbastanza forte, mentre la palla cade la superficie sotto di lei si abbassa altrettanto. La palla cade per sempre senza toccare terra. È diventata un <b>satellite</b>.</p>
+<p>Un cannone in cima a una montagna altissima spara in orizzontale. Se spara piano, la palla cade vicino. Se spara più forte, cade più lontano. Ma la Terra è rotonda: se spari abbastanza forte, mentre la palla cade la superficie sotto di lei si abbassa altrettanto. Una palla che cade per sempre senza toccare terra è un <b>satellite</b>.</p>
 </div></div>
 <div class="fig w-sm"><img src="../assets/fig/f07.svg" alt="Satellite in orbita circolare: la forza di gravità punta verso il centro, la velocità è tangente"></div>
 <p>Ricaviamo la velocità del satellite in tre passi.</p>
@@ -47,13 +47,13 @@
 \[ v=\frac{2\pi r}{T}\qquad \omega=\frac{2\pi}{T}\qquad a_c=\frac{v^2}{r}=\omega^2r=\frac{4\pi^2r}{T^2} \]
 <p>L’accelerazione centripeta punta sempre verso il centro. Ricorda di esprimere \(T\) in secondi: 1 h = 3600 s, 1 d = 86 400 s.</p>
 </div></div>
-<p><b>Periodo e terza legge.</b> Mettiamo \(v=2\pi r/T\) nell’uguaglianza \(v^2=GM/r\):</p>
+<p><b>Periodo e terza legge.</b> Mettiamo \(v=\dfrac{2\pi r}{T}\) nell’uguaglianza \(v^2=\dfrac{GM}{r}\):</p>
 <div class="box formula"><div class="bt">Terza legge di Keplero ricavata da Newton</div><div class="bb">
 \[ \frac{4\pi^2r^2}{T^2}=\frac{GM}{r}\quad\Longrightarrow\quad T^2=\frac{4\pi^2}{GM}\,r^3\qquad\text{quindi}\qquad M=\frac{4\pi^2r^3}{G\,T^2} \]
-<p>La costante di Keplero vale \(4\pi^2/(GM)\): dipende solo dalla massa del corpo centrale. Misurando \(T\) e \(r\) di un satellite si trova la <b>massa del pianeta</b>.</p>
+<p>La costante di Keplero vale \(\dfrac{4\pi^2}{GM}\): dipende solo dalla massa del corpo centrale. Misurando \(T\) e \(r\) di un satellite si trova la <b>massa del pianeta</b>.</p>
 </div></div>
 <div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
-<p>Keplero aveva trovato la sua terza legge guardando il cielo per anni. Newton la <b>ricava</b> in tre righe dalla sua formula. E si capisce anche perché la costante delle lune di Giove è diversa: dipende dalla massa del corpo attorno a cui si gira.</p>
+<p>Keplero aveva trovato la sua terza legge guardando il cielo per anni. Newton la ricava dalla legge di gravitazione con i pochi passaggi appena visti. E si capisce anche perché la costante delle lune di Giove è diversa: dipende dalla massa del corpo attorno a cui si gira.</p>
 </div></div>
 <div class="tw"><table class="mini"><tr><th>Oggetto</th><th>quota</th><th>velocità</th><th>periodo</th></tr>
 <tr><td>Stazione spaziale (ISS)</td><td>400 km</td><td>7,7 km/s</td><td>92 min</td></tr>
@@ -65,11 +65,11 @@
 <ol><li>\(T=92{,}7\cdot60=5{,}56\cdot10^3\) s.</li>
 <li>\(r=\sqrt[3]{\dfrac{GM_T\,T^2}{4\pi^2}}=\sqrt[3]{\dfrac{3{,}98\cdot10^{14}\cdot(5{,}56\cdot10^3)^2}{4\pi^2}}=6{,}78\cdot10^6\) m.</li>
 <li>\(h=r-R_T=6780-6370\approx410\) km.</li></ol>
-<p>La ISS fa circa 16 giri al giorno: gli astronauti vedono 16 albe.</p>
+<p>La ISS fa circa 16 giri al giorno, quindi gli astronauti vedono 16 albe ogni 24 ore.</p>
 </div></div>
 <div class="box lampo"><div class="bt">Quesito lampo</div><div class="bb">
 <p>Un satellite di 10 tonnellate e uno di 1 kg sono sulla stessa orbita. Chi va più veloce?</p>
-<details><summary>Risposta</summary>Vanno alla stessa velocità: \(v=\sqrt{GM/r}\) non contiene la massa del satellite.</details>
+<details><summary>Risposta</summary>Vanno alla stessa velocità: \(v=\sqrt{\dfrac{GM}{r}}\) non contiene la massa del satellite.</details>
 </div></div>
 
 <h2 id="geo"><span class="num">2</span>Satelliti geostazionari e GPS</h2>
@@ -85,22 +85,22 @@
 <li>\(h=r-R_T=4{,}21\cdot10^7-0{,}637\cdot10^7=3{,}58\cdot10^7\) m \(\approx35\,800\) km.</li></ol>
 </div></div>
 <div class="box approf"><div class="bt">Approfondimento: come funziona il GPS</div><div class="bb">
-<p>Ogni satellite GPS trasmette l’ora esatta, misurata da un orologio atomico. Il ricevitore nel tuo telefono misura il ritardo \(\Delta t\) del segnale e calcola la distanza \(d=c\,\Delta t\). Essere a distanza \(d\) da un satellite vuol dire stare su una sfera. Le sfere di tre satelliti si incrociano in un solo punto: la tua posizione (un quarto satellite serve a correggere l’orologio del telefono).</p>
+<p>Ogni satellite GPS trasmette l’ora esatta, misurata da un orologio atomico. Il ricevitore nel tuo telefono misura il ritardo \(\Delta t\) del segnale e calcola la distanza \(d=c\,\Delta t\). Essere a distanza \(d\) da un satellite vuol dire stare su una sfera. Le sfere di tre satelliti si incrociano in due punti: uno è la tua posizione, l’altro è lontano nello spazio e si scarta. Un quarto satellite serve a correggere l’orologio del telefono.</p>
 </div></div>
 
 <h2 id="peso"><span class="num">3</span>L’“assenza di peso”</h2>
-<div class="box attenzione"><div class="bt">Attenzione: un errore comunissimo</div><div class="bb">
-<p>“Gli astronauti galleggiano perché nello spazio non c’è gravità.” <b>Falso.</b> Alla quota della ISS, 400 km, \(g\) vale ancora 8,7 m/s², quasi come a terra.</p>
+<div class="box attenzione"><div class="bt">Attenzione: un errore comune</div><div class="bb">
+<p>“Gli astronauti galleggiano perché nello spazio non c’è gravità.” È una spiegazione sbagliata. Alla quota della ISS, 400 km, \(g\) vale ancora 8,7 m/s², quasi come a terra.</p>
 </div></div>
 <div class="fig w-md"><svg viewBox="0 0 330 190" xmlns="http://www.w3.org/2000/svg" font-size="12" fill="currentColor" role="img" aria-label="Persona su una bilancia in ascensore fermo e in caduta libera"><rect x="30" y="30" width="90" height="130" fill="none" stroke="currentColor"/><circle cx="75" cy="80" r="7" fill="none" stroke="currentColor"/><line x1="75" y1="87" x2="75" y2="115" stroke="currentColor"/><line x1="63" y1="98" x2="87" y2="98" stroke="currentColor"/><line x1="75" y1="115" x2="67" y2="135" stroke="currentColor"/><line x1="75" y1="115" x2="83" y2="135" stroke="currentColor"/><rect x="55" y="138" width="40" height="8" fill="#3b82f6"/><text x="40" y="176">segna 70 kg</text><text x="55" y="22">fermo</text><rect x="190" y="30" width="90" height="130" fill="none" stroke="currentColor"/><circle cx="235" cy="60" r="7" fill="none" stroke="currentColor"/><line x1="235" y1="67" x2="235" y2="95" stroke="currentColor"/><line x1="223" y1="78" x2="247" y2="78" stroke="currentColor"/><line x1="235" y1="95" x2="227" y2="115" stroke="currentColor"/><line x1="235" y1="95" x2="243" y2="115" stroke="currentColor"/><rect x="215" y="138" width="40" height="8" fill="#3b82f6"/><text x="212" y="176">segna 0</text><text x="160" y="22">cavo rotto: cade con a = g</text><line x1="305" y1="60" x2="305" y2="128" stroke="#A61B1B" stroke-width="2"/><path d="M299 122 L305 134 L311 122 z" fill="#A61B1B"/><text x="312" y="100" fill="#A61B1B">g</text></svg><div class="cap">In caduta libera persona e bilancia cadono insieme: la bilancia segna zero.</div></div>
 <div class="box semplice"><div class="bt">In parole semplici: l’ascensore</div><div class="bb">
-<p>Sei in ascensore, in piedi su una bilancia. Se il cavo si rompe, cadete tutti insieme con la stessa accelerazione \(g\): tu, la bilancia, l’ascensore. I tuoi piedi non premono più sulla bilancia, che segna 0. Ti senti senza peso, ma la gravità c’è eccome: è lei che vi fa cadere.</p>
+<p>Sei in ascensore, in piedi su una bilancia. Se il cavo si rompe, cadete tutti insieme con la stessa accelerazione \(g\): tu, la bilancia, l’ascensore. I tuoi piedi non premono più sulla bilancia, che segna 0. Ti senti senza peso, eppure la gravità agisce ancora, perché è lei che vi fa cadere.</p>
 <p>La stazione spaziale è un ascensore che cade per sempre, come la palla del cannone di Newton. Astronauti e stazione cadono insieme, quindi nulla preme su nulla.</p>
 </div></div>
-<p>Quello che segna la bilancia si chiama <b>peso apparente</b>: è la spinta del pavimento su di te. La forza di gravità \(mg\) c’è sempre; in caduta libera è il peso apparente a essere zero.</p>
+<p>Quello che segna la bilancia si chiama <b>peso apparente</b>: è la spinta del pavimento su di te.</p>
 
 <h2 id="campo"><span class="num">4</span>Il campo gravitazionale</h2>
-<p>Come fa la Terra ad attirare la Luna <b>senza toccarla</b>, attraverso il vuoto? Newton stesso ammetteva di non saperlo. Nell’Ottocento nasce un’idea nuova: il <b>campo</b>.</p>
+<p>Newton stesso ammetteva di non sapere come la Terra possa attirare la Luna senza toccarla, attraverso il vuoto. Nell’Ottocento la risposta arriva con il concetto di <b>campo</b>.</p>
 <div class="box semplice"><div class="bt">In parole semplici</div><div class="bb">
 <p>Una massa “modifica” lo spazio intorno a sé. Ogni punto riceve una specie di etichetta che dice: <i>se metti qui 1 kg, verrà tirato con questa forza, in questa direzione</i>. Quell’etichetta è il campo gravitazionale. È come la mappa del vento del meteo: ogni città ha una freccia, anche se lì non c’è nessuna bandiera.</p>
 </div></div>
@@ -109,7 +109,7 @@
 <p>Il campo di una massa sferica è radiale e punta verso il centro. Sulla superficie terrestre vale proprio 9,81 N/kg.</p>
 </div></div>
 <div class="fig w-sm"><img src="../assets/fig/f08.svg" alt="Frecce del campo gravitazionale che puntano verso la massa M, più lunghe vicino"><div class="cap">Frecce verso il centro, più lunghe (campo più intenso) vicino alla massa.</div></div>
-<p>Il campo è una proprietà <b>del posto</b>: qui vale 9,81 N/kg, chiunque ci sia. La forza dipende anche dall’<b>oggetto</b>: 100 kg sentono 981 N, 1 kg sente 9,81 N. E il campo in un punto è anche l’accelerazione con cui cadrebbe un oggetto lasciato lì: N/kg e m/s² sono la stessa unità.</p>
+<p>Il campo è una proprietà del posto: qui vale 9,81 N/kg, chiunque ci sia. La forza dipende anche dall’oggetto: 100 kg sentono 981 N, 1 kg sente 9,81 N. E il campo in un punto è anche l’accelerazione con cui cadrebbe un oggetto lasciato lì: N/kg e m/s² sono la stessa unità.</p>
 <div class="box richiamo"><div class="bt">Richiamo di matematica: somma di vettori</div><div class="bb">
 <p>Con più masse, i campi si sommano <b>come vettori</b> (principio di sovrapposizione). Se due campi stanno sulla stessa retta:</p>
 <ul><li>stesso verso: i moduli si sommano;</li><li>versi opposti: si sottraggono, e il campo totale punta come il più intenso.</li></ul>
@@ -118,7 +118,7 @@
 <p>Tra Terra e Luna il campo della Terra punta verso la Terra e quello della Luna verso la Luna. C’è un punto in cui si bilanciano e il campo totale è zero.</p>
 <div class="fig w-lg"><img src="../assets/fig/f09.svg" alt="Campo totale lungo la congiungente Terra-Luna: si annulla a 3,46 per 10 alla 8 metri dalla Terra"></div>
 <div class="box esempio"><div class="bt">Esempio svolto: il punto di campo nullo tra Terra e Luna</div><div class="bb">
-<p>Terra e Luna distano \(d=3{,}84\cdot10^8\) m e \(M_L/M_T=0{,}0123\). A che distanza \(x\) dal centro della Terra il campo totale è nullo?</p>
+<p>Terra e Luna distano \(d=3{,}84\cdot10^8\) m e \(\dfrac{M_L}{M_T}=0{,}0123\). A che distanza \(x\) dal centro della Terra il campo totale è nullo?</p>
 <ol><li>I due campi sono opposti e si annullano se \(\dfrac{GM_T}{x^2}=\dfrac{GM_L}{(d-x)^2}\).</li>
 <li>Radice quadrata dei due membri: \(\dfrac{d-x}{x}=\sqrt{\dfrac{M_L}{M_T}}=\sqrt{0{,}0123}=0{,}111\).</li>
 <li>\(d=x(1+0{,}111)\Rightarrow x=\dfrac{3{,}84\cdot10^8}{1{,}111}=3{,}46\cdot10^8\) m.</li></ol>
@@ -128,7 +128,7 @@
 <h2 id="esercizi"><span class="num">5</span>Esercizi</h2>
 <p class="note">Dati: \(G=6{,}67\cdot10^{-11}\ \mathrm{N\,m^2/kg^2}\), \(M_T=5{,}97\cdot10^{24}\) kg, \(R_T=6{,}37\cdot10^6\) m, \(GM_T=3{,}98\cdot10^{14}\ \mathrm{m^3/s^2}\), \(g=9{,}81\) m/s². Altri dati nel <a href="formulario.html">formulario</a>.</p>
 
-<div class="ex" id="e2-1"><div class="head"><span class="n">1</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e2-1"><div class="head"><span class="n">1</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Un satellite meteorologico orbita a 800 km di quota su un’orbita circolare.</p>
 <ul class="req"><li>Calcola la sua velocità.</li><li>Quanti minuti impiega per un giro?</li></ul>
 <details class="ris"><summary>Risultato</summary>\(v=7{,}45\) km/s; \(T=101\) min.</details>
@@ -138,7 +138,7 @@
 <li>\(T=\dfrac{2\pi r}{v}=\dfrac{2\pi\cdot7{,}17\cdot10^6}{7{,}45\cdot10^3}=6{,}05\cdot10^3\) s \(=101\) min.</li></ol>
 </details></div>
 
-<div class="ex" id="e2-2"><div class="head"><span class="n">2</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-2"><div class="head"><span class="n">2</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Phobos, la luna più grande di Marte, percorre un’orbita quasi circolare di raggio \(9{,}38\cdot10^6\) m in 7,65 ore.</p>
 <ul class="req"><li>Calcola la massa di Marte.</li></ul>
 <details class="ris"><summary>Risultato</summary>\(M=6{,}44\cdot10^{23}\) kg.</details>
@@ -147,10 +147,10 @@
 <li>Dalla terza legge: \(M=\dfrac{4\pi^2r^3}{GT^2}=\dfrac{4\pi^2\cdot(9{,}38\cdot10^6)^3}{6{,}67\cdot10^{-11}\cdot(2{,}754\cdot10^4)^2}\).</li>
 <li>Numeratore: \(39{,}5\cdot8{,}25\cdot10^{20}=3{,}26\cdot10^{22}\). Denominatore: \(6{,}67\cdot10^{-11}\cdot7{,}58\cdot10^8=5{,}06\cdot10^{-2}\).</li>
 <li>\(M=6{,}44\cdot10^{23}\) kg.</li></ol>
-<p>Il valore accettato è \(6{,}42\cdot10^{23}\) kg: è proprio così che si misurano le masse dei pianeti.</p>
+<p>Il valore accettato è \(6{,}42\cdot10^{23}\) kg. Con questo metodo si misura la massa dei pianeti che hanno lune.</p>
 </details></div>
 
-<div class="ex" id="e2-3"><div class="head"><span class="n">3</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="●●●"></span></div>
+<div class="ex" id="e2-3"><div class="head"><span class="n">3</span><span class="tag prova">Ora prova tu</span><span class="lvl" data-l="livello 3"></span></div>
 <p>Un futuro satellite “areostazionario” deve restare sempre sopra lo stesso punto dell’equatore di Marte. Marte ha massa \(6{,}42\cdot10^{23}\) kg, raggio \(3{,}39\cdot10^6\) m e ruota su se stesso in \(8{,}862\cdot10^4\) s.</p>
 <ul class="req"><li>A che quota dalla superficie di Marte deve orbitare?</li></ul>
 <details class="ris"><summary>Risultato</summary>\(h=1{,}70\cdot10^4\) km (\(r=2{,}04\cdot10^7\) m).</details>
@@ -162,49 +162,49 @@
 <p>Molto più in basso dei geostazionari terrestri, perché Marte ha massa molto minore.</p>
 </details></div>
 
-<div class="ex" id="e2-4"><div class="head"><span class="n">4</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e2-4"><div class="head"><span class="n">4</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Un satellite viene spostato su un’orbita circolare di raggio quattro volte più grande.</p>
 <ul class="req"><li>Come cambia la sua velocità?</li><li>Come cambia il periodo?</li></ul>
 <details class="ris"><summary>Risultato</summary>La velocità si dimezza; il periodo diventa 8 volte più lungo.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
-<ol><li>\(v\propto\dfrac{1}{\sqrt r}\): con \(r\to4r\), \(v\to v/\sqrt4=v/2\).</li>
+<ol><li>\(v\propto\dfrac{1}{\sqrt r}\): con \(r\to4r\), \(v\to\dfrac{v}{\sqrt4}=\dfrac{v}{2}\).</li>
 <li>\(T\propto r^{3/2}\): con \(r\to4r\), \(T\to4^{3/2}\,T=8\,T\).</li></ol>
-<p>Verifica di coerenza: \(T=2\pi r/v\) cresce di \(4\) per il raggio e di \(2\) per la velocità dimezzata, \(4\cdot2=8\).</p>
+<p>Verifica di coerenza: \(T=\dfrac{2\pi r}{v}\) cresce di \(4\) per il raggio e di \(2\) per la velocità dimezzata, \(4\cdot2=8\).</p>
 </details></div>
 
-<div class="ex" id="e2-5"><div class="head"><span class="n">5</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-5"><div class="head"><span class="n">5</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Un astronauta di 75 kg si trova sulla stazione spaziale, a 420 km di quota.</p>
 <ul class="req"><li>Quanto vale lì il campo gravitazionale?</li><li>Con che forza la Terra attira l’astronauta? Che percentuale del suo peso a terra è?</li><li>Perché allora galleggia?</li></ul>
 <details class="ris"><summary>Risultato</summary>\(g=8{,}63\) m/s²; \(F=647\) N, l’88% del peso a terra. Galleggia perché è in caduta libera insieme alla stazione.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>\(r=6{,}37\cdot10^6+0{,}42\cdot10^6=6{,}79\cdot10^6\) m.</li>
 <li>\(g=\dfrac{GM_T}{r^2}=\dfrac{3{,}98\cdot10^{14}}{(6{,}79\cdot10^6)^2}=8{,}63\) m/s².</li>
-<li>\(F=mg=75\cdot8{,}63=647\) N. A terra: \(75\cdot9{,}81=736\) N. Rapporto \(647/736=0{,}88\).</li>
+<li>\(F=mg=75\cdot8{,}63=647\) N. A terra: \(75\cdot9{,}81=736\) N. Rapporto \(\dfrac{647}{736}=0{,}88\).</li>
 <li>La gravità c’è, ed è lei a fare da forza centripeta. Astronauta e stazione cadono insieme con la stessa accelerazione, quindi il pavimento non lo spinge: il peso apparente è zero.</li></ol>
 </details></div>
 
-<div class="ex" id="e2-6"><div class="head"><span class="n">6</span><span class="tag sesucc">Che cosa succede se</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e2-6"><div class="head"><span class="n">6</span><span class="tag sesucc">Che cosa succede se</span><span class="lvl" data-l="livello 1"></span></div>
 <p>Un razzo si trova a una quota pari a due raggi terrestri (\(h=2R_T\)).</p>
 <ul class="req"><li>Quanto vale lì il campo gravitazionale?</li></ul>
-<details class="ris"><summary>Risultato</summary>\(g=g_0/9=1{,}09\) m/s².</details>
+<details class="ris"><summary>Risultato</summary>\(g=\dfrac{g_0}{9}=1{,}09\) m/s².</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>Attenzione: la distanza dal centro è \(r=R_T+2R_T=3R_T\), non \(2R_T\).</li>
 <li>\(g=\dfrac{GM_T}{(3R_T)^2}=\dfrac{g_0}{9}=\dfrac{9{,}81}{9}=1{,}09\) m/s².</li></ol>
 </details></div>
 
-<div class="ex" id="e2-7"><div class="head"><span class="n">7</span><span class="lvl" data-l="●●●"></span></div>
-<p>Lungo la congiungente Terra–Sole (distanza \(1{,}50\cdot10^{11}\) m) c’è un punto in cui il campo della Terra e quello del Sole si annullano. \(M_S=1{,}99\cdot10^{30}\) kg.</p>
+<div class="ex" id="e2-7"><div class="head"><span class="n">7</span><span class="lvl" data-l="livello 3"></span></div>
+<p>Lungo la congiungente Terra-Sole (distanza \(1{,}50\cdot10^{11}\) m) c’è un punto in cui il campo della Terra e quello del Sole si annullano. \(M_S=1{,}99\cdot10^{30}\) kg.</p>
 <div class="fig w-md"><svg viewBox="0 0 340 100" xmlns="http://www.w3.org/2000/svg" font-size="12" fill="currentColor" role="img" aria-label="Sole, punto P vicino alla Terra, Terra"><circle cx="30" cy="45" r="22" fill="#f5a623"/><text x="18" y="85">Sole</text><circle cx="310" cy="45" r="6" fill="#3b82f6"/><text x="296" y="85">Terra</text><circle cx="290" cy="45" r="3"/><text x="284" y="34">P</text><line x1="290" y1="45" x2="260" y2="45" stroke="#B5651D" stroke-width="2"/><path d="M264 40 L254 45 L264 50 z" fill="#B5651D"/><line x1="290" y1="45" x2="300" y2="45" stroke="#2E6B30" stroke-width="2"/><text x="290" y="97" font-size="11">x</text><line x1="290" y1="92" x2="310" y2="92" stroke="currentColor" stroke-width=".8"/></svg><div class="cap">Non in scala: il punto è molto più vicino alla Terra.</div></div>
-<ul class="req"><li>A che distanza dal centro della Terra si trova?</li><li>Confrontala con la distanza Terra–Luna (\(3{,}84\cdot10^8\) m).</li></ul>
-<details class="ris"><summary>Risultato</summary>\(x=2{,}59\cdot10^8\) m dalla Terra, circa due terzi della distanza Terra–Luna.</details>
+<ul class="req"><li>A che distanza dal centro della Terra si trova?</li><li>Confrontala con la distanza Terra-Luna (\(3{,}84\cdot10^8\) m).</li></ul>
+<details class="ris"><summary>Risultato</summary>\(x=2{,}59\cdot10^8\) m dalla Terra, circa due terzi della distanza Terra-Luna.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>Con \(x\) distanza dalla Terra e \(d-x\) dal Sole: \(\dfrac{GM_T}{x^2}=\dfrac{GM_S}{(d-x)^2}\).</li>
 <li>Radice: \(\dfrac{x}{d-x}=\sqrt{\dfrac{M_T}{M_S}}=\sqrt{\dfrac{5{,}97\cdot10^{24}}{1{,}99\cdot10^{30}}}=1{,}732\cdot10^{-3}\).</li>
 <li>\(x=\dfrac{1{,}732\cdot10^{-3}}{1+1{,}732\cdot10^{-3}}\,d=1{,}729\cdot10^{-3}\cdot1{,}50\cdot10^{11}=2{,}59\cdot10^8\) m.</li>
-<li>\(2{,}59/3{,}84=0{,}68\): circa due terzi della distanza Terra–Luna.</li></ol>
+<li>\(\dfrac{2{,}59}{3{,}84}=0{,}68\): circa due terzi della distanza Terra-Luna.</li></ol>
 </details></div>
 
-<div class="ex" id="e2-8"><div class="head"><span class="n">8</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-8"><div class="head"><span class="n">8</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Due sfere di piombo di 200 kg e 800 kg hanno i centri a 2,0 m di distanza.</p>
 <ul class="req"><li>Calcola il campo gravitazionale totale nel punto medio tra le due sfere (modulo e verso).</li><li>In che punto della congiungente il campo è nullo?</li></ul>
 <details class="ris"><summary>Risultato</summary>\(4{,}0\cdot10^{-8}\) N/kg, verso la sfera da 800 kg; campo nullo a 0,67 m dalla sfera da 200 kg.</details>
@@ -212,20 +212,20 @@
 <ol><li>Nel punto medio ciascuna sfera dista 1,0 m. \(g_1=\dfrac{6{,}67\cdot10^{-11}\cdot200}{1{,}0^2}=1{,}33\cdot10^{-8}\) N/kg verso la sfera piccola; \(g_2=\dfrac{6{,}67\cdot10^{-11}\cdot800}{1{,}0^2}=5{,}34\cdot10^{-8}\) N/kg verso quella grande.</li>
 <li>Versi opposti: \(g=g_2-g_1=4{,}0\cdot10^{-8}\) N/kg, verso la sfera da 800 kg.</li>
 <li>Campo nullo a distanza \(x\) dalla sfera piccola: \(\dfrac{200}{x^2}=\dfrac{800}{(2{,}0-x)^2}\Rightarrow\dfrac{2{,}0-x}{x}=\sqrt4=2\Rightarrow x=\dfrac{2{,}0}{3}=0{,}67\) m.</li></ol>
-<p>Il punto è più vicino alla massa più piccola, come era da aspettarsi.</p>
+<p>Il punto è più vicino alla massa più piccola, perché il suo campo è più debole e deve essere compensato dalla vicinanza.</p>
 </details></div>
 
-<div class="ex" id="e2-9"><div class="head"><span class="n">9</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-9"><div class="head"><span class="n">9</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Un pendolo sulla Terra oscilla con periodo 1,50 s. Lo stesso pendolo viene portato sulla Luna, dove \(g_L=1{,}62\) m/s².</p>
 <ul class="req"><li>Quanto vale il periodo sulla Luna?</li></ul>
 <details class="ris"><summary>Risultato</summary>\(T_L=3{,}69\) s.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
-<ol><li>Periodo del pendolo: \(T=2\pi\sqrt{L/g}\). La lunghezza è la stessa, quindi \(T\propto1/\sqrt g\).</li>
+<ol><li>Periodo del pendolo: \(T=2\pi\sqrt{\dfrac{L}{g}}\). La lunghezza è la stessa, quindi \(T\propto\dfrac{1}{\sqrt g}\).</li>
 <li>\(T_L=T_T\sqrt{\dfrac{g_T}{g_L}}=1{,}50\cdot\sqrt{\dfrac{9{,}81}{1{,}62}}=1{,}50\cdot2{,}46=3{,}69\) s.</li></ol>
-<p>Al contrario: misurando il periodo di un pendolo si misura il campo gravitazionale di un pianeta.</p>
+<p>Si può anche fare il contrario, cioè ricavare il campo gravitazionale di un pianeta dal periodo di un pendolo.</p>
 </details></div>
 
-<div class="ex" id="e2-10"><div class="head"><span class="n">10</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-10"><div class="head"><span class="n">10</span><span class="lvl" data-l="livello 2"></span></div>
 <p>I satelliti GPS compiono due giri della Terra in un giorno siderale, quindi hanno periodo \(T=4{,}308\cdot10^4\) s.</p>
 <ul class="req"><li>Calcola il raggio dell’orbita e la quota.</li><li>Calcola la velocità.</li></ul>
 <details class="ris"><summary>Risultato</summary>\(r=2{,}66\cdot10^7\) m; \(h=2{,}02\cdot10^4\) km; \(v=3{,}87\) km/s.</details>
@@ -235,7 +235,7 @@
 <li>\(v=\dfrac{2\pi r}{T}=\dfrac{2\pi\cdot2{,}655\cdot10^7}{4{,}308\cdot10^4}=3{,}87\cdot10^3\) m/s.</li></ol>
 </details></div>
 
-<div class="ex" id="e2-11"><div class="head"><span class="n">11</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-11"><div class="head"><span class="n">11</span><span class="lvl" data-l="livello 2"></span></div>
 <p>La Terra percorre attorno al Sole un’orbita quasi circolare di raggio \(1{,}50\cdot10^{11}\) m in un anno (\(3{,}156\cdot10^7\) s).</p>
 <ul class="req"><li>Usando solo questi dati e \(G\), calcola la massa del Sole.</li></ul>
 <details class="ris"><summary>Risultato</summary>\(M_S=2{,}01\cdot10^{30}\) kg.</details>
@@ -243,20 +243,20 @@
 <ol><li>\(M_S=\dfrac{4\pi^2r^3}{GT^2}=\dfrac{4\pi^2\cdot(1{,}50\cdot10^{11})^3}{6{,}67\cdot10^{-11}\cdot(3{,}156\cdot10^7)^2}\).</li>
 <li>Numeratore: \(39{,}5\cdot3{,}375\cdot10^{33}=1{,}332\cdot10^{35}\). Denominatore: \(6{,}67\cdot10^{-11}\cdot9{,}96\cdot10^{14}=6{,}64\cdot10^4\).</li>
 <li>\(M_S=2{,}01\cdot10^{30}\) kg.</li></ol>
-<p>Abbiamo “pesato” il Sole senza andarci.</p>
+<p>Il valore accettato è \(1{,}99\cdot10^{30}\) kg.</p>
 </details></div>
 
-<div class="ex" id="e2-12"><div class="head"><span class="n">12</span><span class="tag dimostra">Dimostra</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-12"><div class="head"><span class="n">12</span><span class="tag dimostra">Dimostra</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Un satellite ruota attorno a un pianeta di massa \(M\) e raggio \(R\) con velocità angolare \(\omega\).</p>
 <ul class="req"><li>Dimostra che la sua quota è \(h=\sqrt[3]{\dfrac{GM}{\omega^2}}-R\).</li></ul>
-<details class="ris"><summary>Risultato</summary>\(h=\sqrt[3]{GM/\omega^2}-R\).</details>
+<details class="ris"><summary>Risultato</summary>\(h=\sqrt[3]{\dfrac{GM}{\omega^2}}-R\).</details>
 <details class="sol"><summary>Soluzione svolta</summary>
 <ol><li>Forza centripeta scritta con \(\omega\): \(F_c=m\omega^2r\).</li>
 <li>\(G\dfrac{Mm}{r^2}=m\omega^2r\Rightarrow r^3=\dfrac{GM}{\omega^2}\Rightarrow r=\sqrt[3]{\dfrac{GM}{\omega^2}}\).</li>
 <li>\(h=r-R=\sqrt[3]{\dfrac{GM}{\omega^2}}-R\).</li></ol>
 </details></div>
 
-<div class="ex" id="e2-13"><div class="head"><span class="n">13</span><span class="tag dimostra">Dimostra</span><span class="lvl" data-l="●●○"></span></div>
+<div class="ex" id="e2-13"><div class="head"><span class="n">13</span><span class="tag dimostra">Dimostra</span><span class="lvl" data-l="livello 2"></span></div>
 <p>Un satellite di massa \(m\) percorre un’orbita circolare di raggio \(r\) attorno a un pianeta di massa \(M\).</p>
 <ul class="req"><li>Dimostra che la sua energia cinetica è \(K=\dfrac{GMm}{2r}\).</li></ul>
 <details class="ris"><summary>Risultato</summary>\(K=\tfrac12mv^2=\dfrac{GMm}{2r}\). Questo risultato ti servirà nella lezione 3.</details>
@@ -266,16 +266,16 @@
 <li>\(K=\tfrac12mv^2=\dfrac{GMm}{2r}\).</li></ol>
 </details></div>
 
-<div class="ex" id="e2-14"><div class="head"><span class="n">14</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="●○○"></span></div>
+<div class="ex" id="e2-14"><div class="head"><span class="n">14</span><span class="tag pensa">Fermati a pensare</span><span class="lvl" data-l="livello 1"></span></div>
 <p>È corretto dire che il vettore campo gravitazionale è lo stesso in tutti i punti della superficie terrestre?</p>
 <details class="ris"><summary>Risultato</summary>No: il modulo è circa lo stesso, ma la direzione cambia.</details>
 <details class="sol"><summary>Soluzione svolta</summary>
-<p>Il <b>modulo</b> vale circa 9,8 N/kg ovunque, ma la <b>direzione</b> punta sempre verso il centro della Terra. In Italia e in Australia i due vettori hanno direzioni molto diverse. Un vettore è lo stesso solo se modulo, direzione e verso coincidono.</p>
+<p>Il modulo vale circa 9,8 N/kg ovunque, ma la direzione punta sempre verso il centro della Terra. In Italia e in Australia i due vettori hanno direzioni molto diverse. Un vettore è lo stesso solo se modulo, direzione e verso coincidono.</p>
 </details></div>
 
-<div class="pager"><a href="1-keplero-newton.html">← Lezione 1</a><a href="3-energia-fuga.html">Lezione 3: energia e fuga →</a></div>
+<div class="pager"><a href="1-keplero-newton.html">Indietro: Lezione 1</a><a href="3-energia-fuga.html">Avanti: lezione 3, energia e fuga</a></div>
 </main>
-<footer>Fisica per le superiori · Gravitazione</footer>
+<footer>Fisica per le superiori, unità sulla gravitazione</footer>
 <script src="../assets/site.js"></script>
 </body>
 </html>

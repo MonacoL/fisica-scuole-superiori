@@ -53,7 +53,7 @@
 \end{axis}\end{tikzpicture}\end{preview}
 % 4 inverso del quadrato
 \begin{preview}\begin{tikzpicture}
-\begin{axis}[width=9cm,height=6cm,xlabel={distanza $r/r_0$},ylabel={forza $F/F_0$},xmin=0,xmax=5.2,ymin=0,ymax=1.15,xtick={1,2,3,4,5},ytick={0,0.25,0.5,0.75,1},yticklabels={0,$\frac14$,$\frac12$,$\frac34$,1}]
+\begin{axis}[width=9cm,height=6cm,xlabel={distanza $\dfrac{r}{r_0}$},ylabel={forza $\dfrac{F}{F_0}$},xmin=0,xmax=5.2,ymin=0,ymax=1.15,xtick={1,2,3,4,5},ytick={0,0.25,0.5,0.75,1},yticklabels={0,$\frac14$,$\frac12$,$\frac34$,1}]
 \addplot[formula,very thick,domain=0.93:5,samples=80] {1/x^2};
 \addplot[only marks,mark=*,esempio] coordinates {(1,1) (2,0.25) (3,0.1111) (4,0.0625)};
 \node[anchor=south west,font=\small] at (axis cs:2,0.27) {$\frac14$};
@@ -64,7 +64,7 @@
 \begin{preview}\begin{tikzpicture}
 \begin{axis}[width=10cm,height=6cm,xlabel={quota $h$ (migliaia di km)},ylabel={$g$ (m/s$^2$)},xmin=0,xmax=40,ymin=0,ymax=10.5]
 \addplot[formula,very thick,domain=0:40,samples=120] {9.81*(6.37/(6.37+x))^2};
-\addplot[only marks,mark=*,esempio,nodes near coords,point meta=explicit symbolic,every node near coord/.style={font=\scriptsize,black,anchor=south west}] coordinates {(0.4,8.69)[ISS: 8{,}7] (20.2,0.57)[GPS: 0{,}57] (35.8,0.22)[geostaz.: 0{,}22]};
+\addplot[only marks,mark=*,esempio,nodes near coords,point meta=explicit symbolic,every node near coord/.style={font=\scriptsize,black,anchor=south west}] coordinates {(0.4,8.69)[ISS: 8{,}7] (20.2,0.56)[GPS: 0{,}56] (35.8,0.22)[geostaz.: 0{,}22]};
 \end{axis}\end{tikzpicture}\end{preview}
 % 6 cannone di Newton
 \begin{preview}\begin{tikzpicture}[scale=1]
@@ -105,8 +105,8 @@
 \end{axis}\end{tikzpicture}\end{preview}
 % 10 pozzo
 \begin{preview}\begin{tikzpicture}
-\begin{axis}[width=10cm,height=7cm,xlabel={distanza $r/R$},ylabel={energia (unità $GMm/R$)},xmin=0,xmax=6,ymin=-1.1,ymax=0.6,legend style={font=\small,at={(0.97,0.35)},anchor=east}]
-\addplot[attenzione,very thick,domain=1:6,samples=80] {-1/x}; \addlegendentry{$U=-GMm/r$}
+\begin{axis}[width=10cm,height=7cm,xlabel={distanza $\dfrac{r}{R}$},ylabel={energia (unità $\dfrac{GMm}{R}$)},xmin=0,xmax=6,ymin=-1.1,ymax=0.6,legend style={font=\small,at={(0.97,0.35)},anchor=east,row sep=3pt}]
+\addplot[attenzione,very thick,domain=1:6,samples=80] {-1/x}; \addlegendentry{$U=-\frac{GMm}{r}$}
 \addplot[medica,very thick,domain=1:6,samples=80] {1/(2*x)}; \addlegendentry{$K$ in orbita}
 \addplot[formula,very thick,domain=1:6,samples=80] {-1/(2*x)}; \addlegendentry{$E=K+U$}
 \draw[gray] (axis cs:0,0)--(axis cs:6,0);
